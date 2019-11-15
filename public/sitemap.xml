@@ -2,7 +2,9 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
-      <loc>/categories/</loc>
+      <loc>https://binfer.github.io/blog/a/</loc>
+      
+      <lastmod>2019-11-15T18:20:42+08:00</lastmod>
       
       
       
@@ -10,7 +12,9 @@
     </url>
   
     <url>
-      <loc>/</loc>
+      <loc>https://binfer.github.io/blog/</loc>
+      
+      <lastmod>2019-11-15T18:20:42+08:00</lastmod>
       
       
       
@@ -18,7 +22,35 @@
     </url>
   
     <url>
-      <loc>/tags/</loc>
+      <loc>https://binfer.github.io/</loc>
+      
+      <lastmod>2019-11-15T18:20:42+08:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://binfer.github.io/about/</loc>
+      
+      <lastmod>2019-11-15T18:17:30+08:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://binfer.github.io/categories/</loc>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://binfer.github.io/tags/</loc>
       
       
       
