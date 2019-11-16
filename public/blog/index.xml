@@ -17,7 +17,8 @@
       <pubDate>Fri, 15 Nov 2019 18:35:29 +0800</pubDate>
       
       <guid>https://binfer.github.io/blog/go/dial-sacnning-port/</guid>
-      <description>go 实现端口扫描 package main import ( &amp;quot;flag&amp;quot; &amp;quot;fmt&amp;quot; &amp;quot;net&amp;quot; &amp;quot;sync&amp;quot; &amp;quot;time&amp;quot; ) func main() { startPort := flag.Int(&amp;quot;start-port&amp;quot;, 80, &amp;quot;开始扫描的端口&amp;quot;) endPort := flag.Int(&amp;quot;end-port&amp;quot;, 100, &amp;quot;结束扫描的端口&amp;quot;) timeOut := flag.Duration(&amp;quot;timeout&amp;quot;, time.Millisecond * 200, &amp;quot;超时时间&amp;quot;) flag.Parse() ips := []string{ &amp;quot;127.0.0.1&amp;quot;, &amp;quot;google.com&amp;quot;, &amp;quot;baidu.com&amp;quot;, } // 扫描端口 Dials(ips, *startPort, *endPort, *timeOut) } func Dials(ips []string, start, end int, timeout time.Duration) { var ( wg = &amp;amp;sync.WaitGroup{} timeOut = time.Millisecond * 200 unUse = map[string][]int{} ) for port := start; port &amp;lt;= end; port++ { wg.</description>
+      <description>go 实现端口扫描  https://github.com/binfer-go/dials.git
+package main import ( &amp;quot;flag&amp;quot; &amp;quot;fmt&amp;quot; &amp;quot;net&amp;quot; &amp;quot;sync&amp;quot; &amp;quot;time&amp;quot; ) func main() { startPort := flag.Int(&amp;quot;start-port&amp;quot;, 80, &amp;quot;开始扫描的端口&amp;quot;) endPort := flag.Int(&amp;quot;end-port&amp;quot;, 100, &amp;quot;结束扫描的端口&amp;quot;) timeOut := flag.Duration(&amp;quot;timeout&amp;quot;, time.Millisecond * 200, &amp;quot;超时时间&amp;quot;) flag.Parse() ips := []string{ &amp;quot;127.0.0.1&amp;quot;, &amp;quot;google.com&amp;quot;, &amp;quot;baidu.com&amp;quot;, } // 扫描端口 Dials(ips, *startPort, *endPort, *timeOut) } func Dials(ips []string, start, end int, timeout time.Duration) { var ( wg = &amp;amp;sync.WaitGroup{} timeOut = time.Millisecond * 200 unUse = map[string][]int{} ) for port := start; port &amp;lt;= end; port++ { wg.</description>
     </item>
     
   </channel>

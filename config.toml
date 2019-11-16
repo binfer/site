@@ -50,11 +50,12 @@ posts = "/:year/:filename/"
   background    = "black"
   linkColor     = "seagreen"
   author        = "smoke"
-  avatar        = "/images/me/avatar.jpeg"
+  email         = "smoke.mvp@gmail.com"
+  avatar        = "/images/me/avatar.jpg"
   subtitle      = "I fight, So you can't have to."
   motto         = "Motto"
-  siteStartYear = 2016
-  favicon       = "/favicon.ico"
+  siteStartYear = 2019
+  favicon       = "/images/favicon.ico"
   # dark mode
   darkLinkColor = "darkseagreen"
   darkNav       = true
@@ -70,17 +71,18 @@ posts = "/:year/:filename/"
 
 
 [params.social]
-    GitHub      = "#"
-    Twitter     = "#"
-    Email       = "@smoke.mvp@gmail.com"
-    Instagram   = "#"
-    Wechat      = "/images/me/wechat.png"  # Wechat QRcode image
+    GitHub      = "https://github.com/binfer"
+    Twitter     = "夜华"
+    Email       = "smoke.mvp@gmail.com"
+    Instagram   = "smoke.mvp@gmail.com"
+    Wechat      = "images/me/wechat.png"  # Wechat QRcode image
     Facebook    = "#"
     Telegram    = "#"
     Dribbble    = "#"
     Medium      = "#"
     linkedin    = "#"
     codepen     = "#"
+    Salack = "#"
     stackoverflow = "#"
 
 

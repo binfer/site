@@ -4,8 +4,7 @@ date: 2019-11-15T18:35:29+08:00
 ---
 
 ### go 实现端口扫描
-
-![Github](https://github.com/binfer-go/dials.git)
+- [https://github.com/binfer-go/dials.git](https://github.com/binfer-go/dials.git)
 
 ```go
 

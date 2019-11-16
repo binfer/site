@@ -15,6 +15,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="manifest" href="/site.webmanifest">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
@@ -46,7 +47,7 @@
     "articleSection" : "blog",
     "name" : "Dial Sacnning Port",
     "headline" : "Dial Sacnning Port",
-    "description" : "go 实现端口扫描 package main import ( \x26quot;flag\x26quot; \x26quot;fmt\x26quot; \x26quot;net\x26quot; \x26quot;sync\x26quot; \x26quot;time\x26quot; ) func main() { startPort := flag.Int(\x26quot;start-port\x26quot;, 80, \x26quot;开始扫描的端口\x26quot;) endPort := flag.Int(\x26quot;end-port\x26quot;, 100, \x26quot;结束扫描的端口\x26quot;) timeOut := flag.Duration(\x26quot;timeout\x26quot;, time.Millisecond * 200, \x26quot;超时时间\x26quot;) flag.Parse() ips := []string{ \x26quot;127.0.0.1\x26quot;, \x26quot;google.com\x26quot;, \x26quot;baidu.com\x26quot;, } \/\/ 扫描端口 Dials(ips, *startPort, *endPort, *timeOut) } func Dials(ips []string, start, end int, timeout time.Duration) { var ( wg = \x26amp;sync.WaitGroup{} timeOut = time.Millisecond * 200 unUse = map[string][]int{} ) for port := start; port \x26lt;= end; port\x2b\x2b { wg.",
+    "description" : "go 实现端口扫描  https:\/\/github.com\/binfer-go\/dials.git\npackage main import ( \x26quot;flag\x26quot; \x26quot;fmt\x26quot; \x26quot;net\x26quot; \x26quot;sync\x26quot; \x26quot;time\x26quot; ) func main() { startPort := flag.Int(\x26quot;start-port\x26quot;, 80, \x26quot;开始扫描的端口\x26quot;) endPort := flag.Int(\x26quot;end-port\x26quot;, 100, \x26quot;结束扫描的端口\x26quot;) timeOut := flag.Duration(\x26quot;timeout\x26quot;, time.Millisecond * 200, \x26quot;超时时间\x26quot;) flag.Parse() ips := []string{ \x26quot;127.0.0.1\x26quot;, \x26quot;google.com\x26quot;, \x26quot;baidu.com\x26quot;, } \/\/ 扫描端口 Dials(ips, *startPort, *endPort, *timeOut) } func Dials(ips []string, start, end int, timeout time.Duration) { var ( wg = \x26amp;sync.WaitGroup{} timeOut = time.Millisecond * 200 unUse = map[string][]int{} ) for port := start; port \x26lt;= end; port\x2b\x2b { wg.",
     "inLanguage" : "en-us",
     "author" : "smoke",
     "creator" : "smoke",
@@ -57,7 +58,7 @@
     "datePublished": "2019-11-15 18:35:29 \x2b0800 CST",
     "dateModified" : "2019-11-15 18:35:29 \x2b0800 CST",
     "url" : "https:\/\/binfer.github.io\/blog\/go\/dial-sacnning-port\/",
-    "wordCount" : "150",
+    "wordCount" : "151",
     "keywords" : [  "smoke"]
 }
 </script>
@@ -130,8 +131,6 @@
         
 
         
-            
-        
 
         
         
@@ -148,7 +147,8 @@
 
 <h3 id="go-实现端口扫描">go 实现端口扫描</h3>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://github.com/binfer-go/dials.git" alt="Github" class="lazyload"><figcaption class="image-caption">Github</figcaption></figure></p>
+<ul>
+<li><p><a href="https://github.com/binfer-go/dials.git" rel="nofollow noreferrer" target="_blank">https://github.com/binfer-go/dials.git</a></p>
 
 <pre><code class="language-go">
 package main
@@ -212,7 +212,8 @@ func isOpen(host string, port int, timeOut time.Duration) bool {
 
 }
 
-</code></pre>
+</code></pre></li>
+</ul>
 
     </div>
 
@@ -271,7 +272,7 @@ func isOpen(host string, port int, timeOut time.Duration) bool {
          
 
          
-		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+        <span>smoke.mvp@gmail.com</span> & 君  陌  园
     </div>
 </footer>
 
@@ -287,9 +288,8 @@ func isOpen(host string, port int, timeOut time.Duration) bool {
 
 
     
-     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
-      
-     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
     
   
 
