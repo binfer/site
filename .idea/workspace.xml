@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c32945a-7494-489a-b97b-8292736505f4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/LeaveIt" beforeDir="false" afterPath="$PROJECT_DIR$/themes/LeaveIt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/LeaveIt/layouts/partials/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/LeaveIt/layouts/partials/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/LeaveIt/layouts/partials/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/LeaveIt/layouts/partials/head.html" afterDir="false" />
