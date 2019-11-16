@@ -7,7 +7,7 @@ script: hugo
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: <$travis>
+  github_token: $travis
   on:
     branch: master
   local_dir: public
