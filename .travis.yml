@@ -1,20 +1,18 @@
-sudo: true
-dist: trusty
-language: generic
-
-addons:
-  apt:
-    packages:
-      - snapd
-
-install:
-  - sudo snap install hugo
-  - export PATH=/snap/bin:$PATH
-
-script:
-  - hugo --enableGitInfo
-
+sudo: false
+language: go
+git:
+  depth: 1
+install: go get -v github.com/gohugoio/hugo
+script: hugo
 deploy:
   provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
+  local_dir: public
+  repo: binfer/binfer.github.io
+  fqdn: <custom-domain-if-needed>
+  target_branch: master
+  email: <github-email>
+  name: <github-username>
