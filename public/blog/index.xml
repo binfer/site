@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on smoke</title>
+    <link>https://binfer.github.io/blog/</link>
+    <description>Recent content in Blogs on smoke</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 18 Nov 2019 13:40:16 +0800</lastBuildDate>
+    
+	<atom:link href="https://binfer.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Project Collect Build Lists UseSmoke</title>
+      <link>https://binfer.github.io/blog/other/project-collect-build-lists-usesmoke/</link>
+      <pubDate>Mon, 18 Nov 2019 13:40:16 +0800</pubDate>
+      
+      <guid>https://binfer.github.io/blog/other/project-collect-build-lists-usesmoke/</guid>
+      <description>  use Go
+ Gofer框架 - (文档)[https://goframe.org/index]
+Micro框架
+ Other project
+ markdown使用 
+github中文文档收集
+苹果超级签名开发demo
+  </description>
+    </item>
+    
+    <item>
+      <title>Baidu Cloud Download</title>
+      <link>https://binfer.github.io/blog/go/baidu-cloud-download/</link>
+      <pubDate>Mon, 18 Nov 2019 13:21:41 +0800</pubDate>
+      
+      <guid>https://binfer.github.io/blog/go/baidu-cloud-download/</guid>
+      <description> https://github.com/iikira/BaiduPCS-Go.git
+baidu-cloud download  use: &amp;gt; login &amp;gt;&amp;gt; example &amp;gt;&amp;gt;&amp;gt; ~~  </description>
+    </item>
+    
+    <item>
+      <title>Dial Sacnning Port</title>
+      <link>https://binfer.github.io/blog/go/dial-sacnning-port/</link>
+      <pubDate>Fri, 15 Nov 2019 18:35:29 +0800</pubDate>
+      
+      <guid>https://binfer.github.io/blog/go/dial-sacnning-port/</guid>
+      <description>go 实现端口扫描  https://github.com/binfer-go/dials.git
+package main import ( &amp;quot;flag&amp;quot; &amp;quot;fmt&amp;quot; &amp;quot;net&amp;quot; &amp;quot;sync&amp;quot; &amp;quot;time&amp;quot; ) func main() { startPort := flag.Int(&amp;quot;start-port&amp;quot;, 80, &amp;quot;开始扫描的端口&amp;quot;) endPort := flag.Int(&amp;quot;end-port&amp;quot;, 100, &amp;quot;结束扫描的端口&amp;quot;) timeOut := flag.Duration(&amp;quot;timeout&amp;quot;, time.Millisecond * 200, &amp;quot;超时时间&amp;quot;) flag.Parse() ips := []string{ &amp;quot;127.0.0.1&amp;quot;, &amp;quot;google.com&amp;quot;, &amp;quot;baidu.com&amp;quot;, } // 扫描端口 Dials(ips, *startPort, *endPort, *timeOut) } func Dials(ips []string, start, end int, timeout time.Duration) { var ( wg = &amp;amp;sync.WaitGroup{} timeOut = time.Millisecond * 200 unUse = map[string][]int{} ) for port := start; port &amp;lt;= end; port++ { wg.</description>
+    </item>
+    
+  </channel>
+</rss>
