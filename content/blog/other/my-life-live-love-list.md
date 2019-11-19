@@ -3,17 +3,20 @@ title: "My Life Live Love List"
 date: 2019-11-19T12:35:53+08:00
 ---
 
-#### 清单[list]
-~~~~~~~~~~~
-1. 健身
+> To help ohters, you don't have to be an efficient expert in the art; 
 
-2. 内在精神
+> the main thing is the intention
 
-3. 咖啡制作
+##### list
 
-4. 摄影
+~~~~~~~~~~~~~~~~toml
+ #  健身
+ #  内在精神
+ #  咖啡制作
+ #  摄影
+ #  游戏
+ #  酒文化
 
-5. 游戏
+~~~~~~~~~~~~~~~~
 
-6. 酒文化
 
