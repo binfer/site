@@ -13,7 +13,8 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Run a one-line script
-      run: |
+      run:
+        push
       local_dir: public
       repo: binfer/binfer.github.io
       target_branch: master
