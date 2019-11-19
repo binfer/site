@@ -1,28 +1,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>smoke on smoke</title>
-    <link>https://binfer.github.io/</link>
+    <link>/</link>
     <description>Recent content in smoke on smoke</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 Nov 2019 13:40:16 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 19 Nov 2019 12:35:53 +0800</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Blogs</title>
-      <link>https://binfer.github.io/blog/</link>
-      <pubDate>Mon, 18 Nov 2019 13:40:16 +0800</pubDate>
+      <link>/blog/</link>
+      <pubDate>Tue, 19 Nov 2019 12:35:53 +0800</pubDate>
       
-      <guid>https://binfer.github.io/blog/</guid>
+      <guid>/blog/</guid>
       <description></description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://binfer.github.io/about/</link>
+      <link>/about/</link>
       <pubDate>Fri, 15 Nov 2019 18:17:30 +0800</pubDate>
       
-      <guid>https://binfer.github.io/about/</guid>
+      <guid>/about/</guid>
       <description>&lt;p&gt;&lt;code&gt;CODE&lt;/code&gt;: to me&lt;/p&gt;
 </description>
     </item>

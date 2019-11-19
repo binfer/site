@@ -2,7 +2,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
-      <loc>https://binfer.github.io/blog/</loc>
+      <loc>/blog/</loc>
+      
+      <lastmod>2019-11-19T12:35:53+08:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>/blog/other/my-life-live-love-list/</loc>
+      
+      <lastmod>2019-11-19T12:35:53+08:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>/</loc>
+      
+      <lastmod>2019-11-19T12:35:53+08:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>/blog/other/coffee-knowledge-over/</loc>
+      
+      <lastmod>2019-11-19T10:21:03+08:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>/blog/other/project-collect-build-lists-usesmoke/</loc>
       
       <lastmod>2019-11-18T13:40:16+08:00</lastmod>
       
@@ -12,27 +52,7 @@
     </url>
   
     <url>
-      <loc>https://binfer.github.io/blog/other/project-collect-build-lists-usesmoke/</loc>
-      
-      <lastmod>2019-11-18T13:40:16+08:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://binfer.github.io/</loc>
-      
-      <lastmod>2019-11-18T13:40:16+08:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://binfer.github.io/blog/go/baidu-cloud-download/</loc>
+      <loc>/blog/go/baidu-cloud-download/</loc>
       
       <lastmod>2019-11-18T13:21:41+08:00</lastmod>
       
@@ -42,7 +62,7 @@
     </url>
   
     <url>
-      <loc>https://binfer.github.io/blog/go/dial-sacnning-port/</loc>
+      <loc>/blog/go/dial-sacnning-port/</loc>
       
       <lastmod>2019-11-15T18:35:29+08:00</lastmod>
       
@@ -52,7 +72,7 @@
     </url>
   
     <url>
-      <loc>https://binfer.github.io/about/</loc>
+      <loc>/about/</loc>
       
       <lastmod>2019-11-15T18:17:30+08:00</lastmod>
       
@@ -62,7 +82,7 @@
     </url>
   
     <url>
-      <loc>https://binfer.github.io/categories/</loc>
+      <loc>/categories/</loc>
       
       
       
@@ -70,7 +90,7 @@
     </url>
   
     <url>
-      <loc>https://binfer.github.io/tags/</loc>
+      <loc>/tags/</loc>
       
       
       
