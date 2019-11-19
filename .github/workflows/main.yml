@@ -1,20 +1,19 @@
-name: CI hugo
-
-on:
-  push:
-    branches:
-      - master
-
-jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+sudo: false
+language: go
+git:
+  depth: 1
+install: go get -v github.com/gohugoio/hugo
+script: hugo
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: <9862396f711cc4bb3e2c05215aed5bb833aa9ac5>
+  #api_key: 9862396f711cc4bb3e2c05215aed5bb833aa9ac5
+  on:
+    branch: master
+  local_dir: public
+  repo: binfer/binfer.github.io
+  fqdn: <custom-domain-if-needed>
+  target_branch: master
+  email: <github-email>
+  name: <github-username>
