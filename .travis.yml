@@ -7,7 +7,7 @@ script: hugo
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: 9862396f711cc4bb3e2c05215aed5bb833aa9ac5
+  github_token: <9862396f711cc4bb3e2c05215aed5bb833aa9ac5>
   #api_key: 9862396f711cc4bb3e2c05215aed5bb833aa9ac5
   on:
     branch: master
