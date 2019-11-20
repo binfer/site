@@ -6,10 +6,26 @@
     <description>Recent content in Blogs on smoke</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 19 Nov 2019 12:35:53 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 19 Nov 2019 18:32:56 +0800</lastBuildDate>
     
 	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Risk Control Safe Rule</title>
+      <link>/blog/other/risk-control-safe-rule/</link>
+      <pubDate>Tue, 19 Nov 2019 18:32:56 +0800</pubDate>
+      
+      <guid>/blog/other/risk-control-safe-rule/</guid>
+      <description>会员风控管制  1 可疑名单 (可继续操作，但是行为进行可疑标记)
+ 2 系统自动管制名单(可继续操作，但是提醒运营对其进行 行为，身份校验)
+ 3 人工管制名单（行为冻结，通知人工介入，同时发送报告）
+ 4 异常账户 （账户异常标记，通知人工介入，同时发送报告）
+ 5 拒绝请求
+   取款跟踪
+  取款前规则： &amp;hellip; &amp;hellip;&amp;hellip;.. &amp;hellip;.. &amp;hellip;
+  订单发起人账户, 姓名， 银行卡实名认证(当次取款订单[拒绝请求]) 订单发起人手机号实名认证(当次取款订单[拒绝请求]) 订单发起人银行卡预留手机号认证(当次取款订单[拒绝请求]) 订单发起人银行借记卡有效性认证(当次取款订单[拒绝请求]) 订单发起人账户状态为[异常]标识， 取款订单信息全部进入[可疑名单] 订单发起人当前ip 与 上次取款成功的订单ip 校验(不一致, 当次取款订单进入[可疑名单]) 订单发起人当前设备 与 上次取款成功的订单设备 校验 (不一致，当次取款订单进入[可疑名单]) 订单发起人当日取款次数超过 N+1次 (当次取款订单进入[可疑名单]) 订单发起人当日取款次数超过 N+n次 (当次取款订单进入[系统管制名单]) 订单发起人当日取款次数超过 N+n+1次 (当次取款订单进入[人工管制名单], 会员账户进行[异常]标识) 订单发起人当日取款次数超过 N+n+n次 (当次取款订单[拒绝请求]) 订单发起人当日取款金额 &amp;gt; 10000元 (当次取款订单进入[可疑名单]) 订单发起人当日取款金额 &amp;gt; 20000元 (当次取款订单进入[系统管制名单]) 订单发起人当日取款金额 &amp;gt; 30000元 (当次取款订单进入[人工管制名单], 会员账户进行[异常]标识) 订单发起人当日取款金额 &amp;gt; 40000元 (当次取款订单[拒绝请求])     存款跟踪</description>
+    </item>
     
     <item>
       <title>My Life Live Love List</title>
@@ -17,7 +33,7 @@
       <pubDate>Tue, 19 Nov 2019 12:35:53 +0800</pubDate>
       
       <guid>/blog/other/my-life-live-love-list/</guid>
-      <description>  To help ohters, you don&amp;rsquo;t have to be an efficient expert in the art;
+      <description> _ ____ _ _ __ __ _| |_ |__ /_ _ __| | _ _ ___| |_ \ V V / &#39; \ |_ \ &#39;_/ _` |_| &#39; \/ -_) _| \_/\_/|_||_|___/_| \__,_(_)_||_\___|\__| est. 2020 mvp.langer@gmail.com   To help ohters, you don&amp;rsquo;t have to be an efficient expert in the art;
 the main thing is the intention
  list # 健身 # 内在精神 # 咖啡制作 # 摄影 # 游戏 # 酒文化  </description>
     </item>
