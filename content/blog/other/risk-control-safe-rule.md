@@ -2,9 +2,9 @@
 title: "Risk Control Safe Rule"
 date: 2019-11-19T18:32:56+08:00
 ---
-![/static/images/flow/safeflow.png][doge]
+![smoke][doge]
+[smoke](/images/flow/safeflow.svg)
 
-![/static/images/flow/safeflow.png](/static/images/flow/safeflow.png)
 ### 会员风控管制
 
 - 1 可疑名单 (可继续操作，但是行为进行可疑标记)
