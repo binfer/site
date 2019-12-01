@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="smoke">
+  <meta name="description" content="smoke.mvp">
+  <meta name="keywords" content="smoke">
+  
+  <link rel="prev" href="/blog/other/risk-control-safe-rule/" />
+  
+  <link rel="canonical" href="/blog/php/temegram-php-message/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Temegram Php Message | smoke
+       
+  </title>
+  <meta name="title" content="Temegram Php Message | smoke">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": ""
+    },
+    "articleSection" : "blog",
+    "name" : "Temegram Php Message",
+    "headline" : "Temegram Php Message",
+    "description" : "telegram php \x26lt;?php namespace App\\Repositories; use GuzzleHttp\\Client; use GuzzleHttp\\Psr7\\Response; use Illuminate\\Support\\Facades\\Log; \/\/ 申请bot,建立订阅通道，建立组，管理订阅通道和组，将bot拉入组内 class TelegramRepository extends BaseRepository { static public $curl; protected $list; public $id, $first_name; public function __construct(){ if (!self::$curl) self::$curl = new Client([\x27base_uri\x27 =\x26gt; \x26quot;https:\/\/api.telegram.org\/bot\x26quot;.config(\x27other.telegram\x27).\x26quot;\/\x26quot;]); } public function make() { $result = self::$curl-\x26gt;get(\x26quot;getUpdates\x26quot;, [\x27verify\x27 =\x26gt; false]); $this-\x26gt;list = $result-\x26gt;getBody()-\x26gt;getContents(); return $this; } public function one($index=0, $field=\x27chat\x27) { if ($this-\x26gt;list) { $data = json_decode($this-\x26gt;list, true); if (is_array($data)) { if (isset($data[\x27result\x27][$index])) { \/\/chat针对组 $info = $data[\x27result\x27][$index][\x27message\x27][$field]; foreach ($info as $k=\x26gt;$v) { $this-\x26gt;$k = $v; } } } } return $this; } public function push(string $message = \x27\x27, callable $call=null) { if ($call)$call($this); $msg = array( \x27位置 : \x27.",
+    "inLanguage" : "en-us",
+    "author" : "smoke",
+    "creator" : "smoke",
+    "publisher": "smoke",
+    "accountablePerson" : "smoke",
+    "copyrightHolder" : "smoke",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-11-30 13:10:08 \x2b0800 CST",
+    "dateModified" : "2019-11-30 13:10:08 \x2b0800 CST",
+    "url" : "\/blog\/php\/temegram-php-message\/",
+    "wordCount" : "164",
+    "keywords" : [  "smoke"]
+}
+</script>
+
+</head>
+
+  
+
+
+<link href="/css/awesome.min.css" type="application/rss+xml" />
+<script src="/js/jquery.min.js" async=""></script>
+<script src="/js/autoload.js" async=""></script>
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="">smoke</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/blog/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="">smoke</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/blog/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Temegram Php Message</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="" rel="author">smoke</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-11-30 itemprop="datePublished">November 30, 2019</time>
+                </span>
+                in
+                
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h2 id="telegram-php">telegram php</h2>
+
+<pre><code class="language-php">
+&lt;?php
+
+namespace App\Repositories;
+
+
+use GuzzleHttp\Client;
+use GuzzleHttp\Psr7\Response;
+use Illuminate\Support\Facades\Log;
+
+// 申请bot,建立订阅通道，建立组，管理订阅通道和组，将bot拉入组内
+class TelegramRepository extends BaseRepository
+{
+
+    static public $curl;
+    protected $list;
+    public $id, $first_name;
+    public function __construct(){
+        if (!self::$curl)
+            self::$curl = new Client(['base_uri' =&gt; &quot;https://api.telegram.org/bot&quot;.config('other.telegram').&quot;/&quot;]);
+    }
+
+
+    public function make() {
+        $result = self::$curl-&gt;get(&quot;getUpdates&quot;, ['verify' =&gt; false]);
+        $this-&gt;list = $result-&gt;getBody()-&gt;getContents();
+        return $this;
+    }
+
+
+    public function one($index=0, $field='chat') {
+        if ($this-&gt;list) {
+            $data = json_decode($this-&gt;list, true);
+            if (is_array($data)) {
+                if (isset($data['result'][$index])) {
+                    //chat针对组
+                    $info = $data['result'][$index]['message'][$field];
+                    foreach ($info as $k=&gt;$v) {
+                        $this-&gt;$k = $v;
+                    }
+                }
+            }
+        }
+        return $this;
+    }
+
+    public function push(string $message = '', callable $call=null) {
+
+       if ($call)$call($this);
+       $msg = array(
+           '位置 : '.get_called_class(),
+           '时间 : '.date(&quot;Y-m-d H:i:s&quot;),
+           '事件 : '.$message
+       );
+       $request = [
+           'query'  =&gt; [
+               'chat_id'    =&gt; $this-&gt;id,
+               'text'       =&gt; join(PHP_EOL,$msg),
+               ],
+           'verify' =&gt; false
+       ];
+       $result = self::$curl-&gt;post(&quot;sendMessage&quot;, $request);
+       $status = $result-&gt;getStatusCode();
+
+       if ($status != 200) Log::notice(&quot;telegram 发送失败.&quot;);
+
+    }
+
+
+
+    // 快捷执行
+    public function execute(string $message='', int $index=0) {
+
+        $this-&gt;make()-&gt;one($index)-&gt;push($message);
+        //$this-&gt;push($message, function (&amp;$self) use($index) {$self-&gt;make()-&gt;one($index);});
+
+    }
+}
+
+</code></pre>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>smoke </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=/blog/php/temegram-php-message/>/blog/php/temegram-php-message/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                #
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="/blog/other/risk-control-safe-rule/" class="prev" rel="prev" title="Risk Control Safe Rule"><i class="iconfont icon-left"></i>&nbsp;Risk Control Safe Rule</a>
+         
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="">smoke</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

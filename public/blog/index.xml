@@ -6,10 +6,19 @@
     <description>Recent content in Blogs on smoke</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 19 Nov 2019 18:32:56 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 30 Nov 2019 13:10:08 +0800</lastBuildDate>
     
 	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Temegram Php Message</title>
+      <link>/blog/php/temegram-php-message/</link>
+      <pubDate>Sat, 30 Nov 2019 13:10:08 +0800</pubDate>
+      
+      <guid>/blog/php/temegram-php-message/</guid>
+      <description>telegram php &amp;lt;?php namespace App\Repositories; use GuzzleHttp\Client; use GuzzleHttp\Psr7\Response; use Illuminate\Support\Facades\Log; // 申请bot,建立订阅通道，建立组，管理订阅通道和组，将bot拉入组内 class TelegramRepository extends BaseRepository { static public $curl; protected $list; public $id, $first_name; public function __construct(){ if (!self::$curl) self::$curl = new Client([&#39;base_uri&#39; =&amp;gt; &amp;quot;https://api.telegram.org/bot&amp;quot;.config(&#39;other.telegram&#39;).&amp;quot;/&amp;quot;]); } public function make() { $result = self::$curl-&amp;gt;get(&amp;quot;getUpdates&amp;quot;, [&#39;verify&#39; =&amp;gt; false]); $this-&amp;gt;list = $result-&amp;gt;getBody()-&amp;gt;getContents(); return $this; } public function one($index=0, $field=&#39;chat&#39;) { if ($this-&amp;gt;list) { $data = json_decode($this-&amp;gt;list, true); if (is_array($data)) { if (isset($data[&#39;result&#39;][$index])) { //chat针对组 $info = $data[&#39;result&#39;][$index][&#39;message&#39;][$field]; foreach ($info as $k=&amp;gt;$v) { $this-&amp;gt;$k = $v; } } } } return $this; } public function push(string $message = &#39;&#39;, callable $call=null) { if ($call)$call($this); $msg = array( &#39;位置 : &#39;.</description>
+    </item>
     
     <item>
       <title>Risk Control Safe Rule</title>
