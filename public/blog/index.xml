@@ -6,10 +6,19 @@
     <description>Recent content in Blogs on smoke</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 30 Nov 2019 13:10:08 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 02 Dec 2019 13:13:13 +0800</lastBuildDate>
     
 	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>位运算</title>
+      <link>/blog/go/%E4%BD%8D%E8%BF%90%E7%AE%97/</link>
+      <pubDate>Mon, 02 Dec 2019 13:13:13 +0800</pubDate>
+      
+      <guid>/blog/go/%E4%BD%8D%E8%BF%90%E7%AE%97/</guid>
+      <description> 位运算 A = 0011 1100 B = 0000 1101 假定 A 为60, B 为13: 按位与 : A &amp;amp; B = 12 ==&amp;gt; 二进制 : 0000 1100 (A和B相对应的位置有一个为0, 该位置即为 0, 其他维持为1) 按位或 : A | B = 61 ==&amp;gt; 二进制 : 0011 1101 (A和B相对应的位置有一个为1, 该位置即为 1, 其他维持为0) 按位异或 : A ^ B = 49 ==&amp;gt; 二进制 : 0011 0001 (A和B相对应的位置2个都为1, 该位置即为0, 其他维持0或1) 左移运算 : A &amp;lt;&amp;lt; 2 = 240 ==&amp;gt; 二进制 : 1111 0000 (A的二进制位置向左移动2位, 右侧如果是1丢弃) 右移运算 : A &amp;gt;&amp;gt; 2 = 15 ==&amp;gt; 二进制 : 0000 1111 (A的二进制位置向右移动2位, 左侧补0, 右侧0省略) &amp;lt;&amp;lt;=	左移后赋值	C &amp;lt;&amp;lt;= 2 等于 C = C &amp;lt;&amp;lt; 2 &amp;gt;&amp;gt;=	右移后赋值	C &amp;gt;&amp;gt;= 2 等于 C = C &amp;gt;&amp;gt; 2 &amp;amp;=	按位与后赋值	C &amp;amp;= 2 等于 C = C &amp;amp; 2 ^=	按位异或后赋值	C ^= 2 等于 C = C ^ 2 |=	按位或后赋值	C |= 2 等于 C = C | 2  </description>
+    </item>
     
     <item>
       <title>Temegram Php Message</title>

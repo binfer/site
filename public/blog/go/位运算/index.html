@@ -9,9 +9,9 @@
   <meta name="description" content="smoke.mvp">
   <meta name="keywords" content="smoke">
   
-  <link rel="prev" href="/blog/other/risk-control-safe-rule/" />
-  <link rel="next" href="/blog/go/%E4%BD%8D%E8%BF%90%E7%AE%97/" />
-  <link rel="canonical" href="/blog/php/temegram-php-message/" />
+  <link rel="prev" href="/blog/php/temegram-php-message/" />
+  
+  <link rel="canonical" href="/blog/go/%E4%BD%8D%E8%BF%90%E7%AE%97/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -22,10 +22,10 @@
   <title>
        
        
-           Temegram Php Message | smoke
+           位运算 | smoke
        
   </title>
-  <meta name="title" content="Temegram Php Message | smoke">
+  <meta name="title" content="位运算 | smoke">
     
   
   <link rel="stylesheet" href="/font/iconfont.css">
@@ -44,9 +44,9 @@
          "@id": ""
     },
     "articleSection" : "blog",
-    "name" : "Temegram Php Message",
-    "headline" : "Temegram Php Message",
-    "description" : "telegram php \x26lt;?php namespace App\\Repositories; use GuzzleHttp\\Client; use GuzzleHttp\\Psr7\\Response; use Illuminate\\Support\\Facades\\Log; \/\/ 申请bot,建立订阅通道，建立组，管理订阅通道和组，将bot拉入组内 class TelegramRepository extends BaseRepository { static public $curl; protected $list; public $id, $first_name; public function __construct(){ if (!self::$curl) self::$curl = new Client([\x27base_uri\x27 =\x26gt; \x26quot;https:\/\/api.telegram.org\/bot\x26quot;.config(\x27other.telegram\x27).\x26quot;\/\x26quot;]); } public function make() { $result = self::$curl-\x26gt;get(\x26quot;getUpdates\x26quot;, [\x27verify\x27 =\x26gt; false]); $this-\x26gt;list = $result-\x26gt;getBody()-\x26gt;getContents(); return $this; } public function one($index=0, $field=\x27chat\x27) { if ($this-\x26gt;list) { $data = json_decode($this-\x26gt;list, true); if (is_array($data)) { if (isset($data[\x27result\x27][$index])) { \/\/chat针对组 $info = $data[\x27result\x27][$index][\x27message\x27][$field]; foreach ($info as $k=\x26gt;$v) { $this-\x26gt;$k = $v; } } } } return $this; } public function push(string $message = \x27\x27, callable $call=null) { if ($call)$call($this); $msg = array( \x27位置 : \x27.",
+    "name" : "位运算",
+    "headline" : "位运算",
+    "description" : " 位运算 A = 0011 1100 B = 0000 1101 假定 A 为60, B 为13: 按位与 : A \x26amp; B = 12 ==\x26gt; 二进制 : 0000 1100 (A和B相对应的位置有一个为0, 该位置即为 0, 其他维持为1) 按位或 : A | B = 61 ==\x26gt; 二进制 : 0011 1101 (A和B相对应的位置有一个为1, 该位置即为 1, 其他维持为0) 按位异或 : A ^ B = 49 ==\x26gt; 二进制 : 0011 0001 (A和B相对应的位置2个都为1, 该位置即为0, 其他维持0或1) 左移运算 : A \x26lt;\x26lt; 2 = 240 ==\x26gt; 二进制 : 1111 0000 (A的二进制位置向左移动2位, 右侧如果是1丢弃) 右移运算 : A \x26gt;\x26gt; 2 = 15 ==\x26gt; 二进制 : 0000 1111 (A的二进制位置向右移动2位, 左侧补0, 右侧0省略) \x26lt;\x26lt;=\t左移后赋值\tC \x26lt;\x26lt;= 2 等于 C = C \x26lt;\x26lt; 2 \x26gt;\x26gt;=\t右移后赋值\tC \x26gt;\x26gt;= 2 等于 C = C \x26gt;\x26gt; 2 \x26amp;=\t按位与后赋值\tC \x26amp;= 2 等于 C = C \x26amp; 2 ^=\t按位异或后赋值\tC ^= 2 等于 C = C ^ 2 |=\t按位或后赋值\tC |= 2 等于 C = C | 2  ",
     "inLanguage" : "en-us",
     "author" : "smoke",
     "creator" : "smoke",
@@ -54,10 +54,10 @@
     "accountablePerson" : "smoke",
     "copyrightHolder" : "smoke",
     "copyrightYear" : "2019",
-    "datePublished": "2019-11-30 13:10:08 \x2b0800 CST",
-    "dateModified" : "2019-11-30 13:10:08 \x2b0800 CST",
-    "url" : "\/blog\/php\/temegram-php-message\/",
-    "wordCount" : "164",
+    "datePublished": "2019-12-02 13:13:13 \x2b0800 CST",
+    "dateModified" : "2019-12-02 13:13:13 \x2b0800 CST",
+    "url" : "\/blog\/go\/%E4%BD%8D%E8%BF%90%E7%AE%97\/",
+    "wordCount" : "145",
     "keywords" : [  "smoke"]
 }
 </script>
@@ -120,11 +120,11 @@
       		
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">Temegram Php Message</h1>
+        <h1 class="post-title" itemprop="name headline">位运算</h1>
         <div class="post-meta">
                 Written by <a itemprop="name" href="" rel="author">smoke</a> with ♥ 
                 <span class="post-time">
-                on <time datetime=2019-11-30 itemprop="datePublished">November 30, 2019</time>
+                on <time datetime=2019-12-02 itemprop="datePublished">December 2, 2019</time>
                 </span>
                 in
                 
@@ -148,86 +148,28 @@
 
           
 
-<h2 id="telegram-php">telegram php</h2>
+<h3 id="位运算">位运算</h3>
 
-<pre><code class="language-php">
-&lt;?php
+<pre><code class="language-go">
+A = 0011 1100
+B = 0000 1101
+假定 A 为60,  B 为13:
 
-namespace App\Repositories;
+按位与      : A &amp; B  = 12  ==&gt; 二进制  : 0000 1100     (A和B相对应的位置有一个为0, 该位置即为 0, 其他维持为1) 
 
+按位或      : A | B  = 61  ==&gt; 二进制  : 0011 1101     (A和B相对应的位置有一个为1, 该位置即为 1, 其他维持为0)
 
-use GuzzleHttp\Client;
-use GuzzleHttp\Psr7\Response;
-use Illuminate\Support\Facades\Log;
+按位异或    : A ^ B  = 49  ==&gt; 二进制  : 0011 0001     (A和B相对应的位置2个都为1, 该位置即为0, 其他维持0或1) 
 
-// 申请bot,建立订阅通道，建立组，管理订阅通道和组，将bot拉入组内
-class TelegramRepository extends BaseRepository
-{
+左移运算    : A &lt;&lt; 2 = 240 ==&gt; 二进制  : 1111 0000     (A的二进制位置向左移动2位, 右侧如果是1丢弃)
 
-    static public $curl;
-    protected $list;
-    public $id, $first_name;
-    public function __construct(){
-        if (!self::$curl)
-            self::$curl = new Client(['base_uri' =&gt; &quot;https://api.telegram.org/bot&quot;.config('other.telegram').&quot;/&quot;]);
-    }
+右移运算    : A &gt;&gt; 2 = 15  ==&gt; 二进制  : 0000 1111     (A的二进制位置向右移动2位, 左侧补0, 右侧0省略)
 
-
-    public function make() {
-        $result = self::$curl-&gt;get(&quot;getUpdates&quot;, ['verify' =&gt; false]);
-        $this-&gt;list = $result-&gt;getBody()-&gt;getContents();
-        return $this;
-    }
-
-
-    public function one($index=0, $field='chat') {
-        if ($this-&gt;list) {
-            $data = json_decode($this-&gt;list, true);
-            if (is_array($data)) {
-                if (isset($data['result'][$index])) {
-                    //chat针对组
-                    $info = $data['result'][$index]['message'][$field];
-                    foreach ($info as $k=&gt;$v) {
-                        $this-&gt;$k = $v;
-                    }
-                }
-            }
-        }
-        return $this;
-    }
-
-    public function push(string $message = '', callable $call=null) {
-
-       if ($call)$call($this);
-       $msg = array(
-           '位置 : '.get_called_class(),
-           '时间 : '.date(&quot;Y-m-d H:i:s&quot;),
-           '事件 : '.$message
-       );
-       $request = [
-           'query'  =&gt; [
-               'chat_id'    =&gt; $this-&gt;id,
-               'text'       =&gt; join(PHP_EOL,$msg),
-               ],
-           'verify' =&gt; false
-       ];
-       $result = self::$curl-&gt;post(&quot;sendMessage&quot;, $request);
-       $status = $result-&gt;getStatusCode();
-
-       if ($status != 200) Log::notice(&quot;telegram 发送失败.&quot;);
-
-    }
-
-
-
-    // 快捷执行
-    public function execute(string $message='', int $index=0) {
-
-        $this-&gt;make()-&gt;one($index)-&gt;push($message);
-        //$this-&gt;push($message, function (&amp;$self) use($index) {$self-&gt;make()-&gt;one($index);});
-
-    }
-}
+&lt;&lt;=	    左移后赋值	        C &lt;&lt;= 2     等于 C = C &lt;&lt; 2
+&gt;&gt;=	    右移后赋值	        C &gt;&gt;= 2     等于 C = C &gt;&gt; 2
+&amp;=	    按位与后赋值	        C &amp;= 2      等于 C = C &amp; 2
+^=	    按位异或后赋值	    C ^= 2      等于 C = C ^ 2
+|=	    按位或后赋值	        C |= 2      等于 C = C | 2
 
 </code></pre>
 
@@ -244,7 +186,7 @@ class TelegramRepository extends BaseRepository
              
             <p class="copyright-item">
                     <span>Link:</span>
-                    <a href=/blog/php/temegram-php-message/>/blog/php/temegram-php-message/</span>
+                    <a href=/blog/go/%E4%BD%8D%E8%BF%90%E7%AE%97/>/blog/go/%E4%BD%8D%E8%BF%90%E7%AE%97/</span>
             </p>
             
              
@@ -265,10 +207,8 @@ class TelegramRepository extends BaseRepository
 
     <div class="post-nav">
         
-        <a href="/blog/other/risk-control-safe-rule/" class="prev" rel="prev" title="Risk Control Safe Rule"><i class="iconfont icon-left"></i>&nbsp;Risk Control Safe Rule</a>
+        <a href="/blog/php/temegram-php-message/" class="prev" rel="prev" title="Temegram Php Message"><i class="iconfont icon-left"></i>&nbsp;Temegram Php Message</a>
          
-        
-        <a href="/blog/go/%E4%BD%8D%E8%BF%90%E7%AE%97/" class="next" rel="next" title="位运算">位运算&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 
