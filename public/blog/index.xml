@@ -6,10 +6,20 @@
     <description>Recent content in Blogs on smoke</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 Dec 2019 13:22:29 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 03 Dec 2019 13:58:19 +0800</lastBuildDate>
     
 	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Vim</title>
+      <link>/blog/linux/vim/</link>
+      <pubDate>Tue, 03 Dec 2019 13:58:19 +0800</pubDate>
+      
+      <guid>/blog/linux/vim/</guid>
+      <description>vim自定义模板 .vimrc
+&amp;quot;##### 拷贝后保存为 .vimrc，替换到系统中 &amp;quot;============================================================================== &amp;quot; 处理 Gnome 终端不能使用 alt 快捷键 &amp;quot; 参考：http://landcareweb.com/questions/8623/altjian-kuai-jie-jian-bu-gua-yong-yu-dai-you-vimde-gnomezhong-duan &amp;quot;============================================================================== let c=&#39;a&#39; while c &amp;lt;= &#39;z&#39; exec &amp;quot;set &amp;lt;A-&amp;quot;.c.&amp;quot;&amp;gt;=\e&amp;quot;.c exec &amp;quot;imap \e&amp;quot;.c.&amp;quot; &amp;lt;A-&amp;quot;.c.&amp;quot;&amp;gt;&amp;quot; let c = nr2char(1+char2nr(c)) endw set timeout ttimeoutlen=50 &amp;quot;============================================================================== &amp;quot; vim 内置配置 &amp;quot;============================================================================== &amp;quot; 设置 vimrc 修改保存后立刻生效，不用在重新打开 &amp;quot; 建议配置完成后将这个关闭，否则配置多了之后会很卡 &amp;quot; autocmd BufWritePost $MYVIMRC source $MYVIMRC &amp;quot; 关闭兼容模式 set nocompatible set number &amp;quot; 设置绝对行号 set relativenumber &amp;quot; 设置相对行号 set cursorline &amp;quot;突出显示当前行 &amp;quot; set cursorcolumn &amp;quot; 突出显示当前列 set showmatch &amp;quot; 显示括号匹配 set showcmd &amp;quot; 显示未完成命令 set nowrap &amp;quot; 设置不自动换行 &amp;quot; tab 缩进 set tabstop=4 &amp;quot; 设置Tab长度为4空格 set shiftwidth=4 &amp;quot; 设置自动缩进长度为4空格 set autoindent &amp;quot; 继承前一行的缩进方式，适用于多行注释 &amp;quot; 定义快捷键的前缀，即&amp;lt;Leader&amp;gt; &amp;quot; let mapleader=&amp;quot;;&amp;quot; &amp;quot; 自定义快捷键 &amp;quot; ==== 系统剪切板复制粘贴 ==== &amp;quot; v 模式下复制内容到系统剪切板 vmap &amp;lt;M-c&amp;gt; &amp;quot;+yy &amp;quot; n 模式下复制一行到系统剪切板 nmap &amp;lt;M-c&amp;gt; &amp;quot;+yy &amp;quot; n 模式下粘贴系统剪切板的内容 nmap &amp;lt;M-v&amp;gt; &amp;quot;+p &amp;quot; 修改默认的区域切换如ctrl+w+h 奇幻到左侧， 依次是 左右上下 nmap &amp;lt;M-h&amp;gt; &amp;lt;C-w&amp;gt;h nmap &amp;lt;M-l&amp;gt; &amp;lt;C-w&amp;gt;l nmap &amp;lt;M-k&amp;gt; &amp;lt;C-w&amp;gt;k nmap &amp;lt;M-j&amp;gt; &amp;lt;C-w&amp;gt;j &amp;quot;开启实时搜索 set incsearch &amp;quot; 搜索时大小写不敏感 set ignorecase syntax enable syntax on &amp;quot; 开启文件类型侦测 filetype plugin indent on &amp;quot; 启用自动补全 &amp;quot; 退出插入模式指定类型的文件自动保存 au InsertLeave *.</description>
+    </item>
     
     <item>
       <title>Grpc Go Use Builder</title>
@@ -105,10 +115,14 @@ the main thing is the intention
       <description>  use Go
  Gofer框架 - (文档)[https://goframe.org/index]
 Micro框架
+ PHP
+ Mini探针
  Other project
  markdown使用 
 github中文文档收集
 苹果超级签名开发demo
+ System
+ manjaro-xfce-18.1.3-191114-linux53.iso linux系统版本
   </description>
     </item>
     
