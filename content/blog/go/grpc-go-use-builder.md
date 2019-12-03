@@ -4,6 +4,31 @@ date: 2019-12-03T13:22:29+08:00
 ---
 #### 使用grpc
 
+[https://github.com/binfer-go/example-grpc](https://github.com/binfer-go/example-grpc)
+
+Proto
+```proto
+//命令 protoc --go_out=plugins=grpc:. .\router.proto
+
+syntax = "proto3";
+
+package proto;
+service RouteGuide{
+    rpc Getfeature(Point) returns (Feature) {}                  // 普通
+    rpc ListFeatures(Point) returns (stream Feature) {}         // 服务流
+    rpc RecordRoute(stream Point) returns (Feature) {}          // 客户端流
+    rpc RouteChat(stream Point) returns (stream Feature){}      // 双向流
+}
+message Point {
+    int32 latitude  = 1;
+    int32 longitude = 2;
+}
+message Feature{
+    int32 id = 1;
+    bytes data = 2;
+}
+```
+
 1. 简单RPC
 
 ```go

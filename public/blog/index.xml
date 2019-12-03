@@ -17,8 +17,9 @@
       <pubDate>Tue, 03 Dec 2019 13:22:29 +0800</pubDate>
       
       <guid>/blog/go/grpc-go-use-builder/</guid>
-      <description>使用grpc  简单RPC
-// 服务端 var port = &amp;quot;:9900&amp;quot; type routeGuideServer struct { //pb proto.UnimplementedRouteGuideServer } func (router *routeGuideServer) Getfeature(ctx context.Context, point *proto.Point) (*proto.Feature, error) { fmt.Println(&amp;quot;------ getfeature:&amp;quot;, point.Longitude, point.Latitude) return &amp;amp;proto.Feature{Message:&amp;quot;getfeature&amp;quot;}, nil } func main() { server, err := net.Listen(&amp;quot;tcp&amp;quot;, &amp;quot;127.0.0.1&amp;quot; + port) if err != nil { log.Fatalf(&amp;quot;tcp listen error: %s \n&amp;quot;, err) } grpcServer := grpc.NewServer() proto.RegisterRouteGuideServer(grpcServer, &amp;amp;routeGuideServer{}) _ = grpcServer.Serve(server) } // 客户端 const ( address = &amp;quot;localhost:9900&amp;quot; ) func main() { ctx, _ := context.</description>
+      <description>使用grpc https://github.com/binfer-go/example-grpc
+Proto
+//命令 protoc --go_out=plugins=grpc:. .\router.proto syntax = &amp;quot;proto3&amp;quot;; package proto; service RouteGuide{ rpc Getfeature(Point) returns (Feature) {} // 普通 rpc ListFeatures(Point) returns (stream Feature) {} // 服务流 rpc RecordRoute(stream Point) returns (Feature) {} // 客户端流 rpc RouteChat(stream Point) returns (stream Feature){} // 双向流 } message Point { int32 latitude = 1; int32 longitude = 2; } message Feature{ int32 id = 1; bytes data = 2; }   简单RPC</description>
     </item>
     
     <item>
