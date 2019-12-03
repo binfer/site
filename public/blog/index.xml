@@ -6,10 +6,32 @@
     <description>Recent content in Blogs on smoke</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Dec 2019 13:13:13 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 03 Dec 2019 13:22:29 +0800</lastBuildDate>
     
 	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Grpc Go Use Builder</title>
+      <link>/blog/go/grpc-go-use-builder/</link>
+      <pubDate>Tue, 03 Dec 2019 13:22:29 +0800</pubDate>
+      
+      <guid>/blog/go/grpc-go-use-builder/</guid>
+      <description>使用grpc  简单RPC
+// 服务端 var port = &amp;quot;:9900&amp;quot; type routeGuideServer struct { //pb proto.UnimplementedRouteGuideServer } func (router *routeGuideServer) Getfeature(ctx context.Context, point *proto.Point) (*proto.Feature, error) { fmt.Println(&amp;quot;------ getfeature:&amp;quot;, point.Longitude, point.Latitude) return &amp;amp;proto.Feature{Message:&amp;quot;getfeature&amp;quot;}, nil } func main() { server, err := net.Listen(&amp;quot;tcp&amp;quot;, &amp;quot;127.0.0.1&amp;quot; + port) if err != nil { log.Fatalf(&amp;quot;tcp listen error: %s \n&amp;quot;, err) } grpcServer := grpc.NewServer() proto.RegisterRouteGuideServer(grpcServer, &amp;amp;routeGuideServer{}) _ = grpcServer.Serve(server) } // 客户端 const ( address = &amp;quot;localhost:9900&amp;quot; ) func main() { ctx, _ := context.</description>
+    </item>
+    
+    <item>
+      <title>Self Meditation Thoughts Collect</title>
+      <link>/blog/other/self-meditation-thoughts-collect/</link>
+      <pubDate>Tue, 03 Dec 2019 10:50:45 +0800</pubDate>
+      
+      <guid>/blog/other/self-meditation-thoughts-collect/</guid>
+      <description>冥想杂念收集记录 ···
+[时间] 2019-12-03 10:51:38 [状态] 昏沉 [杂念] 1. 小说情节 2. 烤肠 3. 女生面孔 4. 食堂规则 5. 收集杂念本身 6. 医院(陪同父亲)  ···
+···
+ ···</description>
+    </item>
     
     <item>
       <title>位运算</title>

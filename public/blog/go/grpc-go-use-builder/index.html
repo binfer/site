@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="smoke">
+  <meta name="description" content="smoke.mvp">
+  <meta name="keywords" content="smoke">
+  
+  <link rel="prev" href="/blog/other/self-meditation-thoughts-collect/" />
+  
+  <link rel="canonical" href="/blog/go/grpc-go-use-builder/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Grpc Go Use Builder | smoke
+       
+  </title>
+  <meta name="title" content="Grpc Go Use Builder | smoke">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": ""
+    },
+    "articleSection" : "blog",
+    "name" : "Grpc Go Use Builder",
+    "headline" : "Grpc Go Use Builder",
+    "description" : "使用grpc  简单RPC\n\/\/ 服务端 var port = \x26quot;:9900\x26quot; type routeGuideServer struct { \/\/pb proto.UnimplementedRouteGuideServer } func (router *routeGuideServer) Getfeature(ctx context.Context, point *proto.Point) (*proto.Feature, error) { fmt.Println(\x26quot;------ getfeature:\x26quot;, point.Longitude, point.Latitude) return \x26amp;proto.Feature{Message:\x26quot;getfeature\x26quot;}, nil } func main() { server, err := net.Listen(\x26quot;tcp\x26quot;, \x26quot;127.0.0.1\x26quot; \x2b port) if err != nil { log.Fatalf(\x26quot;tcp listen error: %s \\n\x26quot;, err) } grpcServer := grpc.NewServer() proto.RegisterRouteGuideServer(grpcServer, \x26amp;routeGuideServer{}) _ = grpcServer.Serve(server) } \/\/ 客户端 const ( address = \x26quot;localhost:9900\x26quot; ) func main() { ctx, _ := context.",
+    "inLanguage" : "en-us",
+    "author" : "smoke",
+    "creator" : "smoke",
+    "publisher": "smoke",
+    "accountablePerson" : "smoke",
+    "copyrightHolder" : "smoke",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-12-03 13:22:29 \x2b0800 CST",
+    "dateModified" : "2019-12-03 13:22:29 \x2b0800 CST",
+    "url" : "\/blog\/go\/grpc-go-use-builder\/",
+    "wordCount" : "547",
+    "keywords" : [  "smoke"]
+}
+</script>
+
+</head>
+
+  
+
+
+<link href="/css/awesome.min.css" type="application/rss+xml" />
+<script src="/js/jquery.min.js" async=""></script>
+<script src="/js/autoload.js" async=""></script>
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="">smoke</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/blog/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="">smoke</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/blog/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Grpc Go Use Builder</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="" rel="author">smoke</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-12-03 itemprop="datePublished">December 3, 2019</time>
+                </span>
+                in
+                
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h4 id="使用grpc">使用grpc</h4>
+
+<ol>
+<li><p>简单RPC</p>
+
+<pre><code class="language-go">// 服务端
+var port = &quot;:9900&quot;
+
+type routeGuideServer struct {
+	//pb proto.UnimplementedRouteGuideServer
+}
+
+func (router *routeGuideServer) Getfeature(ctx context.Context, point  *proto.Point) (*proto.Feature, error) {
+	fmt.Println(&quot;------ getfeature:&quot;, point.Longitude, point.Latitude)
+	return &amp;proto.Feature{Message:&quot;getfeature&quot;}, nil
+}
+func main()  {
+
+	server, err := net.Listen(&quot;tcp&quot;, &quot;127.0.0.1&quot; + port)
+	if err != nil {
+		log.Fatalf(&quot;tcp listen error: %s \n&quot;, err)
+	}
+	grpcServer := grpc.NewServer()
+	proto.RegisterRouteGuideServer(grpcServer, &amp;routeGuideServer{})
+	_ = grpcServer.Serve(server)
+}
+
+
+// 客户端
+const (
+	address     = &quot;localhost:9900&quot;
+)
+func main() {
+
+	ctx, _ := context.WithTimeout(context.TODO(), time.Second)
+	conn, err := grpc.DialContext(ctx, address, grpc.WithInsecure())
+	if err != nil {
+		log.Fatalf(&quot;client server error: %s \n&quot;, err)
+	}
+	defer conn.Close()
+	routeServe := proto.NewRouteGuideClient(conn)
+	feature, err := routeServe.Getfeature(context.Background())
+	if err != nil {
+		log.Printf(&quot;client feature error: %s \n&quot;, err)
+	}
+	fmt.Println(feature)
+
+}
+
+</code></pre></li>
+
+<li><p>服务器流式 RPC</p>
+
+<pre><code class="language-go">// 服务端
+
+func (router *routeGuideServer) ListFeatures(point *proto.Point, server proto.RouteGuide_ListFeaturesServer) error {
+	fmt.Println(&quot;------ listfeature:&quot;, point.Latitude, point.Longitude, server.Context())
+	_ = server.Send(&amp;proto.Feature{Message: &quot;listfeature&quot;})
+	_ = server.RecvMsg(nil)
+	return nil
+}
+func main()  {
+	server, err := net.Listen(&quot;tcp&quot;, &quot;127.0.0.1&quot; + port)
+	if err != nil {
+		log.Fatalf(&quot;tcp listen error: %s \n&quot;, err)
+	}
+	grpcServer := grpc.NewServer()
+	proto.RegisterRouteGuideServer(grpcServer, &amp;routeGuideServer{})
+	_ = grpcServer.Serve(server)
+}
+
+// 客户端
+const (
+	address     = &quot;localhost:9900&quot;
+)
+func main() {
+	ctx, _ := context.WithTimeout(context.TODO(), time.Second)
+	conn, err := grpc.DialContext(ctx, address, grpc.WithInsecure())
+	if err != nil {
+		log.Fatalf(&quot;client server error: %s \n&quot;, err)
+	}
+	defer conn.Close()
+	routeServe := proto.NewRouteGuideClient(conn)
+	feature, err := routeServe.RecordRoute(context.Background())
+	if err != nil {
+		log.Printf(&quot;client feature error: %s \n&quot;, err)
+	}
+	_ = feature.Send(&amp;proto.Point{
+		Latitude:             111,
+		Longitude:            222,
+		XXX_NoUnkeyedLiteral: struct{}{},
+		XXX_unrecognized:     nil,
+		XXX_sizecache:        0,
+	})
+	fmt.Println(feature.Recv())
+}
+</code></pre></li>
+
+<li><p>客户端流式 RPC</p>
+
+<pre><code class="language-go">// 服务端
+func (router *routeGuideServer) RecordRoute(stream proto.RouteGuide_RecordRouteServer) error {
+	fmt.Println(&quot;------ recordRoute:&quot;)
+	point, err := stream.Recv()
+	if err == io.EOF {
+		_ = stream.SendAndClose(&amp;proto.Feature{
+			Message:              &quot;hello world&quot;,
+			XXX_NoUnkeyedLiteral: struct{}{},
+			XXX_unrecognized:     nil,
+			XXX_sizecache:        0,
+		})
+	}
+	fmt.Println(&quot;=======&quot;, point)
+	return nil
+}
+func main()  {
+	server, err := net.Listen(&quot;tcp&quot;, &quot;127.0.0.1&quot; + port)
+	if err != nil {
+		log.Fatalf(&quot;tcp listen error: %s \n&quot;, err)
+	}
+	grpcServer := grpc.NewServer()
+	proto.RegisterRouteGuideServer(grpcServer, &amp;routeGuideServer{})
+	_ = grpcServer.Serve(server)
+}
+
+
+// 客户端
+func main() {
+	ctx, _ := context.WithTimeout(context.TODO(), time.Second)
+	conn, err := grpc.DialContext(ctx, address, grpc.WithInsecure())
+	if err != nil {
+		log.Fatalf(&quot;client server error: %s \n&quot;, err)
+	}
+	defer conn.Close()
+	routeServe := proto.NewRouteGuideClient(conn)
+	feature, err := routeServe.RecordRoute(context.Background())
+	if err != nil {
+		log.Printf(&quot;client feature error: %s \n&quot;, err)
+	}
+	_ = feature.Send(&amp;proto.Point{
+		Latitude:             111,
+		Longitude:            222,
+		XXX_NoUnkeyedLiteral: struct{}{},
+		XXX_unrecognized:     nil,
+		XXX_sizecache:        0,
+	})
+	fmt.Println(feature)
+
+}
+</code></pre></li>
+
+<li><p>双向流式 RPC</p>
+
+<pre><code class="language-go">
+// 服务端
+func (router *routeGuideServer) RouteChat(stream proto.RouteGuide_RouteChatServer) error {
+	fmt.Println(&quot;------ routeChat:&quot;)
+	point, err := stream.Recv()
+	if err != nil {
+		return err
+	}
+	if err == io.EOF {
+		_ = stream.Send(&amp;proto.Feature{
+			Id:                   1,
+			Data:                 byte(1),
+			XXX_NoUnkeyedLiteral: struct{}{},
+			XXX_unrecognized:     nil,
+			XXX_sizecache:        0,
+		})
+	}
+	fmt.Println(&quot;=====&quot;, point)
+	_ = stream.Send(&amp;proto.Feature{
+		Message:              &quot;hello ~~~~~&quot;,
+		XXX_NoUnkeyedLiteral: struct{}{},
+		XXX_unrecognized:     nil,
+		XXX_sizecache:        0,
+	})
+	return nil
+}
+func main()  {
+	server, err := net.Listen(&quot;tcp&quot;, &quot;127.0.0.1&quot; + port)
+	if err != nil {
+		log.Fatalf(&quot;tcp listen error: %s \n&quot;, err)
+	}
+	grpcServer := grpc.NewServer()
+	proto.RegisterRouteGuideServer(grpcServer, &amp;routeGuideServer{})
+	_ = grpcServer.Serve(server)
+}
+
+
+// 客户端
+func main() {
+	ctx, _ := context.WithTimeout(context.TODO(), time.Second)
+	conn, err := grpc.DialContext(ctx, address, grpc.WithInsecure())
+	if err != nil {
+		log.Fatalf(&quot;client server error: %s \n&quot;, err)
+	}
+	defer conn.Close()
+	routeServe := proto.NewRouteGuideClient(conn)
+	feature, err := routeServe.RouteChat(context.Background())
+	if err != nil {
+		log.Printf(&quot;client feature error: %s \n&quot;, err)
+	}
+	_ = feature.Send(&amp;proto.Point{
+		Latitude:             111,
+		Longitude:            222,
+		XXX_NoUnkeyedLiteral: struct{}{},
+		XXX_unrecognized:     nil,
+		XXX_sizecache:        0,
+	})
+	fmt.Println(feature.Recv())
+}
+
+</code></pre></li>
+</ol>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>smoke </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=/blog/go/grpc-go-use-builder/>/blog/go/grpc-go-use-builder/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                #
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="/blog/other/self-meditation-thoughts-collect/" class="prev" rel="prev" title="Self Meditation Thoughts Collect"><i class="iconfont icon-left"></i>&nbsp;Self Meditation Thoughts Collect</a>
+         
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="">smoke</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>
