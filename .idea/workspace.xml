@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c32945a-7494-489a-b97b-8292736505f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/content/blog/linux/vim.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/blog/linux/vim/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/tool/linux/doc_2019-11-27_18-35-26.vimrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tool/linux/doc_2019-11-27_18-35-26.vimrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blog/go/grpc-go-use-builder.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blog/go/grpc-go-use-builder.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blog/other/coffee-knowledge-over.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blog/other/coffee-knowledge-over.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/blog/other/project-collect-build-lists-useSmoke.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blog/other/project-collect-build-lists-useSmoke.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/blog/go/grpc-go-use-builder/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/go/grpc-go-use-builder/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/blog/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/sitemap.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blog/other/self-meditation-thoughts-collect.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blog/other/self-meditation-thoughts-collect.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/LeaveIt" beforeDir="false" afterPath="$PROJECT_DIR$/themes/LeaveIt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/LeaveIt/layouts/partials/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/LeaveIt/layouts/partials/head.html" afterDir="false" />
     </list>
@@ -53,6 +47,7 @@
       <recent name="E:\go\site\static\images\flow" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\go\site\static\tool" />
       <recent name="E:\go\site\public\tool\php" />
       <recent name="E:\go\site\static\tool\linux" />
       <recent name="E:\go\site" />

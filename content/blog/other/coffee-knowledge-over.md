@@ -47,3 +47,34 @@ date: 2019-11-19T10:21:03+08:00
  香醇: 哥伦比亚美特宁、摩卡、蓝山、危地马拉、哥斯达黎加 。
 ~~~~
 
+···
+
+| Tables        |      Are      |   Cool |
+| ------------- | :-----------: | -----: |
+| col 3 is      | right-aligned | \$1600 |
+| col 2 is      |   centered    |   \$12 |
+| zebra stripes |   are neat    |    \$1 |
+
+
+<div id="htmldemo"></div>
+<style>
+  #htmldemo {
+    height: 30px;
+    width: 30px;
+    background-color: #00aa9a;
+    animation-name: moveX;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+  }
+  @keyframes moveX {
+    0% {
+      transform: translateX(1px);
+    }
+    100% {
+      transform: translateX(800px);
+    }
+  }
+</style>

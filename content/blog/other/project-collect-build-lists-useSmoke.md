@@ -23,6 +23,8 @@ date: 2019-11-18T13:40:16+08:00
 
 >>  [苹果超级签名开发demo](https://github.com/iizvv/its/blob/master/apple.py)
 
+>>  [https://geekprank.com/blue-death/](https://geekprank.com/blue-death/)
+
 > System
 >
 >>  manjaro-xfce-18.1.3-191114-linux53.iso   linux系统版本

@@ -131,7 +131,8 @@ func (router *routeGuideServer) RecordRoute(stream proto.RouteGuide_RecordRouteS
 	point, err := stream.Recv()
 	if err == io.EOF {
 		_ = stream.SendAndClose(&proto.Feature{
-			Message:              "hello world",
+            Id:                   1,  
+			Data:                 []byte("hello"),
 			XXX_NoUnkeyedLiteral: struct{}{},
 			XXX_unrecognized:     nil,
 			XXX_sizecache:        0,
@@ -188,7 +189,7 @@ func (router *routeGuideServer) RouteChat(stream proto.RouteGuide_RouteChatServe
 	if err == io.EOF {
 		_ = stream.Send(&proto.Feature{
 			Id:                   1,
-			Data:                 byte(1),
+			Data:                 []byte("hello"),
 			XXX_NoUnkeyedLiteral: struct{}{},
 			XXX_unrecognized:     nil,
 			XXX_sizecache:        0,
@@ -196,7 +197,8 @@ func (router *routeGuideServer) RouteChat(stream proto.RouteGuide_RouteChatServe
 	}
 	fmt.Println("=====", point)
 	_ = stream.Send(&proto.Feature{
-		Message:              "hello ~~~~~",
+		Id:                   1,  
+        Data:                 []byte("hello"),
 		XXX_NoUnkeyedLiteral: struct{}{},
 		XXX_unrecognized:     nil,
 		XXX_sizecache:        0,

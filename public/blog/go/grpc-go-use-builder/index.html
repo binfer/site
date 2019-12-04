@@ -57,7 +57,7 @@
     "datePublished": "2019-12-03 13:22:29 \x2b0800 CST",
     "dateModified" : "2019-12-03 13:22:29 \x2b0800 CST",
     "url" : "\/blog\/go\/grpc-go-use-builder\/",
-    "wordCount" : "615",
+    "wordCount" : "617",
     "keywords" : [  "smoke"]
 }
 </script>
@@ -279,7 +279,8 @@ func (router *routeGuideServer) RecordRoute(stream proto.RouteGuide_RecordRouteS
 	point, err := stream.Recv()
 	if err == io.EOF {
 		_ = stream.SendAndClose(&amp;proto.Feature{
-			Message:              &quot;hello world&quot;,
+        Id:                   1,  
+			Data:                 []byte(&quot;hello&quot;),
 			XXX_NoUnkeyedLiteral: struct{}{},
 			XXX_unrecognized:     nil,
 			XXX_sizecache:        0,
@@ -337,7 +338,7 @@ func (router *routeGuideServer) RouteChat(stream proto.RouteGuide_RouteChatServe
 	if err == io.EOF {
 		_ = stream.Send(&amp;proto.Feature{
 			Id:                   1,
-			Data:                 byte(1),
+			Data:                 []byte(&quot;hello&quot;),
 			XXX_NoUnkeyedLiteral: struct{}{},
 			XXX_unrecognized:     nil,
 			XXX_sizecache:        0,
@@ -345,7 +346,8 @@ func (router *routeGuideServer) RouteChat(stream proto.RouteGuide_RouteChatServe
 	}
 	fmt.Println(&quot;=====&quot;, point)
 	_ = stream.Send(&amp;proto.Feature{
-		Message:              &quot;hello ~~~~~&quot;,
+		Id:                   1,  
+    Data:                 []byte(&quot;hello&quot;),
 		XXX_NoUnkeyedLiteral: struct{}{},
 		XXX_unrecognized:     nil,
 		XXX_sizecache:        0,
