@@ -9,9 +9,9 @@
   <meta name="description" content="smoke.mvp">
   <meta name="keywords" content="smoke">
   
-  <link rel="prev" href="/blog/go/%E4%BD%8D%E8%BF%90%E7%AE%97/" />
-  <link rel="next" href="/blog/go/grpc-go-use-builder/" />
-  <link rel="canonical" href="/blog/other/self-meditation-thoughts-collect/" />
+  <link rel="prev" href="/blog/mac/clear-time-machine/" />
+  
+  <link rel="canonical" href="/blog/go/transfer-en-zh/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -22,10 +22,10 @@
   <title>
        
        
-           Self Meditation Thoughts Collect | smoke
+           Transfer en Zh | smoke
        
   </title>
-  <meta name="title" content="Self Meditation Thoughts Collect | smoke">
+  <meta name="title" content="Transfer en Zh | smoke">
     
   
   <link rel="stylesheet" href="/font/iconfont.css">
@@ -44,9 +44,9 @@
          "@id": ""
     },
     "articleSection" : "blog",
-    "name" : "Self Meditation Thoughts Collect",
-    "headline" : "Self Meditation Thoughts Collect",
-    "description" : " 冥想杂念收集记录 ···\n[时间] 2019-12-03 10:51:38 [状态] 昏沉 [杂念] 1. 小说情节 2. 烤肠 3. 女生面孔 4. 食堂规则 5. 收集杂念本身 6. 医院(陪同)  ···\n···\n[时间] 2019-12-04 10:42:18 [状态] 良好 [杂念] 1. 食堂豆腐脑 2. 奶茶 3. 马匹 4. 模糊  ···\n[时间] 2019-12-06 10:42:18 [状态] 良好 [杂念] 1. 被指责作弊 2. 杂念  ",
+    "name" : "Transfer en Zh",
+    "headline" : "Transfer en Zh",
+    "description" : "cli 翻译 package main import ( \x26quot;encoding\/xml\x26quot; \x26quot;github.com\/bndr\/gotabulate\x26quot; \x26quot;github.com\/fatih\/color\x26quot; \x26quot;fmt\x26quot; \x26quot;io\/ioutil\x26quot; \x26quot;net\/http\x26quot; \x26quot;net\/url\x26quot; \x26quot;os\x26quot; \x26quot;strings\x26quot; ) type ParseXmlData struct { XMLName xml.Name `xml:\x26quot;yodaodict\x26quot;` RawInput string `xml:\x26quot;return-phrase\x26quot;` CustomTrans CustomNode `xml:\x26quot;custom-translation\x26quot;` WebTrans WebTransList `xml:\x26quot;yodao-web-dict\x26quot;` } type CustomNode struct { Type string `xml:\x26quot;type\x26quot;` Translation []Translation `xml:\x26quot;translation\x26quot;` } type WebTransList struct { TransNode []WebTransNode `xml:\x26quot;web-translation\x26quot;` } type WebTransNode struct { Key string `xml:\x26quot;key\x26quot;` Trans []TransNode `xml:\x26quot;trans\x26quot;` } type TransNode struct { Value string `xml:\x26quot;value,CDATA\x26quot;` } type Translation struct { Content string `xml:\x26quot;content,CDATA\x26quot;` } func HttpGet(url string, ch chan []byte) { resp, err := http.",
     "inLanguage" : "en-us",
     "author" : "smoke",
     "creator" : "smoke",
@@ -54,10 +54,10 @@
     "accountablePerson" : "smoke",
     "copyrightHolder" : "smoke",
     "copyrightYear" : "2019",
-    "datePublished": "2019-12-03 10:50:45 \x2b0800 CST",
-    "dateModified" : "2019-12-03 10:50:45 \x2b0800 CST",
-    "url" : "\/blog\/other\/self-meditation-thoughts-collect\/",
-    "wordCount" : "47",
+    "datePublished": "2019-12-06 17:48:02 \x2b0800 CST",
+    "dateModified" : "2019-12-06 17:48:02 \x2b0800 CST",
+    "url" : "\/blog\/go\/transfer-en-zh\/",
+    "wordCount" : "266",
     "keywords" : [  "smoke"]
 }
 </script>
@@ -120,11 +120,11 @@
       		
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">Self Meditation Thoughts Collect</h1>
+        <h1 class="post-title" itemprop="name headline">Transfer en Zh</h1>
         <div class="post-meta">
                 Written by <a itemprop="name" href="" rel="author">smoke</a> with ♥ 
                 <span class="post-time">
-                on <time datetime=2019-12-03 itemprop="datePublished">December 3, 2019</time>
+                on <time datetime=2019-12-06 itemprop="datePublished">December 6, 2019</time>
                 </span>
                 in
                 
@@ -148,41 +148,131 @@
 
           
 
-<h4 id="冥想杂念收集记录">冥想杂念收集记录</h4>
+<h4 id="cli-翻译">cli 翻译</h4>
 
-<p>···</p>
+<pre><code class="language-go">
+package main
 
-<pre><code class="language-textmate">[时间] 2019-12-03 10:51:38
-[状态] 昏沉
-[杂念]
-    1. 小说情节
-    2. 烤肠
-    3. 女生面孔
-    4. 食堂规则
-    5. 收集杂念本身
-    6. 医院(陪同)
-</code></pre>
+import (
 
-<p>···</p>
+  &quot;encoding/xml&quot;
+  &quot;github.com/bndr/gotabulate&quot;
+  &quot;github.com/fatih/color&quot;
+  &quot;fmt&quot;
+  &quot;io/ioutil&quot;
+  &quot;net/http&quot;
+  &quot;net/url&quot;
+  &quot;os&quot;
+  &quot;strings&quot;
+)
 
-<p>···</p>
+type ParseXmlData struct {
 
-<pre><code class="language-textmate">[时间] 2019-12-04 10:42:18
-[状态] 良好
-[杂念]
-    1. 食堂豆腐脑
-    2. 奶茶
-    3. 马匹
-    4. 模糊
-</code></pre>
+  XMLName     xml.Name     `xml:&quot;yodaodict&quot;`
 
-<p>···</p>
+  RawInput    string       `xml:&quot;return-phrase&quot;`
 
-<pre><code class="language-textmate">[时间] 2019-12-06 10:42:18
-[状态] 良好
-[杂念]
-    1. 被指责作弊
-    2. 杂念
+  CustomTrans CustomNode   `xml:&quot;custom-translation&quot;`
+
+  WebTrans    WebTransList `xml:&quot;yodao-web-dict&quot;`
+
+}
+
+type CustomNode struct {
+
+  Type        string        `xml:&quot;type&quot;`
+
+  Translation []Translation `xml:&quot;translation&quot;`
+
+}
+
+type WebTransList struct {
+
+  TransNode []WebTransNode `xml:&quot;web-translation&quot;`
+
+}
+
+type WebTransNode struct {
+
+  Key   string      `xml:&quot;key&quot;`
+
+  Trans []TransNode `xml:&quot;trans&quot;`
+
+}
+
+type TransNode struct {
+
+  Value string `xml:&quot;value,CDATA&quot;`
+
+}
+
+type Translation struct {
+
+  Content string `xml:&quot;content,CDATA&quot;`
+
+}
+
+func HttpGet(url string, ch chan []byte) {
+
+  resp, err := http.Get(url)
+  if err == nil {
+    defer resp.Body.Close()
+  }
+  if err != nil {
+    color.Red(&quot;please enter ctrl+c ,request error: %s \n&quot;, err)
+  }
+  body, err := ioutil.ReadAll(resp.Body)
+  if err != nil {
+    color.Red(&quot;please enter ctrl+c ,io read error: %s \n&quot;, err)
+  }
+  ch &lt;- body
+}
+
+
+
+func main() {
+
+  args := os.Args[1:]
+
+  if len(args) &lt; 1 {
+    color.Red(&quot;please input the translation word : %s \n&quot;, &quot;---&quot;)
+    color.GreenString(&quot;example: dict hello\n\n&quot;)
+    os.Exit(0)
+  }
+  word := strings.Join(args, &quot; &quot;)
+
+  requestUrl := fmt.Sprintf(&quot;https://dict.youdao.com//fsearch?client=deskdict&amp;keyfrom=chrome.extension&amp;q=%s&amp;pos=-1&amp;doctype=xml&amp;xmlVersion=3.2&amp;dogVersion=1.0&amp;vendor=unknown&amp;appVer=3.1.17.4208&amp;le=eng&quot;, url.QueryEscape(word))
+
+  ch := make(chan []byte)
+  go HttpGet(requestUrl, ch)
+  xmlObject := ParseXmlData{}
+  _ = xml.Unmarshal(&lt;-ch, &amp;xmlObject)
+  color.Blue(&quot;**************************** [ 英汉翻译 ]****************************** %s \n\n&quot;, word)
+  for _, v := range xmlObject.CustomTrans.Translation {
+    _, _ = color.New(color.BgCyan).Add(color.Bold).Println(strings.TrimSpace(v.Content),&quot;\n&quot;)
+  }
+  color.Green(&quot;**************************** [ 网络释义 ]****************************** %s \n\n&quot;, word)
+  result := [][]string{}
+  for _, v := range xmlObject.WebTrans.TransNode {
+    key := strings.TrimSpace(v.Key)
+    for _, vv := range v.Trans {
+      value := strings.TrimSpace(vv.Value)
+      result = append(result, []string{key, value})
+      /*_, _ = color.New(color.Bold).Println(key, &quot;:\t\t\t&quot;, value)*/
+      break
+    }
+  }
+
+  // Create Object
+  tabulate := gotabulate.Create(result)
+  tabulate.SetAlign(&quot;left&quot;)
+  tabulate.SetWrapStrings(true)
+  // Set Headers
+  tabulate.SetHeaders([]string{&quot;KEY&quot;, &quot;VALUE&quot;})
+  // Render
+  _, _ = color.New(color.BgBlue).Add(color.Bold).Println(tabulate.Render(&quot;grid&quot;))
+
+}
 
 </code></pre>
 
@@ -199,7 +289,7 @@
              
             <p class="copyright-item">
                     <span>Link:</span>
-                    <a href=/blog/other/self-meditation-thoughts-collect/>/blog/other/self-meditation-thoughts-collect/</span>
+                    <a href=/blog/go/transfer-en-zh/>/blog/go/transfer-en-zh/</span>
             </p>
             
              
@@ -220,10 +310,8 @@
 
     <div class="post-nav">
         
-        <a href="/blog/go/%E4%BD%8D%E8%BF%90%E7%AE%97/" class="prev" rel="prev" title="位运算"><i class="iconfont icon-left"></i>&nbsp;位运算</a>
+        <a href="/blog/mac/clear-time-machine/" class="prev" rel="prev" title="Clear Time Machine"><i class="iconfont icon-left"></i>&nbsp;Clear Time Machine</a>
          
-        
-        <a href="/blog/go/grpc-go-use-builder/" class="next" rel="next" title="Grpc Go Use Builder">Grpc Go Use Builder&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 

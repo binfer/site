@@ -6,10 +6,33 @@
     <description>Recent content in Blogs on smoke</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Dec 2019 11:12:58 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 06 Dec 2019 17:48:02 +0800</lastBuildDate>
     
 	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Transfer en Zh</title>
+      <link>/blog/go/transfer-en-zh/</link>
+      <pubDate>Fri, 06 Dec 2019 17:48:02 +0800</pubDate>
+      
+      <guid>/blog/go/transfer-en-zh/</guid>
+      <description>cli 翻译 package main import ( &amp;quot;encoding/xml&amp;quot; &amp;quot;github.com/bndr/gotabulate&amp;quot; &amp;quot;github.com/fatih/color&amp;quot; &amp;quot;fmt&amp;quot; &amp;quot;io/ioutil&amp;quot; &amp;quot;net/http&amp;quot; &amp;quot;net/url&amp;quot; &amp;quot;os&amp;quot; &amp;quot;strings&amp;quot; ) type ParseXmlData struct { XMLName xml.Name `xml:&amp;quot;yodaodict&amp;quot;` RawInput string `xml:&amp;quot;return-phrase&amp;quot;` CustomTrans CustomNode `xml:&amp;quot;custom-translation&amp;quot;` WebTrans WebTransList `xml:&amp;quot;yodao-web-dict&amp;quot;` } type CustomNode struct { Type string `xml:&amp;quot;type&amp;quot;` Translation []Translation `xml:&amp;quot;translation&amp;quot;` } type WebTransList struct { TransNode []WebTransNode `xml:&amp;quot;web-translation&amp;quot;` } type WebTransNode struct { Key string `xml:&amp;quot;key&amp;quot;` Trans []TransNode `xml:&amp;quot;trans&amp;quot;` } type TransNode struct { Value string `xml:&amp;quot;value,CDATA&amp;quot;` } type Translation struct { Content string `xml:&amp;quot;content,CDATA&amp;quot;` } func HttpGet(url string, ch chan []byte) { resp, err := http.</description>
+    </item>
+    
+    <item>
+      <title>Clear Time Machine</title>
+      <link>/blog/mac/clear-time-machine/</link>
+      <pubDate>Thu, 05 Dec 2019 14:23:52 +0800</pubDate>
+      
+      <guid>/blog/mac/clear-time-machine/</guid>
+      <description> 清理 Time machine 本地备份以释放硬盘空间
+ 10.13之后的系统默认使用 APFS 文件格式，不能关闭本地快照。也就是说一旦你开启了 Time machine，每次备份时都会在你本地留下一份备份，日积月累占用的空间会越来越大
+ 打开“终端”输入如下代码：sudo tmutil listlocalsnapshots /
+ 接下来尝试删除第一个快照文件，后面的文件名需要根据自己的显示来改变：tmutil deletelocalsnapshots 2017-12-18-093234
+ 如果成功，你会发现磁盘空间已经空出来了不少，接下来删除全部的文件快照：sudo tmutil listlocalsnapshots /
+  </description>
+    </item>
     
     <item>
       <title>Markdown Style Part</title>
@@ -49,10 +72,11 @@ Proto
       <pubDate>Tue, 03 Dec 2019 10:50:45 +0800</pubDate>
       
       <guid>/blog/other/self-meditation-thoughts-collect/</guid>
-      <description>冥想杂念收集记录 ···
+      <description> 冥想杂念收集记录 ···
 [时间] 2019-12-03 10:51:38 [状态] 昏沉 [杂念] 1. 小说情节 2. 烤肠 3. 女生面孔 4. 食堂规则 5. 收集杂念本身 6. 医院(陪同)  ···
 ···
-[时间] 2019-12-04 10:42:18 [状态] 良好 [杂念] 1. 食堂豆腐脑 2. 奶茶 3. 马匹 4. 模糊  ···</description>
+[时间] 2019-12-04 10:42:18 [状态] 良好 [杂念] 1. 食堂豆腐脑 2. 奶茶 3. 马匹 4. 模糊  ···
+[时间] 2019-12-06 10:42:18 [状态] 良好 [杂念] 1. 被指责作弊 2. 杂念  </description>
     </item>
     
     <item>
@@ -124,19 +148,23 @@ the main thing is the intention
       <pubDate>Mon, 18 Nov 2019 13:40:16 +0800</pubDate>
       
       <guid>/blog/other/project-collect-build-lists-usesmoke/</guid>
-      <description>  use Go
- Gofer框架 - (文档)[https://goframe.org/index]
+      <description>use Go
+ Go list清单 - 开源项目列表
+Gofer框架 - (文档)[https://goframe.org/index]
 Micro框架
- PHP
- Mini探针
- Other project
- markdown使用 
-github中文文档收集
-苹果超级签名开发demo
-https://geekprank.com/blue-death/
- System
- manjaro-xfce-18.1.3-191114-linux53.iso linux系统版本
-  </description>
+Gops - 列出和诊断系统上当前正在运行的Go进程的工具
+mxget音乐 - 优雅的一站式音乐搜索、下载试听服务，支持国内所有音乐平台
+fsnotify - Cross-platform file system notifications for Go
+gopherjs - go编译为js
+caire - 图片自动分析拉伸维持库
+lile - 快速生成grpc方法和测试文件
+logrus - 格式化日志输出包
+cobra - 眼镜蛇cli交互包 / A Commander for modern Go CLI interactions
+Gocui - 命令面板工具1
+termui - 命令面板工具2
+drone - Drone 是一个基于 Docker的持续集成平台
+Gods - Go 语言数据结构、容器、集合、列表、栈、键值对、 BidiMaps、树、HashSet 等
+tile38 - Real-time Geospatial and Geofencing</description>
     </item>
     
     <item>

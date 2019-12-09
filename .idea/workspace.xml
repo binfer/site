@@ -3,10 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="0c32945a-7494-489a-b97b-8292736505f4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/blog/go/grpc-go-use-builder.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blog/go/grpc-go-use-builder.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/blog/other/coffee-knowledge-over.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blog/other/coffee-knowledge-over.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/blog/other/project-collect-build-lists-useSmoke.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blog/other/project-collect-build-lists-useSmoke.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/blog/other/self-meditation-thoughts-collect.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blog/other/self-meditation-thoughts-collect.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/blog/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/index.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/blog/other/markdown-style-part/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/other/markdown-style-part/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/blog/other/project-collect-build-lists-usesmoke/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/other/project-collect-build-lists-usesmoke/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/blog/other/self-meditation-thoughts-collect/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/other/self-meditation-thoughts-collect/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/sitemap.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/LeaveIt" beforeDir="false" afterPath="$PROJECT_DIR$/themes/LeaveIt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/LeaveIt/layouts/partials/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/LeaveIt/layouts/partials/head.html" afterDir="false" />
     </list>
@@ -36,7 +41,7 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/tool/php" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
