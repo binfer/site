@@ -2,6 +2,7 @@
 title: "Project Collect Build Lists UseSmoke"
 date: 2019-11-18T13:40:16+08:00
 ---
+#### ![*](https://img.shields.io/static/v1?label=smoke&message=<Project Collect Build Lists UseSmoke>&color=green&style=for-the-badge&logo=appveyor)
 
 > ### use
 >
@@ -56,6 +57,12 @@ date: 2019-11-18T13:40:16+08:00
 > PHP
 >
 >> [Mini探针](/tool/php/mini-x.php)
+
+
+> GITHUB
+>
+>> [readMe生成Badges](https://shields.io/)
+
 
 > Other project 
 >

@@ -2,6 +2,9 @@
 title: "Risk Control Safe Rule"
 date: 2019-11-19T18:32:56+08:00
 ---
+#### ![*](https://img.shields.io/static/v1?label=smoke&message=<Risk Control Safe Rule>&color=green&style=for-the-badge&logo=appveyor)
+
+
 ![smoke][doge]
 [smoke](/images/flow/safeflow.svg)
 

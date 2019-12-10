@@ -2,6 +2,7 @@
 title: "Vim"
 date: 2019-12-03T13:58:19+08:00
 ---
+#### ![*](https://img.shields.io/static/v1?label=smoke&message=<Vim>&color=red&style=for-the-badge&logo=appveyor) 
 
 #### vim自定义模板 
 [.vimrc](/tool/linux/doc_2019-11-27_18-35-26.vimrc)
