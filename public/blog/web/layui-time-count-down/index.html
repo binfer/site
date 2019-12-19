@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="smoke">
+  <meta name="description" content="smoke.mvp">
+  <meta name="keywords" content="smoke">
+  
+  <link rel="prev" href="/blog/go/time-ticker/" />
+  
+  <link rel="canonical" href="/blog/web/layui-time-count-down/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Layui Time Count Down | smoke
+       
+  </title>
+  <meta name="title" content="Layui Time Count Down | smoke">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": ""
+    },
+    "articleSection" : "blog",
+    "name" : "Layui Time Count Down",
+    "headline" : "Layui Time Count Down",
+    "description" : "![*](https:\/\/img.shields.io\/static\/v1?label=smoke\x26amp;message=\x26amp;color=green\x26amp;style=for-the-badge\x26amp;logo=appveyor) layui 倒计时 table.render({ elem: \x26#39;#withdraw-list-table\x26#39; ,url: \x26#39;\/member\/withdraw\/list\x26#39; \/\/模拟接口  ,method:\x26#39;POST\x26#39; ,headers: { \x26#39;X-CSRF-TOKEN\x26#39;: csrf_token} ,smartReloadModel: true ,totalRow:true ,cols: [[ \/\/{field: \x26#39;id\x26#39;,width:80,title: \x26#39;ID\x26#39;,sort:true}  {field: \x26#39;member:order\x26#39;,width:250, title: \x26#39;会员\/单号\x26#39;,totalRowText:\x26#34;总笔数\x26#34;} ,{field: \x26#39;_bank_card_number\x26#39;,width:200,align:\x26#34;right\x26#34;, title: \x26#39;收款银行账号\x26#39;} ,{field: \x26#39;_bank_owner_name\x26#39;,width:120,align:\x26#34;right\x26#34;, title: \x26#39;收款户名\x26#39;,totalRowText:\x26#34;金额小计\x26#34;} ,{field: \x26#39;payer_name\x26#39;,width:120,align:\x26#34;center\x26#34;, title: \x26#39;付款人\x26#39;} ,{field: \x26#39;amount\x26#39;,align:\x26#34;right\x26#34;, title: \x26#39;金额\x26#39;,sort:true,width:100,totalRowText:\x26#34;金额总计\x26#34;} ,{field: \x26#39;service_charge\x26#39;,align:\x26#34;right\x26#34;, title: \x26#39;手续费\x26#39;,width:100} ,{field: \x26#39;create_time\x26#39;,align:\x26#34;center\x26#34;, title: \x26#39;申请时间\x26#39;,width:120} ,{field: \x26#39;deal_time\x26#39;, title: \x26#39;处理时间\x26#39;,sort:true,width:120} ,{field: \x26#39;agent_pay_status_desc\x26#39;, align:\x26#34;center\x26#34;,title: \x26#39;业务状态\x26#39;,width:100} ,{field: \x26#39;status_desc\x26#39;, align:\x26#34;center\x26#34;,title: \x26#39;状态\x26#39;,width:100} ,{field: \x26#39;is_agent_pay_name\x26#39;,title: \x26#39;出款方式\x26#39;,width:120} ,{ field: \x26#39;countDown\x26#39;,width:150, title: \x26#39;确认收款倒计时\x26#39;, templet: function (d) { return \x26#39;\x26lt;dev class=\x26#34;layui-box layui-btn-xs countDown\x26#34; data-date=\x26#34;\x26#39; \x2b (d.",
+    "inLanguage" : "en-us",
+    "author" : "smoke",
+    "creator" : "smoke",
+    "publisher": "smoke",
+    "accountablePerson" : "smoke",
+    "copyrightHolder" : "smoke",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-12-19 18:29:19 \x2b0800 CST",
+    "dateModified" : "2019-12-19 18:29:19 \x2b0800 CST",
+    "url" : "\/blog\/web\/layui-time-count-down\/",
+    "wordCount" : "214",
+    "keywords" : [ "web","layui", "smoke"]
+}
+</script>
+
+</head>
+
+  
+
+
+<link href="/css/awesome.min.css" type="application/rss+xml" />
+<script src="/js/jquery.min.js" async=""></script>
+<script src="/js/autoload.js" async=""></script>
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="">smoke</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/blog/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="">smoke</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/blog/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Layui Time Count Down</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="" rel="author">smoke</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-12-19 itemprop="datePublished">December 19, 2019</time>
+                </span>
+                in
+                
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <h4 id="httpsimgshieldsiostaticv1labelsmokemessagelayui-time-count-downcolorgreenstylefor-the-badgelogoappveyor">![*](<a href="https://img.shields.io/static/v1?label=smoke&amp;message=">https://img.shields.io/static/v1?label=smoke&amp;message=</a><!-- raw HTML omitted -->&amp;color=green&amp;style=for-the-badge&amp;logo=appveyor)</h4>
+<h4 id="layui-">layui 倒计时</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+<span style="color:#a6e22e">table</span>.<span style="color:#a6e22e">render</span>({
+            <span style="color:#a6e22e">elem</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;#withdraw-list-table&#39;</span>
+            ,<span style="color:#a6e22e">url</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;/member/withdraw/list&#39;</span> <span style="color:#75715e">//模拟接口
+</span><span style="color:#75715e"></span>            ,<span style="color:#a6e22e">method</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;POST&#39;</span>
+            ,<span style="color:#a6e22e">headers</span><span style="color:#f92672">:</span> { <span style="color:#e6db74">&#39;X-CSRF-TOKEN&#39;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">csrf_token</span>}
+            ,<span style="color:#a6e22e">smartReloadModel</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+            ,<span style="color:#a6e22e">totalRow</span><span style="color:#f92672">:</span><span style="color:#66d9ef">true</span>
+            ,<span style="color:#a6e22e">cols</span><span style="color:#f92672">:</span> [[
+                <span style="color:#75715e">//{field: &#39;id&#39;,width:80,title: &#39;ID&#39;,sort:true}
+</span><span style="color:#75715e"></span>                {<span style="color:#a6e22e">field</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;member:order&#39;</span>,<span style="color:#a6e22e">width</span><span style="color:#f92672">:</span><span style="color:#ae81ff">250</span>, <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;会员/单号&#39;</span>,<span style="color:#a6e22e">totalRowText</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;总笔数&#34;</span>}
+                ,{<span style="color:#a6e22e">field</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;_bank_card_number&#39;</span>,<span style="color:#a6e22e">width</span><span style="color:#f92672">:</span><span style="color:#ae81ff">200</span>,<span style="color:#a6e22e">align</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;right&#34;</span>, <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;收款银行账号&#39;</span>}
+                ,{<span style="color:#a6e22e">field</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;_bank_owner_name&#39;</span>,<span style="color:#a6e22e">width</span><span style="color:#f92672">:</span><span style="color:#ae81ff">120</span>,<span style="color:#a6e22e">align</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;right&#34;</span>, <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;收款户名&#39;</span>,<span style="color:#a6e22e">totalRowText</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;金额小计&#34;</span>}
+                ,{<span style="color:#a6e22e">field</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;payer_name&#39;</span>,<span style="color:#a6e22e">width</span><span style="color:#f92672">:</span><span style="color:#ae81ff">120</span>,<span style="color:#a6e22e">align</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;center&#34;</span>, <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;付款人&#39;</span>}
+                ,{<span style="color:#a6e22e">field</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;amount&#39;</span>,<span style="color:#a6e22e">align</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;right&#34;</span>, <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;金额&#39;</span>,<span style="color:#a6e22e">sort</span><span style="color:#f92672">:</span><span style="color:#66d9ef">true</span>,<span style="color:#a6e22e">width</span><span style="color:#f92672">:</span><span style="color:#ae81ff">100</span>,<span style="color:#a6e22e">totalRowText</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;金额总计&#34;</span>}
+                ,{<span style="color:#a6e22e">field</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;service_charge&#39;</span>,<span style="color:#a6e22e">align</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;right&#34;</span>, <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;手续费&#39;</span>,<span style="color:#a6e22e">width</span><span style="color:#f92672">:</span><span style="color:#ae81ff">100</span>}
+                ,{<span style="color:#a6e22e">field</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;create_time&#39;</span>,<span style="color:#a6e22e">align</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;center&#34;</span>, <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;申请时间&#39;</span>,<span style="color:#a6e22e">width</span><span style="color:#f92672">:</span><span style="color:#ae81ff">120</span>}
+                ,{<span style="color:#a6e22e">field</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;deal_time&#39;</span>, <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;处理时间&#39;</span>,<span style="color:#a6e22e">sort</span><span style="color:#f92672">:</span><span style="color:#66d9ef">true</span>,<span style="color:#a6e22e">width</span><span style="color:#f92672">:</span><span style="color:#ae81ff">120</span>}
+                ,{<span style="color:#a6e22e">field</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;agent_pay_status_desc&#39;</span>, <span style="color:#a6e22e">align</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;center&#34;</span>,<span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;业务状态&#39;</span>,<span style="color:#a6e22e">width</span><span style="color:#f92672">:</span><span style="color:#ae81ff">100</span>}
+                ,{<span style="color:#a6e22e">field</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;status_desc&#39;</span>, <span style="color:#a6e22e">align</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;center&#34;</span>,<span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;状态&#39;</span>,<span style="color:#a6e22e">width</span><span style="color:#f92672">:</span><span style="color:#ae81ff">100</span>}
+                ,{<span style="color:#a6e22e">field</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;is_agent_pay_name&#39;</span>,<span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;出款方式&#39;</span>,<span style="color:#a6e22e">width</span><span style="color:#f92672">:</span><span style="color:#ae81ff">120</span>}
+                ,{
+                    <span style="color:#a6e22e">field</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;countDown&#39;</span>,<span style="color:#a6e22e">width</span><span style="color:#f92672">:</span><span style="color:#ae81ff">150</span>, <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;确认收款倒计时&#39;</span>, <span style="color:#a6e22e">templet</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">d</span>) {
+                        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;&lt;dev   class=&#34;layui-box layui-btn-xs countDown&#34; data-date=&#34;&#39;</span> <span style="color:#f92672">+</span> (<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">countDown</span><span style="color:#f92672">||</span><span style="color:#e6db74">&#39;&#39;</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;&#34;&gt; ---------- &lt;/dev&gt;&#39;</span>
+                    }
+                }
+                ,{<span style="color:#a6e22e">field</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;lock_btn&#39;</span>, <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;操作&#39;</span> ,<span style="color:#a6e22e">align</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;left&#34;</span>,<span style="color:#a6e22e">width</span><span style="color:#f92672">:</span><span style="color:#ae81ff">200</span>}
+                ,{<span style="color:#a6e22e">field</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;operator_name&#39;</span>, <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;操作人&#39;</span>,<span style="color:#a6e22e">width</span><span style="color:#f92672">:</span><span style="color:#ae81ff">100</span>}
+                ,{<span style="color:#a6e22e">field</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;remark&#39;</span>, <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;备注&#39;</span>,<span style="color:#a6e22e">width</span><span style="color:#f92672">:</span><span style="color:#ae81ff">200</span>}
+            ]]
+            ,<span style="color:#a6e22e">page</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+            ,<span style="color:#a6e22e">limit</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">30</span>
+            ,<span style="color:#a6e22e">height</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;full-360&#39;</span>
+
+           <span style="color:#75715e">/* ,initSort: {
+</span><span style="color:#75715e">                field: &#39;deal_time&#39; //排序字段，对应 cols 设定的各字段名
+</span><span style="color:#75715e">                ,type: &#39;desc&#39; //排序方式  asc: 升序、desc: 降序、null: 默认排序
+</span><span style="color:#75715e">            }*/</span>
+
+            ,<span style="color:#a6e22e">text</span><span style="color:#f92672">:</span> {<span style="color:#a6e22e">none</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;未查询到数据^_^&#39;</span>}
+            ,<span style="color:#a6e22e">done</span>(<span style="color:#a6e22e">res</span>){
+                <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">res</span>) {
+                    <span style="color:#a6e22e">currPage</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">curr_page</span> <span style="color:#f92672">||</span> <span style="color:#ae81ff">1</span>;
+                }
+                <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">elem</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">elem</span>.<span style="color:#a6e22e">next</span>();
+                <span style="color:#a6e22e">layui</span>.<span style="color:#a6e22e">each</span>(<span style="color:#a6e22e">elem</span>.<span style="color:#a6e22e">find</span>(<span style="color:#e6db74">&#39;.countDown&#39;</span>), <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">index</span>, <span style="color:#a6e22e">domElem</span>) {
+                    <span style="color:#a6e22e">domElem</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$</span>(<span style="color:#a6e22e">domElem</span>);
+                    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">domElem</span>.<span style="color:#a6e22e">data</span>(<span style="color:#e6db74">&#39;date&#39;</span>)) {
+                        <span style="color:#66d9ef">return</span>;
+                    }
+                    <span style="color:#75715e">//此处注意时间为毫秒
+</span><span style="color:#75715e"></span>                    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">endTime</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date(<span style="color:#a6e22e">domElem</span>.<span style="color:#a6e22e">data</span>(<span style="color:#e6db74">&#39;date&#39;</span>)).<span style="color:#a6e22e">getTime</span>(),
+                        <span style="color:#a6e22e">serverTime</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date().<span style="color:#a6e22e">getTime</span>();
+                    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">endTime</span><span style="color:#f92672">-</span><span style="color:#a6e22e">serverTime</span><span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">0</span>) {
+                        <span style="color:#a6e22e">layui</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">countdown</span>(<span style="color:#a6e22e">endTime</span>, <span style="color:#a6e22e">serverTime</span>, <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">date</span>, <span style="color:#a6e22e">serverTime</span>, <span style="color:#a6e22e">timer</span>) {
+                            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
+                            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">date</span>[<span style="color:#ae81ff">0</span>]) {
+                                <span style="color:#a6e22e">str</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">date</span>[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;天&#39;</span>;
+                            }
+                            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">date</span>[<span style="color:#ae81ff">1</span>]) {
+                                <span style="color:#a6e22e">str</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">date</span>[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;时&#39;</span>;
+                            }
+                            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">date</span>[<span style="color:#ae81ff">2</span>]) {
+                                <span style="color:#a6e22e">str</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">date</span>[<span style="color:#ae81ff">2</span>]<span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;分&#39;</span>
+                            }
+                            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">date</span>[<span style="color:#ae81ff">3</span>]) {
+                                <span style="color:#a6e22e">str</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">date</span>[<span style="color:#ae81ff">3</span>]<span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;秒&#39;</span>
+                            }
+                            <span style="color:#a6e22e">domElem</span>.<span style="color:#a6e22e">html</span>(<span style="color:#a6e22e">str</span>);
+                        });
+                    }
+                });
+</code></pre></div>
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>smoke </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=/blog/web/layui-time-count-down/>/blog/web/layui-time-count-down/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                #
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="tags/web/">
+                    #web</a></span>
+            
+            <span class="tag"><a href="tags/layui/">
+                    #layui</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="/blog/go/time-ticker/" class="prev" rel="prev" title="Time Ticker"><i class="iconfont icon-left"></i>&nbsp;Time Ticker</a>
+         
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="">smoke</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

@@ -46,7 +46,7 @@
     "articleSection" : "blog",
     "name" : "Temegram Php Message",
     "headline" : "Temegram Php Message",
-    "description" : "telegram php \x26lt;?php namespace App\\Repositories; use GuzzleHttp\\Client; use GuzzleHttp\\Psr7\\Response; use Illuminate\\Support\\Facades\\Log; \/\/ 申请bot,建立订阅通道，建立组，管理订阅通道和组，将bot拉入组内 class TelegramRepository extends BaseRepository { static public $curl; protected $list; public $id, $first_name; public function __construct(){ if (!self::$curl) self::$curl = new Client([\x27base_uri\x27 =\x26gt; \x26quot;https:\/\/api.telegram.org\/bot\x26quot;.config(\x27other.telegram\x27).\x26quot;\/\x26quot;]); } public function make() { $result = self::$curl-\x26gt;get(\x26quot;getUpdates\x26quot;, [\x27verify\x27 =\x26gt; false]); $this-\x26gt;list = $result-\x26gt;getBody()-\x26gt;getContents(); return $this; } public function one($index=0, $field=\x27chat\x27) { if ($this-\x26gt;list) { $data = json_decode($this-\x26gt;list, true); if (is_array($data)) { if (isset($data[\x27result\x27][$index])) { \/\/chat针对组 $info = $data[\x27result\x27][$index][\x27message\x27][$field]; foreach ($info as $k=\x26gt;$v) { $this-\x26gt;$k = $v; } } } } return $this; } public function push(string $message = \x27\x27, callable $call=null) { if ($call)$call($this); $msg = array( \x27位置 : \x27.",
+    "description" : "![*](https:\/\/img.shields.io\/static\/v1?label=smoke\x26amp;message=\x26amp;color=yellowgreen\x26amp;style=for-the-badge\x26amp;logo=appveyor\x26amp;suffix=download\x26amp;?link=http:\/\/left\x26amp;link=http:\/\/google.com) telegram php \x26lt;?php namespace App\\Repositories; use GuzzleHttp\\Client; use GuzzleHttp\\Psr7\\Response; use Illuminate\\Support\\Facades\\Log; \/\/ 申请bot,建立订阅通道，建立组，管理订阅通道和组，将bot拉入组内 class TelegramRepository extends BaseRepository { static public $curl; protected $list; public $id, $first_name; public function __construct(){ if (!self::$curl) self::$curl = new Client([\x26#39;base_uri\x26#39; =\x26gt; \x26#34;https:\/\/api.telegram.org\/bot\x26#34;.config(\x26#39;other.telegram\x26#39;).\x26#34;\/\x26#34;]); } public function make() { $result = self::$curl-\x26gt;get(\x26#34;getUpdates\x26#34;, [\x26#39;verify\x26#39; =\x26gt; false]); $this-\x26gt;list = $result-\x26gt;getBody()-\x26gt;getContents(); return $this; } public function one($index=0, $field=\x26#39;chat\x26#39;) { if ($this-\x26gt;list) { $data = json_decode($this-\x26gt;list, true); if (is_array($data)) { if (isset($data[\x26#39;result\x26#39;][$index])) { \/\/chat针对组  $info = $data[\x26#39;result\x26#39;][$index][\x26#39;message\x26#39;][$field]; foreach ($info as $k=\x26gt;$v) { $this-\x26gt;$k = $v; } } } } return $this; } public function push(string $message = \x26#39;\x26#39;, callable $call=null) { if ($call)$call($this); $msg = array( \x26#39;位置 : \x26#39;.",
     "inLanguage" : "en-us",
     "author" : "smoke",
     "creator" : "smoke",
@@ -57,8 +57,8 @@
     "datePublished": "2019-11-30 13:10:08 \x2b0800 CST",
     "dateModified" : "2019-11-30 13:10:08 \x2b0800 CST",
     "url" : "\/blog\/php\/temegram-php-message\/",
-    "wordCount" : "164",
-    "keywords" : [  "smoke"]
+    "wordCount" : "165",
+    "keywords" : [ "php", "smoke"]
 }
 </script>
 
@@ -134,8 +134,6 @@
         
 
         
-            
-        
 
         
         
@@ -148,93 +146,88 @@
           
           
 
-          
-
-<h4 id="https-img-shields-io-static-v1-label-smoke-message-temegram-php-message-color-yellowgreen-style-for-the-badge-logo-appveyor-suffix-download-link-http-left-link-http-google-com"><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://img.shields.io/static/v1?label=smoke&amp;message=&lt;Temegram Php Message&gt;&amp;color=yellowgreen&amp;style=for-the-badge&amp;logo=appveyor&amp;suffix=download&amp;?link=http://left&amp;link=http://google.com" alt="*" class="lazyload"><figcaption class="image-caption">*</figcaption></figure></h4>
-
+          <h4 id="httpsimgshieldsiostaticv1labelsmokemessagetemegram-php-messagecoloryellowgreenstylefor-the-badgelogoappveyorsuffixdownloadlinkhttpleftlinkhttpgooglecom">![*](<a href="https://img.shields.io/static/v1?label=smoke&amp;message=">https://img.shields.io/static/v1?label=smoke&amp;message=</a><!-- raw HTML omitted -->&amp;color=yellowgreen&amp;style=for-the-badge&amp;logo=appveyor&amp;suffix=download&amp;?link=http://left&amp;link=http://google.com)</h4>
 <h2 id="telegram-php">telegram php</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">
+<span style="color:#75715e">&lt;?php</span>
 
-<pre><code class="language-php">
-&lt;?php
-
-namespace App\Repositories;
+<span style="color:#66d9ef">namespace</span> <span style="color:#a6e22e">App\Repositories</span>;
 
 
-use GuzzleHttp\Client;
-use GuzzleHttp\Psr7\Response;
-use Illuminate\Support\Facades\Log;
+<span style="color:#66d9ef">use</span> <span style="color:#a6e22e">GuzzleHttp\Client</span>;
+<span style="color:#66d9ef">use</span> <span style="color:#a6e22e">GuzzleHttp\Psr7\Response</span>;
+<span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Illuminate\Support\Facades\Log</span>;
 
-// 申请bot,建立订阅通道，建立组，管理订阅通道和组，将bot拉入组内
-class TelegramRepository extends BaseRepository
+<span style="color:#75715e">// 申请bot,建立订阅通道，建立组，管理订阅通道和组，将bot拉入组内
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TelegramRepository</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">BaseRepository</span>
 {
 
-    static public $curl;
-    protected $list;
-    public $id, $first_name;
-    public function __construct(){
-        if (!self::$curl)
-            self::$curl = new Client(['base_uri' =&gt; &quot;https://api.telegram.org/bot&quot;.config('other.telegram').&quot;/&quot;]);
+    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">public</span> $curl;
+    <span style="color:#66d9ef">protected</span> $list;
+    <span style="color:#66d9ef">public</span> $id, $first_name;
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __construct(){
+        <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">self</span><span style="color:#f92672">::</span>$curl)
+            <span style="color:#a6e22e">self</span><span style="color:#f92672">::</span>$curl <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Client</span>([<span style="color:#e6db74">&#39;base_uri&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#34;https://api.telegram.org/bot&#34;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">config</span>(<span style="color:#e6db74">&#39;other.telegram&#39;</span>)<span style="color:#f92672">.</span><span style="color:#e6db74">&#34;/&#34;</span>]);
     }
 
 
-    public function make() {
-        $result = self::$curl-&gt;get(&quot;getUpdates&quot;, ['verify' =&gt; false]);
-        $this-&gt;list = $result-&gt;getBody()-&gt;getContents();
-        return $this;
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">make</span>() {
+        $result <span style="color:#f92672">=</span> <span style="color:#a6e22e">self</span><span style="color:#f92672">::</span>$curl<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#34;getUpdates&#34;</span>, [<span style="color:#e6db74">&#39;verify&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">false</span>]);
+        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">list</span> <span style="color:#f92672">=</span> $result<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getBody</span>()<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getContents</span>();
+        <span style="color:#66d9ef">return</span> $this;
     }
 
 
-    public function one($index=0, $field='chat') {
-        if ($this-&gt;list) {
-            $data = json_decode($this-&gt;list, true);
-            if (is_array($data)) {
-                if (isset($data['result'][$index])) {
-                    //chat针对组
-                    $info = $data['result'][$index]['message'][$field];
-                    foreach ($info as $k=&gt;$v) {
-                        $this-&gt;$k = $v;
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">one</span>($index<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, $field<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;chat&#39;</span>) {
+        <span style="color:#66d9ef">if</span> ($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">list</span>) {
+            $data <span style="color:#f92672">=</span> <span style="color:#a6e22e">json_decode</span>($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">list</span>, <span style="color:#66d9ef">true</span>);
+            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">is_array</span>($data)) {
+                <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">isset</span>($data[<span style="color:#e6db74">&#39;result&#39;</span>][$index])) {
+                    <span style="color:#75715e">//chat针对组
+</span><span style="color:#75715e"></span>                    $info <span style="color:#f92672">=</span> $data[<span style="color:#e6db74">&#39;result&#39;</span>][$index][<span style="color:#e6db74">&#39;message&#39;</span>][$field];
+                    <span style="color:#66d9ef">foreach</span> ($info <span style="color:#66d9ef">as</span> $k<span style="color:#f92672">=&gt;</span>$v) {
+                        $this<span style="color:#f92672">-&gt;</span>$k <span style="color:#f92672">=</span> $v;
                     }
                 }
             }
         }
-        return $this;
+        <span style="color:#66d9ef">return</span> $this;
     }
 
-    public function push(string $message = '', callable $call=null) {
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">string</span> $message <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>, <span style="color:#a6e22e">callable</span> $call<span style="color:#f92672">=</span><span style="color:#66d9ef">null</span>) {
 
-       if ($call)$call($this);
-       $msg = array(
-           '位置 : '.get_called_class(),
-           '时间 : '.date(&quot;Y-m-d H:i:s&quot;),
-           '事件 : '.$message
+       <span style="color:#66d9ef">if</span> ($call)$call($this);
+       $msg <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>(
+           <span style="color:#e6db74">&#39;位置 : &#39;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">get_called_class</span>(),
+           <span style="color:#e6db74">&#39;时间 : &#39;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">date</span>(<span style="color:#e6db74">&#34;Y-m-d H:i:s&#34;</span>),
+           <span style="color:#e6db74">&#39;事件 : &#39;</span><span style="color:#f92672">.</span>$message
        );
-       $request = [
-           'query'  =&gt; [
-               'chat_id'    =&gt; $this-&gt;id,
-               'text'       =&gt; join(PHP_EOL,$msg),
+       $request <span style="color:#f92672">=</span> [
+           <span style="color:#e6db74">&#39;query&#39;</span>  <span style="color:#f92672">=&gt;</span> [
+               <span style="color:#e6db74">&#39;chat_id&#39;</span>    <span style="color:#f92672">=&gt;</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">id</span>,
+               <span style="color:#e6db74">&#39;text&#39;</span>       <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">join</span>(<span style="color:#a6e22e">PHP_EOL</span>,$msg),
                ],
-           'verify' =&gt; false
+           <span style="color:#e6db74">&#39;verify&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">false</span>
        ];
-       $result = self::$curl-&gt;post(&quot;sendMessage&quot;, $request);
-       $status = $result-&gt;getStatusCode();
+       $result <span style="color:#f92672">=</span> <span style="color:#a6e22e">self</span><span style="color:#f92672">::</span>$curl<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">post</span>(<span style="color:#e6db74">&#34;sendMessage&#34;</span>, $request);
+       $status <span style="color:#f92672">=</span> $result<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getStatusCode</span>();
 
-       if ($status != 200) Log::notice(&quot;telegram 发送失败.&quot;);
+       <span style="color:#66d9ef">if</span> ($status <span style="color:#f92672">!=</span> <span style="color:#ae81ff">200</span>) <span style="color:#a6e22e">Log</span><span style="color:#f92672">::</span><span style="color:#a6e22e">notice</span>(<span style="color:#e6db74">&#34;telegram 发送失败.&#34;</span>);
 
     }
 
 
 
-    // 快捷执行
-    public function execute(string $message='', int $index=0) {
+    <span style="color:#75715e">// 快捷执行
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">execute</span>(<span style="color:#a6e22e">string</span> $message<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>, <span style="color:#a6e22e">int</span> $index<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>) {
 
-        $this-&gt;make()-&gt;one($index)-&gt;push($message);
-        //$this-&gt;push($message, function (&amp;$self) use($index) {$self-&gt;make()-&gt;one($index);});
-
+        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">make</span>()<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">one</span>($index)<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">push</span>($message);
+        <span style="color:#75715e">//$this-&gt;push($message, function (&amp;$self) use($index) {$self-&gt;make()-&gt;one($index);});
+</span><span style="color:#75715e"></span>
     }
 }
 
-</code></pre>
-
+</code></pre></div>
     </div>
 
     <div class="post-copyright">
@@ -260,6 +253,14 @@ class TelegramRepository extends BaseRepository
 
   
     <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="tags/php/">
+                    #php</a></span>
+            
+            </section>
         
         <section>
                 <a href="javascript:window.history.back();">back</a></span> · 
@@ -312,9 +313,8 @@ class TelegramRepository extends BaseRepository
 
 
     
-     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
-      
-     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
     
   
 

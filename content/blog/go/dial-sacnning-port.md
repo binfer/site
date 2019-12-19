@@ -1,6 +1,7 @@
 ---
 title: "Dial Sacnning Port"
 date: 2019-11-15T18:35:29+08:00
+tags: ["go"]
 ---
 ![=](https://img.shields.io/static/v1?label=smoke&message=<Dial Sacnning Port>&color=green&style=for-the-badge&logo=appveyor)
 

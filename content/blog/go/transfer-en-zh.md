@@ -1,6 +1,7 @@
 ---
 title: "Transfer en Zh"
 date: 2019-12-06T17:48:02+08:00
+tags: ["go"]
 ---
 #### ![*](https://img.shields.io/static/v1?label=smoke&message=<Transfer en Zh>&color=green&style=for-the-badge&logo=appveyor)
 

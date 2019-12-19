@@ -1,6 +1,7 @@
 ---
 title: "Project Collect Build Lists UseSmoke"
 date: 2019-11-18T13:40:16+08:00
+tags: ["other"]
 ---
 #### ![*](https://img.shields.io/static/v1?label=smoke&message=<Project Collect Build Lists UseSmoke>&color=green&style=for-the-badge&logo=appveyor)
 
@@ -75,12 +76,22 @@ date: 2019-11-18T13:40:16+08:00
 >>  [https://geekprank.com/blue-death/](https://geekprank.com/blue-death/)
 >
 >>  [播放器](https://github.com/vortesnail/qier-player) `https://vortesnail.github.io/qier-player-demo/`
+>
+>> [svg调试](https://jakearchibald.github.io/svgomg/)
+>
+>> [fiddler](https://www.telerik.com/download/fiddler) `抓包工具`
 
 
 > MAC
 >
 >> [工具管理器](https://github.com/rgcr/m-cli) ` macOS 上的一款“瑞士军刀”命令行工具`
+>
+>> [动态壁纸](https://dynamicwallpaper.club/wallpaper/qvvk60oi7v) `可自定义`
 
 > System
 >
 >>  manjaro-xfce-18.1.3-191114-linux53.iso   linux系统版本
+>
+>>  [smartdns](https://github.com/pymumu/smartdns#%E6%A0%87%E5%87%86linux%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E6%A0%91%E8%8E%93%E6%B4%BEx86_64%E7%B3%BB%E7%BB%9F) `smartDNS`
+>
+>>> [Manjaro](https://leay.net/2019/12/18/manjaro/) `Manjaro 基于 Arch Linux `

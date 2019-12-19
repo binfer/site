@@ -6,9 +6,91 @@
     <description>Recent content in Tags on smoke</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Thu, 19 Dec 2019 18:29:19 +0800</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>layui</title>
+      <link>/tags/layui/</link>
+      <pubDate>Thu, 19 Dec 2019 18:29:19 +0800</pubDate>
+      
+      <guid>/tags/layui/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web</title>
+      <link>/tags/web/</link>
+      <pubDate>Thu, 19 Dec 2019 18:29:19 +0800</pubDate>
+      
+      <guid>/tags/web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go</title>
+      <link>/tags/go/</link>
+      <pubDate>Mon, 16 Dec 2019 17:48:05 +0800</pubDate>
+      
+      <guid>/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tcp</title>
+      <link>/tags/tcp/</link>
+      <pubDate>Fri, 13 Dec 2019 10:30:17 +0800</pubDate>
+      
+      <guid>/tags/tcp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>/tags/linux/</link>
+      <pubDate>Wed, 11 Dec 2019 11:35:22 +0800</pubDate>
+      
+      <guid>/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nginx</title>
+      <link>/tags/nginx/</link>
+      <pubDate>Tue, 10 Dec 2019 10:36:04 +0800</pubDate>
+      
+      <guid>/tags/nginx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mac</title>
+      <link>/tags/mac/</link>
+      <pubDate>Thu, 05 Dec 2019 14:23:52 +0800</pubDate>
+      
+      <guid>/tags/mac/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>other</title>
+      <link>/tags/other/</link>
+      <pubDate>Wed, 04 Dec 2019 11:12:58 +0800</pubDate>
+      
+      <guid>/tags/other/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>php</title>
+      <link>/tags/php/</link>
+      <pubDate>Sat, 30 Nov 2019 13:10:08 +0800</pubDate>
+      
+      <guid>/tags/php/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title></title>

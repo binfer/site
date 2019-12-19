@@ -5,5 +5,7 @@
     <mapping directory="$PROJECT_DIR$/live2D" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/themes/LeaveIt" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/themes/dream" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/themes/hugo-nederburg-theme" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/themes/meme" vcs="Git" />
   </component>
 </project>

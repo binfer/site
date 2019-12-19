@@ -1,6 +1,7 @@
 ---
 title: "Markdown Style Part"
 date: 2019-12-04T11:12:58+08:00
+tags: ["other"]
 ---
 #### ![*](https://img.shields.io/static/v1?label=smoke&message=<Markdown Style Part>&color=green&style=for-the-badge&logo=appveyor)
 

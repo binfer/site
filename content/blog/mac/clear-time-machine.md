@@ -1,6 +1,7 @@
 ---
 title: "Clear Time Machine"
 date: 2019-12-05T14:23:52+08:00
+tags: ["mac"]
 ---
 #### ![*](https://img.shields.io/static/v1?label=smoke&message=<Clear Time Machine>&color=blue&style=for-the-badge&logo=appveyor) 
 

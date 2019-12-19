@@ -46,7 +46,7 @@
     "articleSection" : "blog",
     "name" : "位运算",
     "headline" : "位运算",
-    "description" : "  位运算 A = 0011 1100 B = 0000 1101 假定 A 为60, B 为13: 按位与 : A \x26amp; B = 12 ==\x26gt; 二进制 : 0000 1100 (A和B相对应的位置有一个为0, 该位置即为 0, 其他维持为1) 按位或 : A | B = 61 ==\x26gt; 二进制 : 0011 1101 (A和B相对应的位置有一个为1, 该位置即为 1, 其他维持为0) 按位异或 : A ^ B = 49 ==\x26gt; 二进制 : 0011 0001 (A和B相对应的位置2个都为1, 该位置即为0, 其他维持0或1) 左移运算 : A \x26lt;\x26lt; 2 = 240 ==\x26gt; 二进制 : 1111 0000 (A的二进制位置向左移动2位, 右侧如果是1丢弃) 右移运算 : A \x26gt;\x26gt; 2 = 15 ==\x26gt; 二进制 : 0000 1111 (A的二进制位置向右移动2位, 左侧补0, 右侧0省略) \x26lt;\x26lt;=\t左移后赋值\tC \x26lt;\x26lt;= 2 等于 C = C \x26lt;\x26lt; 2 \x26gt;\x26gt;=\t右移后赋值\tC \x26gt;\x26gt;= 2 等于 C = C \x26gt;\x26gt; 2 \x26amp;=\t按位与后赋值\tC \x26amp;= 2 等于 C = C \x26amp; 2 ^=\t按位异或后赋值\tC ^= 2 等于 C = C ^ 2 |=\t按位或后赋值\tC |= 2 等于 C = C | 2  ",
+    "description" : " 位运算 A = 0011 1100 B = 0000 1101 假定 A 为60, B 为13: 按位与 : A \x26amp; B = 12 ==\x26gt; 二进制 : 0000 1100 (A和B相对应的位置有一个为0, 该位置即为 0, 其他维持为1) 按位或 : A | B = 61 ==\x26gt; 二进制 : 0011 1101 (A和B相对应的位置有一个为1, 该位置即为 1, 其他维持为0) 按位异或 : A ^ B = 49 ==\x26gt; 二进制 : 0011 0001 (A和B相对应的位置2个都为1, 该位置即为0, 其他维持0或1) 左移运算 : A \x26lt;\x26lt; 2 = 240 ==\x26gt; 二进制 : 1111 0000 (A的二进制位置向左移动2位, 右侧如果是1丢弃) 右移运算 : A \x26gt;\x26gt; 2 = 15 ==\x26gt; 二进制 : 0000 1111 (A的二进制位置向右移动2位, 左侧补0, 右侧0省略) \x26lt;\x26lt;=\t左移后赋值\tC \x26lt;\x26lt;= 2 等于 C = C \x26lt;\x26lt; 2 \x26gt;\x26gt;=\t右移后赋值\tC \x26gt;\x26gt;= 2 等于 C = C \x26gt;\x26gt; 2 \x26amp;=\t按位与后赋值\tC \x26amp;= 2 等于 C = C \x26amp; 2 ^=\t按位异或后赋值\tC ^= 2 等于 C = C ^ 2 |=\t按位或后赋值\tC |= 2 等于 C = C | 2 ",
     "inLanguage" : "en-us",
     "author" : "smoke",
     "creator" : "smoke",
@@ -58,7 +58,7 @@
     "dateModified" : "2019-12-02 13:13:13 \x2b0800 CST",
     "url" : "\/blog\/go\/%E4%BD%8D%E8%BF%90%E7%AE%97\/",
     "wordCount" : "145",
-    "keywords" : [  "smoke"]
+    "keywords" : [ "go", "smoke"]
 }
 </script>
 
@@ -148,35 +148,30 @@
           
           
 
-          
+          <h4 id="httpsimgshieldsiostaticv1labelsmokemessagecolorgreenstylefor-the-badgelogoappveyor"><img src="https://img.shields.io/static/v1?label=smoke&amp;message=%3C%E4%BD%8D%E8%BF%90%E7%AE%97%3E&amp;color=green&amp;style=for-the-badge&amp;logo=appveyor" alt="*"></h4>
+<h3 id="heading">位运算</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">
+<span style="color:#a6e22e">A</span> = <span style="color:#ae81ff">0011</span> <span style="color:#ae81ff">1100</span>
+<span style="color:#a6e22e">B</span> = <span style="color:#ae81ff">0000</span> <span style="color:#ae81ff">1101</span>
+<span style="color:#a6e22e">假定</span> <span style="color:#a6e22e">A</span> <span style="color:#a6e22e">为60</span>,  <span style="color:#a6e22e">B</span> <span style="color:#a6e22e">为13</span>:
 
-<h4 id="https-img-shields-io-static-v1-label-smoke-message-位运算-color-green-style-for-the-badge-logo-appveyor"><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://img.shields.io/static/v1?label=smoke&amp;message=&lt;位运算&gt;&amp;color=green&amp;style=for-the-badge&amp;logo=appveyor" alt="*" class="lazyload"><figcaption class="image-caption">*</figcaption></figure></h4>
+<span style="color:#a6e22e">按位与</span>      : <span style="color:#a6e22e">A</span> <span style="color:#f92672">&amp;</span> <span style="color:#a6e22e">B</span>  = <span style="color:#ae81ff">12</span>  <span style="color:#f92672">==</span>&gt; <span style="color:#a6e22e">二进制</span>  : <span style="color:#ae81ff">0000</span> <span style="color:#ae81ff">1100</span>     (<span style="color:#a6e22e">A和B相对应的位置有一个为0</span>, <span style="color:#a6e22e">该位置即为</span> <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">其他维持为1</span>) 
 
-<h3 id="位运算">位运算</h3>
+<span style="color:#a6e22e">按位或</span>      : <span style="color:#a6e22e">A</span> | <span style="color:#a6e22e">B</span>  = <span style="color:#ae81ff">61</span>  <span style="color:#f92672">==</span>&gt; <span style="color:#a6e22e">二进制</span>  : <span style="color:#ae81ff">0011</span> <span style="color:#ae81ff">1101</span>     (<span style="color:#a6e22e">A和B相对应的位置有一个为1</span>, <span style="color:#a6e22e">该位置即为</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">其他维持为0</span>)
 
-<pre><code class="language-go">
-A = 0011 1100
-B = 0000 1101
-假定 A 为60,  B 为13:
+<span style="color:#a6e22e">按位异或</span>    : <span style="color:#a6e22e">A</span> ^ <span style="color:#a6e22e">B</span>  = <span style="color:#ae81ff">49</span>  <span style="color:#f92672">==</span>&gt; <span style="color:#a6e22e">二进制</span>  : <span style="color:#ae81ff">0011</span> <span style="color:#ae81ff">0001</span>     (<span style="color:#a6e22e">A和B相对应的位置2个都为1</span>, <span style="color:#a6e22e">该位置即为0</span>, <span style="color:#a6e22e">其他维持0或1</span>) 
 
-按位与      : A &amp; B  = 12  ==&gt; 二进制  : 0000 1100     (A和B相对应的位置有一个为0, 该位置即为 0, 其他维持为1) 
+<span style="color:#a6e22e">左移运算</span>    : <span style="color:#a6e22e">A</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">2</span> = <span style="color:#ae81ff">240</span> <span style="color:#f92672">==</span>&gt; <span style="color:#a6e22e">二进制</span>  : <span style="color:#ae81ff">1111</span> <span style="color:#ae81ff">0000</span>     (<span style="color:#a6e22e">A的二进制位置向左移动2位</span>, <span style="color:#a6e22e">右侧如果是1丢弃</span>)
 
-按位或      : A | B  = 61  ==&gt; 二进制  : 0011 1101     (A和B相对应的位置有一个为1, 该位置即为 1, 其他维持为0)
+<span style="color:#a6e22e">右移运算</span>    : <span style="color:#a6e22e">A</span> <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">2</span> = <span style="color:#ae81ff">15</span>  <span style="color:#f92672">==</span>&gt; <span style="color:#a6e22e">二进制</span>  : <span style="color:#ae81ff">0000</span> <span style="color:#ae81ff">1111</span>     (<span style="color:#a6e22e">A的二进制位置向右移动2位</span>, <span style="color:#a6e22e">左侧补0</span>, <span style="color:#a6e22e">右侧0省略</span>)
 
-按位异或    : A ^ B  = 49  ==&gt; 二进制  : 0011 0001     (A和B相对应的位置2个都为1, 该位置即为0, 其他维持0或1) 
+<span style="color:#f92672">&lt;&lt;=</span>	    <span style="color:#a6e22e">左移后赋值</span>	        <span style="color:#a6e22e">C</span> <span style="color:#f92672">&lt;&lt;=</span> <span style="color:#ae81ff">2</span>     <span style="color:#a6e22e">等于</span> <span style="color:#a6e22e">C</span> = <span style="color:#a6e22e">C</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">2</span>
+<span style="color:#f92672">&gt;&gt;=</span>	    <span style="color:#a6e22e">右移后赋值</span>	        <span style="color:#a6e22e">C</span> <span style="color:#f92672">&gt;&gt;=</span> <span style="color:#ae81ff">2</span>     <span style="color:#a6e22e">等于</span> <span style="color:#a6e22e">C</span> = <span style="color:#a6e22e">C</span> <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">2</span>
+<span style="color:#f92672">&amp;=</span>	    <span style="color:#a6e22e">按位与后赋值</span>	        <span style="color:#a6e22e">C</span> <span style="color:#f92672">&amp;=</span> <span style="color:#ae81ff">2</span>      <span style="color:#a6e22e">等于</span> <span style="color:#a6e22e">C</span> = <span style="color:#a6e22e">C</span> <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">2</span>
+^=	    <span style="color:#a6e22e">按位异或后赋值</span>	    <span style="color:#a6e22e">C</span> ^= <span style="color:#ae81ff">2</span>      <span style="color:#a6e22e">等于</span> <span style="color:#a6e22e">C</span> = <span style="color:#a6e22e">C</span> ^ <span style="color:#ae81ff">2</span>
+<span style="color:#f92672">|=</span>	    <span style="color:#a6e22e">按位或后赋值</span>	        <span style="color:#a6e22e">C</span> <span style="color:#f92672">|=</span> <span style="color:#ae81ff">2</span>      <span style="color:#a6e22e">等于</span> <span style="color:#a6e22e">C</span> = <span style="color:#a6e22e">C</span> | <span style="color:#ae81ff">2</span>
 
-左移运算    : A &lt;&lt; 2 = 240 ==&gt; 二进制  : 1111 0000     (A的二进制位置向左移动2位, 右侧如果是1丢弃)
-
-右移运算    : A &gt;&gt; 2 = 15  ==&gt; 二进制  : 0000 1111     (A的二进制位置向右移动2位, 左侧补0, 右侧0省略)
-
-&lt;&lt;=	    左移后赋值	        C &lt;&lt;= 2     等于 C = C &lt;&lt; 2
-&gt;&gt;=	    右移后赋值	        C &gt;&gt;= 2     等于 C = C &gt;&gt; 2
-&amp;=	    按位与后赋值	        C &amp;= 2      等于 C = C &amp; 2
-^=	    按位异或后赋值	    C ^= 2      等于 C = C ^ 2
-|=	    按位或后赋值	        C |= 2      等于 C = C | 2
-
-</code></pre>
-
+</code></pre></div>
     </div>
 
     <div class="post-copyright">
@@ -202,6 +197,14 @@ B = 0000 1101
 
   
     <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="tags/go/">
+                    #go</a></span>
+            
+            </section>
         
         <section>
                 <a href="javascript:window.history.back();">back</a></span> · 

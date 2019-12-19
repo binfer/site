@@ -1,6 +1,7 @@
 ---
 title: "Vim"
 date: 2019-12-03T13:58:19+08:00
+tags: ["linux"]
 ---
 #### ![*](https://img.shields.io/static/v1?label=smoke&message=<Vim>&color=red&style=for-the-badge&logo=appveyor) 
 

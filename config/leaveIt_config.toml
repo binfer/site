@@ -1,0 +1,88 @@
+#baseURL         = "showfom.github.io"
+languageCode    = "en-us"
+title           = "smoke"
+theme           = "LeaveIt"
+#theme           = "dream"
+
+license         = "MIT"
+licenselink     = "#"
+description     = "#"
+homepage        = "https://binfer.github.io/"
+paginate        = 20
+enableEmoji     = true
+enableRobotsTXT = true
+googleAnalytics = ""
+preserveTaxonomyNames = true
+
+[blackfriday]
+hrefTargetBlank = true
+nofollowLinks   = true
+noreferrerLinks = true
+
+[Permalinks]
+posts = "/:year/:filename/"
+
+[menu]
+  [[menu.main]]
+    name    = "Blog"
+    url     = "/blog/"
+    weight  = 1
+
+  [[menu.main]]
+    name    = "Categories"
+    url     = "/categories/"
+    weight  = 2
+
+  [[menu.main]]
+    name    = "Tags"
+    url     = "/tags/"
+    weight  = 3
+
+  [[menu.main]]
+    name    = "About"
+    url     = "/about"
+    weight  = 4
+
+
+
+[params]
+  backgroundImage = "/me/background.jpg"
+  background    = "black"
+  linkColor     = "seagreen"
+  author        = "smoke"
+  email         = "smoke.mvp@gmail.com"
+  avatar        = "/images/me/avatar.jpg"
+  subtitle      = "I fight, So you can't have to."
+  motto         = "Motto"
+  siteStartYear = 2019
+  favicon       = "/images/favicon.ico"
+  # dark mode
+  darkLinkColor = "darkseagreen"
+  darkNav       = true
+  dark404Button = true
+  cdn_url       = ""
+  home_mode     = "" # post or other
+  google_verification = ""
+  description   = "smoke.mvp"
+  keywords      = "smoke" # site keywords
+  beian         = ""
+  baiduAnalytics= ""
+  license       = '#'
+
+
+[params.social]
+    GitHub      = "https://github.com/binfer"
+    Twitter     = "夜华"
+    Email       = "smoke.mvp@gmail.com"
+    Instagram   = "smoke.mvp@gmail.com"
+    Wechat      = "images/me/wechat.png"  # Wechat QRcode image
+    Facebook    = "#"
+    Telegram    = "#"
+    Dribbble    = "#"
+    Medium      = "#"
+    linkedin    = "#"
+    codepen     = "#"
+    Salack = "#"
+    stackoverflow = "#"
+
+

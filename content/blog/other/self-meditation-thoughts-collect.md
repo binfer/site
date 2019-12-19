@@ -1,6 +1,7 @@
 ---
 title: "Self Meditation Thoughts Collect"
 date: 2019-12-03T10:50:45+08:00
+tags: ["other"]
 ---
 #### ![*](https://img.shields.io/static/v1?label=smoke&message=<Self Meditation Thoughts Collect>&color=green&style=for-the-badge&logo=appveyor)
 

@@ -46,7 +46,7 @@
     "articleSection" : "blog",
     "name" : "Transfer en Zh",
     "headline" : "Transfer en Zh",
-    "description" : "cli 翻译 package main import ( \x26quot;encoding\/xml\x26quot; \x26quot;github.com\/bndr\/gotabulate\x26quot; \x26quot;github.com\/fatih\/color\x26quot; \x26quot;fmt\x26quot; \x26quot;io\/ioutil\x26quot; \x26quot;net\/http\x26quot; \x26quot;net\/url\x26quot; \x26quot;os\x26quot; \x26quot;strings\x26quot; ) type ParseXmlData struct { XMLName xml.Name `xml:\x26quot;yodaodict\x26quot;` RawInput string `xml:\x26quot;return-phrase\x26quot;` CustomTrans CustomNode `xml:\x26quot;custom-translation\x26quot;` WebTrans WebTransList `xml:\x26quot;yodao-web-dict\x26quot;` } type CustomNode struct { Type string `xml:\x26quot;type\x26quot;` Translation []Translation `xml:\x26quot;translation\x26quot;` } type WebTransList struct { TransNode []WebTransNode `xml:\x26quot;web-translation\x26quot;` } type WebTransNode struct { Key string `xml:\x26quot;key\x26quot;` Trans []TransNode `xml:\x26quot;trans\x26quot;` } type TransNode struct { Value string `xml:\x26quot;value,CDATA\x26quot;` } type Translation struct { Content string `xml:\x26quot;content,CDATA\x26quot;` } func HttpGet(url string, ch chan []byte) { resp, err := http.",
+    "description" : "![*](https:\/\/img.shields.io\/static\/v1?label=smoke\x26amp;message=\x26amp;color=green\x26amp;style=for-the-badge\x26amp;logo=appveyor) cli 翻译 package main import ( \x26#34;encoding\/xml\x26#34; \x26#34;github.com\/bndr\/gotabulate\x26#34; \x26#34;github.com\/fatih\/color\x26#34; \x26#34;fmt\x26#34; \x26#34;io\/ioutil\x26#34; \x26#34;net\/http\x26#34; \x26#34;net\/url\x26#34; \x26#34;os\x26#34; \x26#34;strings\x26#34; ) type ParseXmlData struct { XMLName xml.Name `xml:\x26#34;yodaodict\x26#34;` RawInput string `xml:\x26#34;return-phrase\x26#34;` CustomTrans CustomNode `xml:\x26#34;custom-translation\x26#34;` WebTrans WebTransList `xml:\x26#34;yodao-web-dict\x26#34;` } type CustomNode struct { Type string `xml:\x26#34;type\x26#34;` Translation []Translation `xml:\x26#34;translation\x26#34;` } type WebTransList struct { TransNode []WebTransNode `xml:\x26#34;web-translation\x26#34;` } type WebTransNode struct { Key string `xml:\x26#34;key\x26#34;` Trans []TransNode `xml:\x26#34;trans\x26#34;` } type TransNode struct { Value string `xml:\x26#34;value,CDATA\x26#34;` } type Translation struct { Content string `xml:\x26#34;content,CDATA\x26#34;` } func HttpGet(url string, ch chan []byte) { resp, err := http.",
     "inLanguage" : "en-us",
     "author" : "smoke",
     "creator" : "smoke",
@@ -57,8 +57,8 @@
     "datePublished": "2019-12-06 17:48:02 \x2b0800 CST",
     "dateModified" : "2019-12-06 17:48:02 \x2b0800 CST",
     "url" : "\/blog\/go\/transfer-en-zh\/",
-    "wordCount" : "266",
-    "keywords" : [  "smoke"]
+    "wordCount" : "267",
+    "keywords" : [ "go", "smoke"]
 }
 </script>
 
@@ -134,8 +134,6 @@
         
 
         
-            
-        
 
         
         
@@ -148,138 +146,133 @@
           
           
 
-          
+          <h4 id="httpsimgshieldsiostaticv1labelsmokemessagetransfer-en-zhcolorgreenstylefor-the-badgelogoappveyor">![*](<a href="https://img.shields.io/static/v1?label=smoke&amp;message=">https://img.shields.io/static/v1?label=smoke&amp;message=</a><!-- raw HTML omitted -->&amp;color=green&amp;style=for-the-badge&amp;logo=appveyor)</h4>
+<h4 id="cli-">cli 翻译</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">
+<span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
-<h4 id="https-img-shields-io-static-v1-label-smoke-message-transfer-en-zh-color-green-style-for-the-badge-logo-appveyor"><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://img.shields.io/static/v1?label=smoke&amp;message=&lt;Transfer en Zh&gt;&amp;color=green&amp;style=for-the-badge&amp;logo=appveyor" alt="*" class="lazyload"><figcaption class="image-caption">*</figcaption></figure></h4>
+<span style="color:#f92672">import</span> (
 
-<h4 id="cli-翻译">cli 翻译</h4>
-
-<pre><code class="language-go">
-package main
-
-import (
-
-  &quot;encoding/xml&quot;
-  &quot;github.com/bndr/gotabulate&quot;
-  &quot;github.com/fatih/color&quot;
-  &quot;fmt&quot;
-  &quot;io/ioutil&quot;
-  &quot;net/http&quot;
-  &quot;net/url&quot;
-  &quot;os&quot;
-  &quot;strings&quot;
+  <span style="color:#e6db74">&#34;encoding/xml&#34;</span>
+  <span style="color:#e6db74">&#34;github.com/bndr/gotabulate&#34;</span>
+  <span style="color:#e6db74">&#34;github.com/fatih/color&#34;</span>
+  <span style="color:#e6db74">&#34;fmt&#34;</span>
+  <span style="color:#e6db74">&#34;io/ioutil&#34;</span>
+  <span style="color:#e6db74">&#34;net/http&#34;</span>
+  <span style="color:#e6db74">&#34;net/url&#34;</span>
+  <span style="color:#e6db74">&#34;os&#34;</span>
+  <span style="color:#e6db74">&#34;strings&#34;</span>
 )
 
-type ParseXmlData struct {
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">ParseXmlData</span> <span style="color:#66d9ef">struct</span> {
 
-  XMLName     xml.Name     `xml:&quot;yodaodict&quot;`
+  <span style="color:#a6e22e">XMLName</span>     <span style="color:#a6e22e">xml</span>.<span style="color:#a6e22e">Name</span>     <span style="color:#e6db74">`</span><span style="color:#e6db74">xml:&#34;yodaodict&#34;</span><span style="color:#e6db74">`</span>
 
-  RawInput    string       `xml:&quot;return-phrase&quot;`
+  <span style="color:#a6e22e">RawInput</span>    <span style="color:#66d9ef">string</span>       <span style="color:#e6db74">`</span><span style="color:#e6db74">xml:&#34;return-phrase&#34;</span><span style="color:#e6db74">`</span>
 
-  CustomTrans CustomNode   `xml:&quot;custom-translation&quot;`
+  <span style="color:#a6e22e">CustomTrans</span> <span style="color:#a6e22e">CustomNode</span>   <span style="color:#e6db74">`</span><span style="color:#e6db74">xml:&#34;custom-translation&#34;</span><span style="color:#e6db74">`</span>
 
-  WebTrans    WebTransList `xml:&quot;yodao-web-dict&quot;`
-
-}
-
-type CustomNode struct {
-
-  Type        string        `xml:&quot;type&quot;`
-
-  Translation []Translation `xml:&quot;translation&quot;`
+  <span style="color:#a6e22e">WebTrans</span>    <span style="color:#a6e22e">WebTransList</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">xml:&#34;yodao-web-dict&#34;</span><span style="color:#e6db74">`</span>
 
 }
 
-type WebTransList struct {
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">CustomNode</span> <span style="color:#66d9ef">struct</span> {
 
-  TransNode []WebTransNode `xml:&quot;web-translation&quot;`
+  <span style="color:#a6e22e">Type</span>        <span style="color:#66d9ef">string</span>        <span style="color:#e6db74">`</span><span style="color:#e6db74">xml:&#34;type&#34;</span><span style="color:#e6db74">`</span>
 
-}
-
-type WebTransNode struct {
-
-  Key   string      `xml:&quot;key&quot;`
-
-  Trans []TransNode `xml:&quot;trans&quot;`
+  <span style="color:#a6e22e">Translation</span> []<span style="color:#a6e22e">Translation</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">xml:&#34;translation&#34;</span><span style="color:#e6db74">`</span>
 
 }
 
-type TransNode struct {
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">WebTransList</span> <span style="color:#66d9ef">struct</span> {
 
-  Value string `xml:&quot;value,CDATA&quot;`
-
-}
-
-type Translation struct {
-
-  Content string `xml:&quot;content,CDATA&quot;`
+  <span style="color:#a6e22e">TransNode</span> []<span style="color:#a6e22e">WebTransNode</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">xml:&#34;web-translation&#34;</span><span style="color:#e6db74">`</span>
 
 }
 
-func HttpGet(url string, ch chan []byte) {
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">WebTransNode</span> <span style="color:#66d9ef">struct</span> {
 
-  resp, err := http.Get(url)
-  if err == nil {
-    defer resp.Body.Close()
+  <span style="color:#a6e22e">Key</span>   <span style="color:#66d9ef">string</span>      <span style="color:#e6db74">`</span><span style="color:#e6db74">xml:&#34;key&#34;</span><span style="color:#e6db74">`</span>
+
+  <span style="color:#a6e22e">Trans</span> []<span style="color:#a6e22e">TransNode</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">xml:&#34;trans&#34;</span><span style="color:#e6db74">`</span>
+
+}
+
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">TransNode</span> <span style="color:#66d9ef">struct</span> {
+
+  <span style="color:#a6e22e">Value</span> <span style="color:#66d9ef">string</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">xml:&#34;value,CDATA&#34;</span><span style="color:#e6db74">`</span>
+
+}
+
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Translation</span> <span style="color:#66d9ef">struct</span> {
+
+  <span style="color:#a6e22e">Content</span> <span style="color:#66d9ef">string</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">xml:&#34;content,CDATA&#34;</span><span style="color:#e6db74">`</span>
+
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">HttpGet</span>(<span style="color:#a6e22e">url</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">ch</span> <span style="color:#66d9ef">chan</span> []<span style="color:#66d9ef">byte</span>) {
+
+  <span style="color:#a6e22e">resp</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#a6e22e">url</span>)
+  <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
+    <span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">Body</span>.<span style="color:#a6e22e">Close</span>()
   }
-  if err != nil {
-    color.Red(&quot;please enter ctrl+c ,request error: %s \n&quot;, err)
+  <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+    <span style="color:#a6e22e">color</span>.<span style="color:#a6e22e">Red</span>(<span style="color:#e6db74">&#34;please enter ctrl+c ,request error: %s \n&#34;</span>, <span style="color:#a6e22e">err</span>)
   }
-  body, err := ioutil.ReadAll(resp.Body)
-  if err != nil {
-    color.Red(&quot;please enter ctrl+c ,io read error: %s \n&quot;, err)
+  <span style="color:#a6e22e">body</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ioutil</span>.<span style="color:#a6e22e">ReadAll</span>(<span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">Body</span>)
+  <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+    <span style="color:#a6e22e">color</span>.<span style="color:#a6e22e">Red</span>(<span style="color:#e6db74">&#34;please enter ctrl+c ,io read error: %s \n&#34;</span>, <span style="color:#a6e22e">err</span>)
   }
-  ch &lt;- body
+  <span style="color:#a6e22e">ch</span> <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">body</span>
 }
 
 
 
-func main() {
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
 
-  args := os.Args[1:]
+  <span style="color:#a6e22e">args</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Args</span>[<span style="color:#ae81ff">1</span>:]
 
-  if len(args) &lt; 1 {
-    color.Red(&quot;please input the translation word : %s \n&quot;, &quot;---&quot;)
-    color.GreenString(&quot;example: dict hello\n\n&quot;)
-    os.Exit(0)
+  <span style="color:#66d9ef">if</span> len(<span style="color:#a6e22e">args</span>) &lt; <span style="color:#ae81ff">1</span> {
+    <span style="color:#a6e22e">color</span>.<span style="color:#a6e22e">Red</span>(<span style="color:#e6db74">&#34;please input the translation word : %s \n&#34;</span>, <span style="color:#e6db74">&#34;---&#34;</span>)
+    <span style="color:#a6e22e">color</span>.<span style="color:#a6e22e">GreenString</span>(<span style="color:#e6db74">&#34;example: dict hello\n\n&#34;</span>)
+    <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Exit</span>(<span style="color:#ae81ff">0</span>)
   }
-  word := strings.Join(args, &quot; &quot;)
+  <span style="color:#a6e22e">word</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Join</span>(<span style="color:#a6e22e">args</span>, <span style="color:#e6db74">&#34; &#34;</span>)
 
-  requestUrl := fmt.Sprintf(&quot;https://dict.youdao.com//fsearch?client=deskdict&amp;keyfrom=chrome.extension&amp;q=%s&amp;pos=-1&amp;doctype=xml&amp;xmlVersion=3.2&amp;dogVersion=1.0&amp;vendor=unknown&amp;appVer=3.1.17.4208&amp;le=eng&quot;, url.QueryEscape(word))
+  <span style="color:#a6e22e">requestUrl</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprintf</span>(<span style="color:#e6db74">&#34;https://dict.youdao.com//fsearch?client=deskdict&amp;keyfrom=chrome.extension&amp;q=%s&amp;pos=-1&amp;doctype=xml&amp;xmlVersion=3.2&amp;dogVersion=1.0&amp;vendor=unknown&amp;appVer=3.1.17.4208&amp;le=eng&#34;</span>, <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">QueryEscape</span>(<span style="color:#a6e22e">word</span>))
 
-  ch := make(chan []byte)
-  go HttpGet(requestUrl, ch)
-  xmlObject := ParseXmlData{}
-  _ = xml.Unmarshal(&lt;-ch, &amp;xmlObject)
-  color.Blue(&quot;**************************** [ 英汉翻译 ]****************************** %s \n\n&quot;, word)
-  for _, v := range xmlObject.CustomTrans.Translation {
-    _, _ = color.New(color.BgCyan).Add(color.Bold).Println(strings.TrimSpace(v.Content),&quot;\n&quot;)
+  <span style="color:#a6e22e">ch</span> <span style="color:#f92672">:=</span> make(<span style="color:#66d9ef">chan</span> []<span style="color:#66d9ef">byte</span>)
+  <span style="color:#66d9ef">go</span> <span style="color:#a6e22e">HttpGet</span>(<span style="color:#a6e22e">requestUrl</span>, <span style="color:#a6e22e">ch</span>)
+  <span style="color:#a6e22e">xmlObject</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ParseXmlData</span>{}
+  <span style="color:#a6e22e">_</span> = <span style="color:#a6e22e">xml</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">ch</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">xmlObject</span>)
+  <span style="color:#a6e22e">color</span>.<span style="color:#a6e22e">Blue</span>(<span style="color:#e6db74">&#34;**************************** [ 英汉翻译 ]****************************** %s \n\n&#34;</span>, <span style="color:#a6e22e">word</span>)
+  <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">v</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">xmlObject</span>.<span style="color:#a6e22e">CustomTrans</span>.<span style="color:#a6e22e">Translation</span> {
+    <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">_</span> = <span style="color:#a6e22e">color</span>.<span style="color:#a6e22e">New</span>(<span style="color:#a6e22e">color</span>.<span style="color:#a6e22e">BgCyan</span>).<span style="color:#a6e22e">Add</span>(<span style="color:#a6e22e">color</span>.<span style="color:#a6e22e">Bold</span>).<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">TrimSpace</span>(<span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Content</span>),<span style="color:#e6db74">&#34;\n&#34;</span>)
   }
-  color.Green(&quot;**************************** [ 网络释义 ]****************************** %s \n\n&quot;, word)
-  result := [][]string{}
-  for _, v := range xmlObject.WebTrans.TransNode {
-    key := strings.TrimSpace(v.Key)
-    for _, vv := range v.Trans {
-      value := strings.TrimSpace(vv.Value)
-      result = append(result, []string{key, value})
-      /*_, _ = color.New(color.Bold).Println(key, &quot;:\t\t\t&quot;, value)*/
-      break
+  <span style="color:#a6e22e">color</span>.<span style="color:#a6e22e">Green</span>(<span style="color:#e6db74">&#34;**************************** [ 网络释义 ]****************************** %s \n\n&#34;</span>, <span style="color:#a6e22e">word</span>)
+  <span style="color:#a6e22e">result</span> <span style="color:#f92672">:=</span> [][]<span style="color:#66d9ef">string</span>{}
+  <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">v</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">xmlObject</span>.<span style="color:#a6e22e">WebTrans</span>.<span style="color:#a6e22e">TransNode</span> {
+    <span style="color:#a6e22e">key</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">TrimSpace</span>(<span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Key</span>)
+    <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">vv</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Trans</span> {
+      <span style="color:#a6e22e">value</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">TrimSpace</span>(<span style="color:#a6e22e">vv</span>.<span style="color:#a6e22e">Value</span>)
+      <span style="color:#a6e22e">result</span> = append(<span style="color:#a6e22e">result</span>, []<span style="color:#66d9ef">string</span>{<span style="color:#a6e22e">key</span>, <span style="color:#a6e22e">value</span>})
+      <span style="color:#75715e">/*_, _ = color.New(color.Bold).Println(key, &#34;:\t\t\t&#34;, value)*/</span>
+      <span style="color:#66d9ef">break</span>
     }
   }
 
-  // Create Object
-  tabulate := gotabulate.Create(result)
-  tabulate.SetAlign(&quot;left&quot;)
-  tabulate.SetWrapStrings(true)
-  // Set Headers
-  tabulate.SetHeaders([]string{&quot;KEY&quot;, &quot;VALUE&quot;})
-  // Render
-  _, _ = color.New(color.BgBlue).Add(color.Bold).Println(tabulate.Render(&quot;grid&quot;))
+  <span style="color:#75715e">// Create Object
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">tabulate</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">gotabulate</span>.<span style="color:#a6e22e">Create</span>(<span style="color:#a6e22e">result</span>)
+  <span style="color:#a6e22e">tabulate</span>.<span style="color:#a6e22e">SetAlign</span>(<span style="color:#e6db74">&#34;left&#34;</span>)
+  <span style="color:#a6e22e">tabulate</span>.<span style="color:#a6e22e">SetWrapStrings</span>(<span style="color:#66d9ef">true</span>)
+  <span style="color:#75715e">// Set Headers
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">tabulate</span>.<span style="color:#a6e22e">SetHeaders</span>([]<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;KEY&#34;</span>, <span style="color:#e6db74">&#34;VALUE&#34;</span>})
+  <span style="color:#75715e">// Render
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">_</span> = <span style="color:#a6e22e">color</span>.<span style="color:#a6e22e">New</span>(<span style="color:#a6e22e">color</span>.<span style="color:#a6e22e">BgBlue</span>).<span style="color:#a6e22e">Add</span>(<span style="color:#a6e22e">color</span>.<span style="color:#a6e22e">Bold</span>).<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">tabulate</span>.<span style="color:#a6e22e">Render</span>(<span style="color:#e6db74">&#34;grid&#34;</span>))
 
 }
 
-</code></pre>
-
+</code></pre></div>
     </div>
 
     <div class="post-copyright">
@@ -305,6 +298,14 @@ func main() {
 
   
     <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="tags/go/">
+                    #go</a></span>
+            
+            </section>
         
         <section>
                 <a href="javascript:window.history.back();">back</a></span> · 
@@ -357,9 +358,8 @@ func main() {
 
 
     
-     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
-      
-     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
     
   
 

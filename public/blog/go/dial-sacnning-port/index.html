@@ -46,7 +46,7 @@
     "articleSection" : "blog",
     "name" : "Dial Sacnning Port",
     "headline" : "Dial Sacnning Port",
-    "description" : "go 实现端口扫描  https:\/\/github.com\/binfer-go\/dials.git\npackage main import ( \x26quot;flag\x26quot; \x26quot;fmt\x26quot; \x26quot;net\x26quot; \x26quot;sync\x26quot; \x26quot;time\x26quot; ) func main() { startPort := flag.Int(\x26quot;start-port\x26quot;, 80, \x26quot;开始扫描的端口\x26quot;) endPort := flag.Int(\x26quot;end-port\x26quot;, 100, \x26quot;结束扫描的端口\x26quot;) timeOut := flag.Duration(\x26quot;timeout\x26quot;, time.Millisecond * 200, \x26quot;超时时间\x26quot;) flag.Parse() ips := []string{ \x26quot;127.0.0.1\x26quot;, \x26quot;google.com\x26quot;, \x26quot;baidu.com\x26quot;, } \/\/ 扫描端口 Dials(ips, *startPort, *endPort, *timeOut) } func Dials(ips []string, start, end int, timeout time.Duration) { var ( wg = \x26amp;sync.WaitGroup{} timeOut = time.Millisecond * 200 unUse = map[string][]int{} ) for port := start; port \x26lt;= end; port\x2b\x2b { wg.",
+    "description" : "![=](https:\/\/img.shields.io\/static\/v1?label=smoke\x26amp;message=\x26amp;color=green\x26amp;style=for-the-badge\x26amp;logo=appveyor)\ngo 实现端口扫描  https:\/\/github.com\/binfer-go\/dials.git  package main import ( \x26#34;flag\x26#34; \x26#34;fmt\x26#34; \x26#34;net\x26#34; \x26#34;sync\x26#34; \x26#34;time\x26#34; ) func main() { startPort := flag.Int(\x26#34;start-port\x26#34;, 80, \x26#34;开始扫描的端口\x26#34;) endPort := flag.Int(\x26#34;end-port\x26#34;, 100, \x26#34;结束扫描的端口\x26#34;) timeOut := flag.Duration(\x26#34;timeout\x26#34;, time.Millisecond * 200, \x26#34;超时时间\x26#34;) flag.Parse() ips := []string{ \x26#34;127.0.0.1\x26#34;, \x26#34;google.com\x26#34;, \x26#34;baidu.com\x26#34;, } \/\/ 扫描端口 \tDials(ips, *startPort, *endPort, *timeOut) } func Dials(ips []string, start, end int, timeout time.Duration) { var ( wg = \x26amp;sync.WaitGroup{} timeOut = time.Millisecond * 200 unUse = map[string][]int{} ) for port := start; port \x26lt;= end; port\x2b\x2b { wg.",
     "inLanguage" : "en-us",
     "author" : "smoke",
     "creator" : "smoke",
@@ -57,8 +57,8 @@
     "datePublished": "2019-11-15 18:35:29 \x2b0800 CST",
     "dateModified" : "2019-11-15 18:35:29 \x2b0800 CST",
     "url" : "\/blog\/go\/dial-sacnning-port\/",
-    "wordCount" : "151",
-    "keywords" : [  "smoke"]
+    "wordCount" : "152",
+    "keywords" : [ "go", "smoke"]
 }
 </script>
 
@@ -134,8 +134,6 @@
         
 
         
-            
-        
 
         
         
@@ -148,80 +146,74 @@
           
           
 
-          
-
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://img.shields.io/static/v1?label=smoke&amp;message=&lt;Dial Sacnning Port&gt;&amp;color=green&amp;style=for-the-badge&amp;logo=appveyor" alt="=" class="lazyload"><figcaption class="image-caption">=</figcaption></figure></p>
-
-<h3 id="go-实现端口扫描">go 实现端口扫描</h3>
-
+          <p>![=](<a href="https://img.shields.io/static/v1?label=smoke&amp;message=">https://img.shields.io/static/v1?label=smoke&amp;message=</a><!-- raw HTML omitted -->&amp;color=green&amp;style=for-the-badge&amp;logo=appveyor)</p>
+<h3 id="go-">go 实现端口扫描</h3>
 <ul>
-<li><p><a href="https://github.com/binfer-go/dials.git" rel="nofollow noreferrer" target="_blank">https://github.com/binfer-go/dials.git</a></p>
+<li><a href="https://github.com/binfer-go/dials.git">https://github.com/binfer-go/dials.git</a></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">
+<span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
-<pre><code class="language-go">
-package main
-
-import (
-	&quot;flag&quot;
-	&quot;fmt&quot;
-	&quot;net&quot;
-	&quot;sync&quot;
-	&quot;time&quot;
+<span style="color:#f92672">import</span> (
+	<span style="color:#e6db74">&#34;flag&#34;</span>
+	<span style="color:#e6db74">&#34;fmt&#34;</span>
+	<span style="color:#e6db74">&#34;net&#34;</span>
+	<span style="color:#e6db74">&#34;sync&#34;</span>
+	<span style="color:#e6db74">&#34;time&#34;</span>
 )
 
-func main()  {
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>()  {
 
-	startPort 	:= flag.Int(&quot;start-port&quot;, 80, &quot;开始扫描的端口&quot;)
-	endPort 	:= flag.Int(&quot;end-port&quot;, 100, &quot;结束扫描的端口&quot;)
-	timeOut 	:= flag.Duration(&quot;timeout&quot;, time.Millisecond * 200, &quot;超时时间&quot;)
-	flag.Parse()
-	ips := []string{
-		&quot;127.0.0.1&quot;,
-		&quot;google.com&quot;,
-		&quot;baidu.com&quot;,
+	<span style="color:#a6e22e">startPort</span> 	<span style="color:#f92672">:=</span> <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">Int</span>(<span style="color:#e6db74">&#34;start-port&#34;</span>, <span style="color:#ae81ff">80</span>, <span style="color:#e6db74">&#34;开始扫描的端口&#34;</span>)
+	<span style="color:#a6e22e">endPort</span> 	<span style="color:#f92672">:=</span> <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">Int</span>(<span style="color:#e6db74">&#34;end-port&#34;</span>, <span style="color:#ae81ff">100</span>, <span style="color:#e6db74">&#34;结束扫描的端口&#34;</span>)
+	<span style="color:#a6e22e">timeOut</span> 	<span style="color:#f92672">:=</span> <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">Duration</span>(<span style="color:#e6db74">&#34;timeout&#34;</span>, <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Millisecond</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">200</span>, <span style="color:#e6db74">&#34;超时时间&#34;</span>)
+	<span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">Parse</span>()
+	<span style="color:#a6e22e">ips</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">string</span>{
+		<span style="color:#e6db74">&#34;127.0.0.1&#34;</span>,
+		<span style="color:#e6db74">&#34;google.com&#34;</span>,
+		<span style="color:#e6db74">&#34;baidu.com&#34;</span>,
 	}
-	// 扫描端口
-	Dials(ips, *startPort, *endPort, *timeOut)
+	<span style="color:#75715e">// 扫描端口
+</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">Dials</span>(<span style="color:#a6e22e">ips</span>, <span style="color:#f92672">*</span><span style="color:#a6e22e">startPort</span>, <span style="color:#f92672">*</span><span style="color:#a6e22e">endPort</span>, <span style="color:#f92672">*</span><span style="color:#a6e22e">timeOut</span>)
 }
 
-func Dials(ips []string, start, end int, timeout time.Duration)  {
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Dials</span>(<span style="color:#a6e22e">ips</span> []<span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">start</span>, <span style="color:#a6e22e">end</span> <span style="color:#66d9ef">int</span>, <span style="color:#a6e22e">timeout</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Duration</span>)  {
 
-	var (
-		wg 		= &amp;sync.WaitGroup{}
-		timeOut = time.Millisecond * 200
-		unUse 	= map[string][]int{}
+	<span style="color:#66d9ef">var</span> (
+		<span style="color:#a6e22e">wg</span> 		= <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">sync</span>.<span style="color:#a6e22e">WaitGroup</span>{}
+		<span style="color:#a6e22e">timeOut</span> = <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Millisecond</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">200</span>
+		<span style="color:#a6e22e">unUse</span> 	= <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>][]<span style="color:#66d9ef">int</span>{}
 	)
-	for port := start; port &lt;= end; port++ {
-		wg.Add(len(ips))
-		for _, h := range ips {
-			go func(host string, port int) {
-				status := isOpen(host, port, timeOut)
-				if status {
-					unUse[host] = append(unUse[host], port)
+	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">port</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">start</span>; <span style="color:#a6e22e">port</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">end</span>; <span style="color:#a6e22e">port</span><span style="color:#f92672">++</span> {
+		<span style="color:#a6e22e">wg</span>.<span style="color:#a6e22e">Add</span>(len(<span style="color:#a6e22e">ips</span>))
+		<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">h</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">ips</span> {
+			<span style="color:#66d9ef">go</span> <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">host</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">port</span> <span style="color:#66d9ef">int</span>) {
+				<span style="color:#a6e22e">status</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">isOpen</span>(<span style="color:#a6e22e">host</span>, <span style="color:#a6e22e">port</span>, <span style="color:#a6e22e">timeOut</span>)
+				<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">status</span> {
+					<span style="color:#a6e22e">unUse</span>[<span style="color:#a6e22e">host</span>] = append(<span style="color:#a6e22e">unUse</span>[<span style="color:#a6e22e">host</span>], <span style="color:#a6e22e">port</span>)
 				}
-				wg.Done()
-			}(h, port)
+				<span style="color:#a6e22e">wg</span>.<span style="color:#a6e22e">Done</span>()
+			}(<span style="color:#a6e22e">h</span>, <span style="color:#a6e22e">port</span>)
 		}
 	}
-	wg.Wait()
+	<span style="color:#a6e22e">wg</span>.<span style="color:#a6e22e">Wait</span>()
 
-	fmt.Println(unUse)
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">unUse</span>)
 }
 
-// Dial
-func isOpen(host string, port int, timeOut time.Duration) bool {
-	time.Sleep(time.Millisecond * 1)
-	conn, err := net.DialTimeout(&quot;tcp&quot;, fmt.Sprintf(&quot;%s:%d&quot;, host, port), timeOut)
-	if err == nil {
-		_ = conn.Close()
-		return true
+<span style="color:#75715e">// Dial
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">isOpen</span>(<span style="color:#a6e22e">host</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">port</span> <span style="color:#66d9ef">int</span>, <span style="color:#a6e22e">timeOut</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Duration</span>) <span style="color:#66d9ef">bool</span> {
+	<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Sleep</span>(<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Millisecond</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1</span>)
+	<span style="color:#a6e22e">conn</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">net</span>.<span style="color:#a6e22e">DialTimeout</span>(<span style="color:#e6db74">&#34;tcp&#34;</span>, <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprintf</span>(<span style="color:#e6db74">&#34;%s:%d&#34;</span>, <span style="color:#a6e22e">host</span>, <span style="color:#a6e22e">port</span>), <span style="color:#a6e22e">timeOut</span>)
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
+		<span style="color:#a6e22e">_</span> = <span style="color:#a6e22e">conn</span>.<span style="color:#a6e22e">Close</span>()
+		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>
 	}
-	return false
+	<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>
 
 }
 
-</code></pre></li>
-</ul>
-
+</code></pre></div>
     </div>
 
     <div class="post-copyright">
@@ -247,6 +239,14 @@ func isOpen(host string, port int, timeOut time.Duration) bool {
 
   
     <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="tags/go/">
+                    #go</a></span>
+            
+            </section>
         
         <section>
                 <a href="javascript:window.history.back();">back</a></span> · 
@@ -297,9 +297,8 @@ func isOpen(host string, port int, timeOut time.Duration) bool {
 
 
     
-     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
-      
-     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
     
   
 

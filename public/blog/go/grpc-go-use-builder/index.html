@@ -46,7 +46,7 @@
     "articleSection" : "blog",
     "name" : "Grpc Go Use Builder",
     "headline" : "Grpc Go Use Builder",
-    "description" : "使用grpc https:\/\/github.com\/binfer-go\/example-grpc\nProto\n\/\/命令 protoc --go_out=plugins=grpc:. .\\router.proto syntax = \x26quot;proto3\x26quot;; package proto; service RouteGuide{ rpc Getfeature(Point) returns (Feature) {} \/\/ 普通 rpc ListFeatures(Point) returns (stream Feature) {} \/\/ 服务流 rpc RecordRoute(stream Point) returns (Feature) {} \/\/ 客户端流 rpc RouteChat(stream Point) returns (stream Feature){} \/\/ 双向流 } message Point { int32 latitude = 1; int32 longitude = 2; } message Feature{ int32 id = 1; bytes data = 2; }   简单RPC",
+    "description" : "![*](https:\/\/img.shields.io\/static\/v1?label=smoke\x26amp;message=\x26amp;color=green\x26amp;style=for-the-badge\x26amp;logo=appveyor) 使用grpc https:\/\/github.com\/binfer-go\/example-grpc\nProto\n\/\/命令 protoc --go_out=plugins=grpc:. .\\router.proto syntax = \x26#34;proto3\x26#34;;package proto;service RouteGuide{ rpc Getfeature(Point) returns (Feature) {} \/\/ 普通  rpc ListFeatures(Point) returns (stream Feature) {} \/\/ 服务流  rpc RecordRoute(stream Point) returns (Feature) {} \/\/ 客户端流  rpc RouteChat(stream Point) returns (stream Feature){} \/\/ 双向流 }message Point { int32 latitude = 1; int32 longitude = 2;}message Feature{ int32 id = 1; bytes data = 2;} 简单RPC  \/\/ 服务端 var port = \x26#34;:9900\x26#34; type routeGuideServer struct { \/\/pb proto.",
     "inLanguage" : "en-us",
     "author" : "smoke",
     "creator" : "smoke",
@@ -57,8 +57,8 @@
     "datePublished": "2019-12-03 13:22:29 \x2b0800 CST",
     "dateModified" : "2019-12-03 13:22:29 \x2b0800 CST",
     "url" : "\/blog\/go\/grpc-go-use-builder\/",
-    "wordCount" : "617",
-    "keywords" : [  "smoke"]
+    "wordCount" : "612",
+    "keywords" : [ "go", "smoke"]
 }
 </script>
 
@@ -134,8 +134,6 @@
         
 
         
-            
-        
 
         
         
@@ -148,253 +146,240 @@
           
           
 
-          
-
-<h4 id="https-img-shields-io-static-v1-label-smoke-message-grpc-go-use-builder-color-green-style-for-the-badge-logo-appveyor"><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://img.shields.io/static/v1?label=smoke&amp;message=&lt;Grpc Go Use Builder&gt;&amp;color=green&amp;style=for-the-badge&amp;logo=appveyor" alt="*" class="lazyload"><figcaption class="image-caption">*</figcaption></figure></h4>
-
-<h4 id="使用grpc">使用grpc</h4>
-
-<p><a href="https://github.com/binfer-go/example-grpc" rel="nofollow noreferrer" target="_blank">https://github.com/binfer-go/example-grpc</a></p>
-
+          <h4 id="httpsimgshieldsiostaticv1labelsmokemessagegrpc-go-use-buildercolorgreenstylefor-the-badgelogoappveyor">![*](<a href="https://img.shields.io/static/v1?label=smoke&amp;message=">https://img.shields.io/static/v1?label=smoke&amp;message=</a><!-- raw HTML omitted -->&amp;color=green&amp;style=for-the-badge&amp;logo=appveyor)</h4>
+<h4 id="grpc">使用grpc</h4>
+<p><a href="https://github.com/binfer-go/example-grpc">https://github.com/binfer-go/example-grpc</a></p>
 <p>Proto</p>
-
-<pre><code class="language-proto">//命令 protoc --go_out=plugins=grpc:. .\router.proto
-
-syntax = &quot;proto3&quot;;
-
-package proto;
-service RouteGuide{
-    rpc Getfeature(Point) returns (Feature) {}                  // 普通
-    rpc ListFeatures(Point) returns (stream Feature) {}         // 服务流
-    rpc RecordRoute(stream Point) returns (Feature) {}          // 客户端流
-    rpc RouteChat(stream Point) returns (stream Feature){}      // 双向流
-}
-message Point {
-    int32 latitude  = 1;
-    int32 longitude = 2;
-}
-message Feature{
-    int32 id = 1;
-    bytes data = 2;
-}
-</code></pre>
-
-<ol>
-<li><p>简单RPC</p>
-
-<pre><code class="language-go">// 服务端
-var port = &quot;:9900&quot;
-
-type routeGuideServer struct {
-	//pb proto.UnimplementedRouteGuideServer
-}
-
-func (router *routeGuideServer) Getfeature(ctx context.Context, point  *proto.Point) (*proto.Feature, error) {
-	fmt.Println(&quot;------ getfeature:&quot;, point.Longitude, point.Latitude)
-	return &amp;proto.Feature{Message:&quot;getfeature&quot;}, nil
-}
-func main()  {
-
-	server, err := net.Listen(&quot;tcp&quot;, &quot;127.0.0.1&quot; + port)
-	if err != nil {
-		log.Fatalf(&quot;tcp listen error: %s \n&quot;, err)
-	}
-	grpcServer := grpc.NewServer()
-	proto.RegisterRouteGuideServer(grpcServer, &amp;routeGuideServer{})
-	_ = grpcServer.Serve(server)
-}
-
-
-// 客户端
-const (
-	address     = &quot;localhost:9900&quot;
-)
-func main() {
-
-	ctx, _ := context.WithTimeout(context.TODO(), time.Second)
-	conn, err := grpc.DialContext(ctx, address, grpc.WithInsecure())
-	if err != nil {
-		log.Fatalf(&quot;client server error: %s \n&quot;, err)
-	}
-	defer conn.Close()
-	routeServe := proto.NewRouteGuideClient(conn)
-	feature, err := routeServe.Getfeature(context.Background())
-	if err != nil {
-		log.Printf(&quot;client feature error: %s \n&quot;, err)
-	}
-	fmt.Println(feature)
-
-}
-
-</code></pre></li>
-
-<li><p>服务器流式 RPC</p>
-
-<pre><code class="language-go">// 服务端
-
-func (router *routeGuideServer) ListFeatures(point *proto.Point, server proto.RouteGuide_ListFeaturesServer) error {
-	fmt.Println(&quot;------ listfeature:&quot;, point.Latitude, point.Longitude, server.Context())
-	_ = server.Send(&amp;proto.Feature{Message: &quot;listfeature&quot;})
-	_ = server.RecvMsg(nil)
-	return nil
-}
-func main()  {
-	server, err := net.Listen(&quot;tcp&quot;, &quot;127.0.0.1&quot; + port)
-	if err != nil {
-		log.Fatalf(&quot;tcp listen error: %s \n&quot;, err)
-	}
-	grpcServer := grpc.NewServer()
-	proto.RegisterRouteGuideServer(grpcServer, &amp;routeGuideServer{})
-	_ = grpcServer.Serve(server)
-}
-
-// 客户端
-const (
-	address     = &quot;localhost:9900&quot;
-)
-func main() {
-	ctx, _ := context.WithTimeout(context.TODO(), time.Second)
-	conn, err := grpc.DialContext(ctx, address, grpc.WithInsecure())
-	if err != nil {
-		log.Fatalf(&quot;client server error: %s \n&quot;, err)
-	}
-	defer conn.Close()
-	routeServe := proto.NewRouteGuideClient(conn)
-	feature, err := routeServe.RecordRoute(context.Background())
-	if err != nil {
-		log.Printf(&quot;client feature error: %s \n&quot;, err)
-	}
-	_ = feature.Send(&amp;proto.Point{
-		Latitude:             111,
-		Longitude:            222,
-		XXX_NoUnkeyedLiteral: struct{}{},
-		XXX_unrecognized:     nil,
-		XXX_sizecache:        0,
-	})
-	fmt.Println(feature.Recv())
-}
-</code></pre></li>
-
-<li><p>客户端流式 RPC</p>
-
-<pre><code class="language-go">// 服务端
-func (router *routeGuideServer) RecordRoute(stream proto.RouteGuide_RecordRouteServer) error {
-	fmt.Println(&quot;------ recordRoute:&quot;)
-	point, err := stream.Recv()
-	if err == io.EOF {
-		_ = stream.SendAndClose(&amp;proto.Feature{
-        Id:                   1,  
-			Data:                 []byte(&quot;hello&quot;),
-			XXX_NoUnkeyedLiteral: struct{}{},
-			XXX_unrecognized:     nil,
-			XXX_sizecache:        0,
-		})
-	}
-	fmt.Println(&quot;=======&quot;, point)
-	return nil
-}
-func main()  {
-	server, err := net.Listen(&quot;tcp&quot;, &quot;127.0.0.1&quot; + port)
-	if err != nil {
-		log.Fatalf(&quot;tcp listen error: %s \n&quot;, err)
-	}
-	grpcServer := grpc.NewServer()
-	proto.RegisterRouteGuideServer(grpcServer, &amp;routeGuideServer{})
-	_ = grpcServer.Serve(server)
-}
-
-
-// 客户端
-func main() {
-	ctx, _ := context.WithTimeout(context.TODO(), time.Second)
-	conn, err := grpc.DialContext(ctx, address, grpc.WithInsecure())
-	if err != nil {
-		log.Fatalf(&quot;client server error: %s \n&quot;, err)
-	}
-	defer conn.Close()
-	routeServe := proto.NewRouteGuideClient(conn)
-	feature, err := routeServe.RecordRoute(context.Background())
-	if err != nil {
-		log.Printf(&quot;client feature error: %s \n&quot;, err)
-	}
-	_ = feature.Send(&amp;proto.Point{
-		Latitude:             111,
-		Longitude:            222,
-		XXX_NoUnkeyedLiteral: struct{}{},
-		XXX_unrecognized:     nil,
-		XXX_sizecache:        0,
-	})
-	fmt.Println(feature)
-
-}
-</code></pre></li>
-
-<li><p>双向流式 RPC</p>
-
-<pre><code class="language-go">
-// 服务端
-func (router *routeGuideServer) RouteChat(stream proto.RouteGuide_RouteChatServer) error {
-	fmt.Println(&quot;------ routeChat:&quot;)
-	point, err := stream.Recv()
-	if err != nil {
-		return err
-	}
-	if err == io.EOF {
-		_ = stream.Send(&amp;proto.Feature{
-			Id:                   1,
-			Data:                 []byte(&quot;hello&quot;),
-			XXX_NoUnkeyedLiteral: struct{}{},
-			XXX_unrecognized:     nil,
-			XXX_sizecache:        0,
-		})
-	}
-	fmt.Println(&quot;=====&quot;, point)
-	_ = stream.Send(&amp;proto.Feature{
-		Id:                   1,  
-    Data:                 []byte(&quot;hello&quot;),
-		XXX_NoUnkeyedLiteral: struct{}{},
-		XXX_unrecognized:     nil,
-		XXX_sizecache:        0,
-	})
-	return nil
-}
-func main()  {
-	server, err := net.Listen(&quot;tcp&quot;, &quot;127.0.0.1&quot; + port)
-	if err != nil {
-		log.Fatalf(&quot;tcp listen error: %s \n&quot;, err)
-	}
-	grpcServer := grpc.NewServer()
-	proto.RegisterRouteGuideServer(grpcServer, &amp;routeGuideServer{})
-	_ = grpcServer.Serve(server)
-}
-
-
-// 客户端
-func main() {
-	ctx, _ := context.WithTimeout(context.TODO(), time.Second)
-	conn, err := grpc.DialContext(ctx, address, grpc.WithInsecure())
-	if err != nil {
-		log.Fatalf(&quot;client server error: %s \n&quot;, err)
-	}
-	defer conn.Close()
-	routeServe := proto.NewRouteGuideClient(conn)
-	feature, err := routeServe.RouteChat(context.Background())
-	if err != nil {
-		log.Printf(&quot;client feature error: %s \n&quot;, err)
-	}
-	_ = feature.Send(&amp;proto.Point{
-		Latitude:             111,
-		Longitude:            222,
-		XXX_NoUnkeyedLiteral: struct{}{},
-		XXX_unrecognized:     nil,
-		XXX_sizecache:        0,
-	})
-	fmt.Println(feature.Recv())
-}
-
-</code></pre></li>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-proto" data-lang="proto"><span style="color:#75715e">//命令 protoc --go_out=plugins=grpc:. .\router.proto
+</span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>syntax <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;proto3&#34;</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#f92672">package</span> proto;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">service</span> RouteGuide{<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#66d9ef">rpc</span> Getfeature(Point) <span style="color:#66d9ef">returns</span> (Feature) {}                  <span style="color:#75715e">// 普通
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">rpc</span> ListFeatures(Point) <span style="color:#66d9ef">returns</span> (stream Feature) {}         <span style="color:#75715e">// 服务流
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">rpc</span> RecordRoute(stream Point) <span style="color:#66d9ef">returns</span> (Feature) {}          <span style="color:#75715e">// 客户端流
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">rpc</span> RouteChat(stream Point) <span style="color:#66d9ef">returns</span> (stream Feature){}      <span style="color:#75715e">// 双向流
+</span><span style="color:#75715e"></span>}<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">message</span> <span style="color:#a6e22e">Point</span> {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#66d9ef">int32</span> latitude  <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#66d9ef">int32</span> longitude <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>}<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">message</span> <span style="color:#a6e22e">Feature</span>{<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#66d9ef">int32</span> id <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#66d9ef">bytes</span> data <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>}<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><ol>
+<li>简单RPC</li>
 </ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">// 服务端
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">port</span> = <span style="color:#e6db74">&#34;:9900&#34;</span>
 
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">routeGuideServer</span> <span style="color:#66d9ef">struct</span> {
+	<span style="color:#75715e">//pb proto.UnimplementedRouteGuideServer
+</span><span style="color:#75715e"></span>}
+
+<span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">router</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">routeGuideServer</span>) <span style="color:#a6e22e">Getfeature</span>(<span style="color:#a6e22e">ctx</span> <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">Context</span>, <span style="color:#a6e22e">point</span>  <span style="color:#f92672">*</span><span style="color:#a6e22e">proto</span>.<span style="color:#a6e22e">Point</span>) (<span style="color:#f92672">*</span><span style="color:#a6e22e">proto</span>.<span style="color:#a6e22e">Feature</span>, <span style="color:#66d9ef">error</span>) {
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;------ getfeature:&#34;</span>, <span style="color:#a6e22e">point</span>.<span style="color:#a6e22e">Longitude</span>, <span style="color:#a6e22e">point</span>.<span style="color:#a6e22e">Latitude</span>)
+	<span style="color:#66d9ef">return</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">proto</span>.<span style="color:#a6e22e">Feature</span>{<span style="color:#a6e22e">Message</span>:<span style="color:#e6db74">&#34;getfeature&#34;</span>}, <span style="color:#66d9ef">nil</span>
+}
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>()  {
+
+	<span style="color:#a6e22e">server</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">net</span>.<span style="color:#a6e22e">Listen</span>(<span style="color:#e6db74">&#34;tcp&#34;</span>, <span style="color:#e6db74">&#34;127.0.0.1&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">port</span>)
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+		<span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;tcp listen error: %s \n&#34;</span>, <span style="color:#a6e22e">err</span>)
+	}
+	<span style="color:#a6e22e">grpcServer</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">grpc</span>.<span style="color:#a6e22e">NewServer</span>()
+	<span style="color:#a6e22e">proto</span>.<span style="color:#a6e22e">RegisterRouteGuideServer</span>(<span style="color:#a6e22e">grpcServer</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">routeGuideServer</span>{})
+	<span style="color:#a6e22e">_</span> = <span style="color:#a6e22e">grpcServer</span>.<span style="color:#a6e22e">Serve</span>(<span style="color:#a6e22e">server</span>)
+}
+
+
+<span style="color:#75715e">// 客户端
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> (
+	<span style="color:#a6e22e">address</span>     = <span style="color:#e6db74">&#34;localhost:9900&#34;</span>
+)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+
+	<span style="color:#a6e22e">ctx</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">WithTimeout</span>(<span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">TODO</span>(), <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Second</span>)
+	<span style="color:#a6e22e">conn</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">grpc</span>.<span style="color:#a6e22e">DialContext</span>(<span style="color:#a6e22e">ctx</span>, <span style="color:#a6e22e">address</span>, <span style="color:#a6e22e">grpc</span>.<span style="color:#a6e22e">WithInsecure</span>())
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+		<span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;client server error: %s \n&#34;</span>, <span style="color:#a6e22e">err</span>)
+	}
+	<span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">conn</span>.<span style="color:#a6e22e">Close</span>()
+	<span style="color:#a6e22e">routeServe</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">proto</span>.<span style="color:#a6e22e">NewRouteGuideClient</span>(<span style="color:#a6e22e">conn</span>)
+	<span style="color:#a6e22e">feature</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">routeServe</span>.<span style="color:#a6e22e">Getfeature</span>(<span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">Background</span>())
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+		<span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;client feature error: %s \n&#34;</span>, <span style="color:#a6e22e">err</span>)
+	}
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">feature</span>)
+
+}
+
+</code></pre></div><ol start="2">
+<li>服务器流式 RPC</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">// 服务端
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">router</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">routeGuideServer</span>) <span style="color:#a6e22e">ListFeatures</span>(<span style="color:#a6e22e">point</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">proto</span>.<span style="color:#a6e22e">Point</span>, <span style="color:#a6e22e">server</span> <span style="color:#a6e22e">proto</span>.<span style="color:#a6e22e">RouteGuide_ListFeaturesServer</span>) <span style="color:#66d9ef">error</span> {
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;------ listfeature:&#34;</span>, <span style="color:#a6e22e">point</span>.<span style="color:#a6e22e">Latitude</span>, <span style="color:#a6e22e">point</span>.<span style="color:#a6e22e">Longitude</span>, <span style="color:#a6e22e">server</span>.<span style="color:#a6e22e">Context</span>())
+	<span style="color:#a6e22e">_</span> = <span style="color:#a6e22e">server</span>.<span style="color:#a6e22e">Send</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">proto</span>.<span style="color:#a6e22e">Feature</span>{<span style="color:#a6e22e">Message</span>: <span style="color:#e6db74">&#34;listfeature&#34;</span>})
+	<span style="color:#a6e22e">_</span> = <span style="color:#a6e22e">server</span>.<span style="color:#a6e22e">RecvMsg</span>(<span style="color:#66d9ef">nil</span>)
+	<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
+}
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>()  {
+	<span style="color:#a6e22e">server</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">net</span>.<span style="color:#a6e22e">Listen</span>(<span style="color:#e6db74">&#34;tcp&#34;</span>, <span style="color:#e6db74">&#34;127.0.0.1&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">port</span>)
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+		<span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;tcp listen error: %s \n&#34;</span>, <span style="color:#a6e22e">err</span>)
+	}
+	<span style="color:#a6e22e">grpcServer</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">grpc</span>.<span style="color:#a6e22e">NewServer</span>()
+	<span style="color:#a6e22e">proto</span>.<span style="color:#a6e22e">RegisterRouteGuideServer</span>(<span style="color:#a6e22e">grpcServer</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">routeGuideServer</span>{})
+	<span style="color:#a6e22e">_</span> = <span style="color:#a6e22e">grpcServer</span>.<span style="color:#a6e22e">Serve</span>(<span style="color:#a6e22e">server</span>)
+}
+
+<span style="color:#75715e">// 客户端
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> (
+	<span style="color:#a6e22e">address</span>     = <span style="color:#e6db74">&#34;localhost:9900&#34;</span>
+)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#a6e22e">ctx</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">WithTimeout</span>(<span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">TODO</span>(), <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Second</span>)
+	<span style="color:#a6e22e">conn</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">grpc</span>.<span style="color:#a6e22e">DialContext</span>(<span style="color:#a6e22e">ctx</span>, <span style="color:#a6e22e">address</span>, <span style="color:#a6e22e">grpc</span>.<span style="color:#a6e22e">WithInsecure</span>())
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+		<span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;client server error: %s \n&#34;</span>, <span style="color:#a6e22e">err</span>)
+	}
+	<span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">conn</span>.<span style="color:#a6e22e">Close</span>()
+	<span style="color:#a6e22e">routeServe</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">proto</span>.<span style="color:#a6e22e">NewRouteGuideClient</span>(<span style="color:#a6e22e">conn</span>)
+	<span style="color:#a6e22e">feature</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">routeServe</span>.<span style="color:#a6e22e">RecordRoute</span>(<span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">Background</span>())
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+		<span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;client feature error: %s \n&#34;</span>, <span style="color:#a6e22e">err</span>)
+	}
+	<span style="color:#a6e22e">_</span> = <span style="color:#a6e22e">feature</span>.<span style="color:#a6e22e">Send</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">proto</span>.<span style="color:#a6e22e">Point</span>{
+		<span style="color:#a6e22e">Latitude</span>:             <span style="color:#ae81ff">111</span>,
+		<span style="color:#a6e22e">Longitude</span>:            <span style="color:#ae81ff">222</span>,
+		<span style="color:#a6e22e">XXX_NoUnkeyedLiteral</span>: <span style="color:#66d9ef">struct</span>{}{},
+		<span style="color:#a6e22e">XXX_unrecognized</span>:     <span style="color:#66d9ef">nil</span>,
+		<span style="color:#a6e22e">XXX_sizecache</span>:        <span style="color:#ae81ff">0</span>,
+	})
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">feature</span>.<span style="color:#a6e22e">Recv</span>())
+}
+</code></pre></div><ol start="3">
+<li>客户端流式 RPC</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">// 服务端
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">router</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">routeGuideServer</span>) <span style="color:#a6e22e">RecordRoute</span>(<span style="color:#a6e22e">stream</span> <span style="color:#a6e22e">proto</span>.<span style="color:#a6e22e">RouteGuide_RecordRouteServer</span>) <span style="color:#66d9ef">error</span> {
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;------ recordRoute:&#34;</span>)
+	<span style="color:#a6e22e">point</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">stream</span>.<span style="color:#a6e22e">Recv</span>()
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">EOF</span> {
+		<span style="color:#a6e22e">_</span> = <span style="color:#a6e22e">stream</span>.<span style="color:#a6e22e">SendAndClose</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">proto</span>.<span style="color:#a6e22e">Feature</span>{
+            <span style="color:#a6e22e">Id</span>:                   <span style="color:#ae81ff">1</span>,  
+			<span style="color:#a6e22e">Data</span>:                 []byte(<span style="color:#e6db74">&#34;hello&#34;</span>),
+			<span style="color:#a6e22e">XXX_NoUnkeyedLiteral</span>: <span style="color:#66d9ef">struct</span>{}{},
+			<span style="color:#a6e22e">XXX_unrecognized</span>:     <span style="color:#66d9ef">nil</span>,
+			<span style="color:#a6e22e">XXX_sizecache</span>:        <span style="color:#ae81ff">0</span>,
+		})
+	}
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;=======&#34;</span>, <span style="color:#a6e22e">point</span>)
+	<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
+}
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>()  {
+	<span style="color:#a6e22e">server</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">net</span>.<span style="color:#a6e22e">Listen</span>(<span style="color:#e6db74">&#34;tcp&#34;</span>, <span style="color:#e6db74">&#34;127.0.0.1&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">port</span>)
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+		<span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;tcp listen error: %s \n&#34;</span>, <span style="color:#a6e22e">err</span>)
+	}
+	<span style="color:#a6e22e">grpcServer</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">grpc</span>.<span style="color:#a6e22e">NewServer</span>()
+	<span style="color:#a6e22e">proto</span>.<span style="color:#a6e22e">RegisterRouteGuideServer</span>(<span style="color:#a6e22e">grpcServer</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">routeGuideServer</span>{})
+	<span style="color:#a6e22e">_</span> = <span style="color:#a6e22e">grpcServer</span>.<span style="color:#a6e22e">Serve</span>(<span style="color:#a6e22e">server</span>)
+}
+
+
+<span style="color:#75715e">// 客户端
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#a6e22e">ctx</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">WithTimeout</span>(<span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">TODO</span>(), <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Second</span>)
+	<span style="color:#a6e22e">conn</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">grpc</span>.<span style="color:#a6e22e">DialContext</span>(<span style="color:#a6e22e">ctx</span>, <span style="color:#a6e22e">address</span>, <span style="color:#a6e22e">grpc</span>.<span style="color:#a6e22e">WithInsecure</span>())
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+		<span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;client server error: %s \n&#34;</span>, <span style="color:#a6e22e">err</span>)
+	}
+	<span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">conn</span>.<span style="color:#a6e22e">Close</span>()
+	<span style="color:#a6e22e">routeServe</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">proto</span>.<span style="color:#a6e22e">NewRouteGuideClient</span>(<span style="color:#a6e22e">conn</span>)
+	<span style="color:#a6e22e">feature</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">routeServe</span>.<span style="color:#a6e22e">RecordRoute</span>(<span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">Background</span>())
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+		<span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;client feature error: %s \n&#34;</span>, <span style="color:#a6e22e">err</span>)
+	}
+	<span style="color:#a6e22e">_</span> = <span style="color:#a6e22e">feature</span>.<span style="color:#a6e22e">Send</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">proto</span>.<span style="color:#a6e22e">Point</span>{
+		<span style="color:#a6e22e">Latitude</span>:             <span style="color:#ae81ff">111</span>,
+		<span style="color:#a6e22e">Longitude</span>:            <span style="color:#ae81ff">222</span>,
+		<span style="color:#a6e22e">XXX_NoUnkeyedLiteral</span>: <span style="color:#66d9ef">struct</span>{}{},
+		<span style="color:#a6e22e">XXX_unrecognized</span>:     <span style="color:#66d9ef">nil</span>,
+		<span style="color:#a6e22e">XXX_sizecache</span>:        <span style="color:#ae81ff">0</span>,
+	})
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">feature</span>)
+
+}
+</code></pre></div><ol start="4">
+<li>双向流式 RPC</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">
+<span style="color:#75715e">// 服务端
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">router</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">routeGuideServer</span>) <span style="color:#a6e22e">RouteChat</span>(<span style="color:#a6e22e">stream</span> <span style="color:#a6e22e">proto</span>.<span style="color:#a6e22e">RouteGuide_RouteChatServer</span>) <span style="color:#66d9ef">error</span> {
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;------ routeChat:&#34;</span>)
+	<span style="color:#a6e22e">point</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">stream</span>.<span style="color:#a6e22e">Recv</span>()
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">err</span>
+	}
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">EOF</span> {
+		<span style="color:#a6e22e">_</span> = <span style="color:#a6e22e">stream</span>.<span style="color:#a6e22e">Send</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">proto</span>.<span style="color:#a6e22e">Feature</span>{
+			<span style="color:#a6e22e">Id</span>:                   <span style="color:#ae81ff">1</span>,
+			<span style="color:#a6e22e">Data</span>:                 []byte(<span style="color:#e6db74">&#34;hello&#34;</span>),
+			<span style="color:#a6e22e">XXX_NoUnkeyedLiteral</span>: <span style="color:#66d9ef">struct</span>{}{},
+			<span style="color:#a6e22e">XXX_unrecognized</span>:     <span style="color:#66d9ef">nil</span>,
+			<span style="color:#a6e22e">XXX_sizecache</span>:        <span style="color:#ae81ff">0</span>,
+		})
+	}
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;=====&#34;</span>, <span style="color:#a6e22e">point</span>)
+	<span style="color:#a6e22e">_</span> = <span style="color:#a6e22e">stream</span>.<span style="color:#a6e22e">Send</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">proto</span>.<span style="color:#a6e22e">Feature</span>{
+		<span style="color:#a6e22e">Id</span>:                   <span style="color:#ae81ff">1</span>,  
+        <span style="color:#a6e22e">Data</span>:                 []byte(<span style="color:#e6db74">&#34;hello&#34;</span>),
+		<span style="color:#a6e22e">XXX_NoUnkeyedLiteral</span>: <span style="color:#66d9ef">struct</span>{}{},
+		<span style="color:#a6e22e">XXX_unrecognized</span>:     <span style="color:#66d9ef">nil</span>,
+		<span style="color:#a6e22e">XXX_sizecache</span>:        <span style="color:#ae81ff">0</span>,
+	})
+	<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
+}
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>()  {
+	<span style="color:#a6e22e">server</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">net</span>.<span style="color:#a6e22e">Listen</span>(<span style="color:#e6db74">&#34;tcp&#34;</span>, <span style="color:#e6db74">&#34;127.0.0.1&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">port</span>)
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+		<span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;tcp listen error: %s \n&#34;</span>, <span style="color:#a6e22e">err</span>)
+	}
+	<span style="color:#a6e22e">grpcServer</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">grpc</span>.<span style="color:#a6e22e">NewServer</span>()
+	<span style="color:#a6e22e">proto</span>.<span style="color:#a6e22e">RegisterRouteGuideServer</span>(<span style="color:#a6e22e">grpcServer</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">routeGuideServer</span>{})
+	<span style="color:#a6e22e">_</span> = <span style="color:#a6e22e">grpcServer</span>.<span style="color:#a6e22e">Serve</span>(<span style="color:#a6e22e">server</span>)
+}
+
+
+<span style="color:#75715e">// 客户端
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#a6e22e">ctx</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">WithTimeout</span>(<span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">TODO</span>(), <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Second</span>)
+	<span style="color:#a6e22e">conn</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">grpc</span>.<span style="color:#a6e22e">DialContext</span>(<span style="color:#a6e22e">ctx</span>, <span style="color:#a6e22e">address</span>, <span style="color:#a6e22e">grpc</span>.<span style="color:#a6e22e">WithInsecure</span>())
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+		<span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;client server error: %s \n&#34;</span>, <span style="color:#a6e22e">err</span>)
+	}
+	<span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">conn</span>.<span style="color:#a6e22e">Close</span>()
+	<span style="color:#a6e22e">routeServe</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">proto</span>.<span style="color:#a6e22e">NewRouteGuideClient</span>(<span style="color:#a6e22e">conn</span>)
+	<span style="color:#a6e22e">feature</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">routeServe</span>.<span style="color:#a6e22e">RouteChat</span>(<span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">Background</span>())
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+		<span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;client feature error: %s \n&#34;</span>, <span style="color:#a6e22e">err</span>)
+	}
+	<span style="color:#a6e22e">_</span> = <span style="color:#a6e22e">feature</span>.<span style="color:#a6e22e">Send</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">proto</span>.<span style="color:#a6e22e">Point</span>{
+		<span style="color:#a6e22e">Latitude</span>:             <span style="color:#ae81ff">111</span>,
+		<span style="color:#a6e22e">Longitude</span>:            <span style="color:#ae81ff">222</span>,
+		<span style="color:#a6e22e">XXX_NoUnkeyedLiteral</span>: <span style="color:#66d9ef">struct</span>{}{},
+		<span style="color:#a6e22e">XXX_unrecognized</span>:     <span style="color:#66d9ef">nil</span>,
+		<span style="color:#a6e22e">XXX_sizecache</span>:        <span style="color:#ae81ff">0</span>,
+	})
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">feature</span>.<span style="color:#a6e22e">Recv</span>())
+}
+
+</code></pre></div>
     </div>
 
     <div class="post-copyright">
@@ -420,6 +405,14 @@ func main() {
 
   
     <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="tags/go/">
+                    #go</a></span>
+            
+            </section>
         
         <section>
                 <a href="javascript:window.history.back();">back</a></span> · 
@@ -472,9 +465,8 @@ func main() {
 
 
     
-     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
-      
-     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
     
   
 

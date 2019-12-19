@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on smoke</title>
+    <link>/tags/linux/</link>
+    <description>Recent content in linux on smoke</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 11 Dec 2019 11:35:22 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Command Use Guid</title>
+      <link>/blog/linux/command-use-guid/</link>
+      <pubDate>Wed, 11 Dec 2019 11:35:22 +0800</pubDate>
+      
+      <guid>/blog/linux/command-use-guid/</guid>
+      <description>![*](https://img.shields.io/static/v1?label=smoke&amp;amp;message=&amp;amp;color=red&amp;amp;style=for-the-badge&amp;amp;logo=appveyor) screen</description>
+    </item>
+    
+    <item>
+      <title>Vim</title>
+      <link>/blog/linux/vim/</link>
+      <pubDate>Tue, 03 Dec 2019 13:58:19 +0800</pubDate>
+      
+      <guid>/blog/linux/vim/</guid>
+      <description>vim自定义模板 .vimrc
+&amp;#34;##### 拷贝后保存为 .vimrc，替换到系统中&amp;#34;==============================================================================&amp;#34; 处理 Gnome 终端不能使用 alt 快捷键&amp;#34; 参考：http://landcareweb.com/questions/8623/altjian-kuai-jie-jian-bu-gua-yong-yu-dai-you-vimde-gnomezhong-duan&amp;#34;==============================================================================let c=&amp;#39;a&amp;#39;while c &amp;lt;= &amp;#39;z&amp;#39;exec &amp;#34;set &amp;lt;A-&amp;#34;.c.&amp;#34;&amp;gt;=\e&amp;#34;.cexec &amp;#34;imap \e&amp;#34;.c.&amp;#34; &amp;lt;A-&amp;#34;.c.&amp;#34;&amp;gt;&amp;#34;let c = nr2char(1+char2nr(c))endwset timeout ttimeoutlen=50&amp;#34;==============================================================================&amp;#34; vim 内置配置 &amp;#34;==============================================================================&amp;#34; 设置 vimrc 修改保存后立刻生效，不用在重新打开&amp;#34; 建议配置完成后将这个关闭，否则配置多了之后会很卡&amp;#34; autocmd BufWritePost $MYVIMRC source $MYVIMRC&amp;#34; 关闭兼容模式set nocompatibleset number &amp;#34; 设置绝对行号set relativenumber &amp;#34; 设置相对行号set cursorline &amp;#34;突出显示当前行&amp;#34; set cursorcolumn &amp;#34; 突出显示当前列set showmatch &amp;#34; 显示括号匹配set showcmd &amp;#34; 显示未完成命令set nowrap &amp;#34; 设置不自动换行&amp;#34; tab 缩进set tabstop=4 &amp;#34; 设置Tab长度为4空格set shiftwidth=4 &amp;#34; 设置自动缩进长度为4空格set autoindent &amp;#34; 继承前一行的缩进方式，适用于多行注释&amp;#34; 定义快捷键的前缀，即&amp;lt;Leader&amp;gt;&amp;#34; let mapleader=&amp;#34;;&amp;#34;&amp;#34; 自定义快捷键&amp;#34; ==== 系统剪切板复制粘贴 ====&amp;#34; v 模式下复制内容到系统剪切板vmap &amp;lt;M-c&amp;gt; &amp;#34;+yy&amp;#34; n 模式下复制一行到系统剪切板nmap &amp;lt;M-c&amp;gt; &amp;#34;+yy&amp;#34; n 模式下粘贴系统剪切板的内容nmap &amp;lt;M-v&amp;gt; &amp;#34;+p&amp;#34; 修改默认的区域切换如ctrl+w+h 奇幻到左侧， 依次是 左右上下nmap &amp;lt;M-h&amp;gt; &amp;lt;C-w&amp;gt;hnmap &amp;lt;M-l&amp;gt; &amp;lt;C-w&amp;gt;lnmap &amp;lt;M-k&amp;gt; &amp;lt;C-w&amp;gt;knmap &amp;lt;M-j&amp;gt; &amp;lt;C-w&amp;gt;j&amp;#34;开启实时搜索set incsearch&amp;#34; 搜索时大小写不敏感set ignorecasesyntax enablesyntax on &amp;#34; 开启文件类型侦测filetype plugin indent on &amp;#34; 启用自动补全&amp;#34; 退出插入模式指定类型的文件自动保存au InsertLeave *.</description>
+    </item>
+    
+  </channel>
+</rss>

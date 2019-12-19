@@ -1,6 +1,7 @@
 ---
 title: "My Life Live Love List"
 date: 2019-11-19T12:35:53+08:00
+tags: ["other"]
 ---
 #### ![*](https://img.shields.io/static/v1?label=smoke&message=<Project Collect Build Lists UseSmoke>&color=green&style=for-the-badge&logo=appveyor)
 
