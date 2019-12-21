@@ -46,7 +46,7 @@
     "articleSection" : "blog",
     "name" : "Check Nginx Sh",
     "headline" : "Check Nginx Sh",
-    "description" : "![*](https:\/\/img.shields.io\/static\/v1?label=smoke\x26amp;message=\x26amp;color=orange\x26amp;style=for-the-badge\x26amp;logo=appveyor) Nginx日志安全分析脚本()\ncheck\n#!\/usr\/bin\/env bash echo \x26#34;\x26#34; echo \x26#34; ========================================================= \x26#34; echo \x26#34; \\ Nginx日志安全分析脚本 V1.0 \/ \x26#34; echo \x26#34; ========================================================= \x26#34; echo \x26#34; # 支持Nginx日志分析，攻击告警分析等 \x26#34; echo \x26#34; # author：al0ne \x26#34; echo \x26#34; # https:\/\/github.com\/al0ne \x26#34; echo -e \x26#34;\\n\x26#34; #此脚本是参考nmgxy\/klionsec修改而来,重新添加了一些特征，只用来临时救急，还是推荐到ELK或者Splunk中分析 #功能 ###统计Top 20 地址 ###SQL注入分析 ###扫描器\/常用黑客工具 ###漏洞利用检测 ###敏感路径访问 ###文件包含攻击 ###HTTP Tunnel ###Webshell ###寻找响应长度的url Top 20 ###寻找罕见的脚本文件访问 ###寻找302跳转的脚本文件 #如果存在多个access文件或者有多个access.x.gz 建议先zcat access*.gz \x26gt;\x26gt; access.log文件中 #设置分析结果存储目录,结尾不能加\/ outfile=\/tmp\/logs #如果目录以存在则清空，未存在则新建目录 if [ -d $outfile ]; then rm -rf $outfile\/* else mkdir -p $outfile fi #设置nginx日志目录，结尾必须加\/ access_dir=\/var\/log\/nginx\/ #设置文件名，如果文件名为access那么匹配的是access*文件 access_log=access #判断日志文件是否存在 num=$(ls ${access_dir}${access_log}* | wc -l) \x26gt;\/dev\/null 2\x26gt;\x26amp;1 if [ $num -eq 0 ]; then echo \x26#39;日志文件不存在\x26#39; exit 1 fi #如果检测别的日志请手动替换偏移，例如awk的$7代表url，$9代表状态码，$10代表长度,本脚本是以nginx日志为基础 echo \x26#34;分析结果日志：${outfile}\x26#34; echo \x26#34;Nginx日志目录：${access_dir}\x26#34; echo \x26#34;Nginx文件名：${access_log}\x26#34; echo -e \x26#34;\\n\x26#34; echo -e \x26#34;\\e[00;31m[\x2b]TOP 20 IP 地址\\e[00m\x26#34; ag -a -o --nofilename \x26#39;\\d\x2b\\.",
+    "description" : "Nginx日志安全分析脚本()\ncheck\n#!\/usr\/bin\/env bash echo \x26#34;\x26#34; echo \x26#34; ========================================================= \x26#34; echo \x26#34; \\ Nginx日志安全分析脚本 V1.0 \/ \x26#34; echo \x26#34; ========================================================= \x26#34; echo \x26#34; # 支持Nginx日志分析，攻击告警分析等 \x26#34; echo \x26#34; # author：al0ne \x26#34; echo \x26#34; # https:\/\/github.com\/al0ne \x26#34; echo -e \x26#34;\\n\x26#34; #此脚本是参考nmgxy\/klionsec修改而来,重新添加了一些特征，只用来临时救急，还是推荐到ELK或者Splunk中分析 #功能 ###统计Top 20 地址 ###SQL注入分析 ###扫描器\/常用黑客工具 ###漏洞利用检测 ###敏感路径访问 ###文件包含攻击 ###HTTP Tunnel ###Webshell ###寻找响应长度的url Top 20 ###寻找罕见的脚本文件访问 ###寻找302跳转的脚本文件 #如果存在多个access文件或者有多个access.x.gz 建议先zcat access*.gz \x26gt;\x26gt; access.log文件中 #设置分析结果存储目录,结尾不能加\/ outfile=\/tmp\/logs #如果目录以存在则清空，未存在则新建目录 if [ -d $outfile ]; then rm -rf $outfile\/* else mkdir -p $outfile fi #设置nginx日志目录，结尾必须加\/ access_dir=\/var\/log\/nginx\/ #设置文件名，如果文件名为access那么匹配的是access*文件 access_log=access #判断日志文件是否存在 num=$(ls ${access_dir}${access_log}* | wc -l) \x26gt;\/dev\/null 2\x26gt;\x26amp;1 if [ $num -eq 0 ]; then echo \x26#39;日志文件不存在\x26#39; exit 1 fi #如果检测别的日志请手动替换偏移，例如awk的$7代表url，$9代表状态码，$10代表长度,本脚本是以nginx日志为基础 echo \x26#34;分析结果日志：${outfile}\x26#34; echo \x26#34;Nginx日志目录：${access_dir}\x26#34; echo \x26#34;Nginx文件名：${access_log}\x26#34; echo -e \x26#34;\\n\x26#34; echo -e \x26#34;\\e[00;31m[\x2b]TOP 20 IP 地址\\e[00m\x26#34; ag -a -o --nofilename \x26#39;\\d\x2b\\.",
     "inLanguage" : "en-us",
     "author" : "smoke",
     "creator" : "smoke",
@@ -57,7 +57,7 @@
     "datePublished": "2019-12-10 10:36:04 \x2b0800 CST",
     "dateModified" : "2019-12-10 10:36:04 \x2b0800 CST",
     "url" : "\/blog\/nginx\/check-nginx-sh\/",
-    "wordCount" : "591",
+    "wordCount" : "590",
     "keywords" : [ "nginx", "smoke"]
 }
 </script>
@@ -134,6 +134,8 @@
         
 
         
+            
+        
 
         
         
@@ -146,7 +148,7 @@
           
           
 
-          <h4 id="httpsimgshieldsiostaticv1labelsmokemessagecheck-nginx-shcolororangestylefor-the-badgelogoappveyor">![*](<a href="https://img.shields.io/static/v1?label=smoke&amp;message=">https://img.shields.io/static/v1?label=smoke&amp;message=</a><!-- raw HTML omitted -->&amp;color=orange&amp;style=for-the-badge&amp;logo=appveyor)</h4>
+          <h4 id="httpsimgshieldsiostaticv1labelsmokemessagecheck-nginx-shcolororangestylefor-the-badgelogoappveyor"><img src="https://img.shields.io/static/v1?label=smoke&amp;message=%3CCheck-Nginx-Sh%3E&amp;color=orange&amp;style=for-the-badge&amp;logo=appveyor" alt="*"></h4>
 <p>Nginx日志安全分析脚本()</p>
 <p><a href="/tool/linux/nginx_check.sh">check</a></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">
@@ -355,8 +357,9 @@ echo -e <span style="color:#e6db74">&#34;\n&#34;</span>
 
 
     
-    
-    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
     
   
 

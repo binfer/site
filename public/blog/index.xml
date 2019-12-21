@@ -17,7 +17,7 @@
       <pubDate>Thu, 19 Dec 2019 18:29:19 +0800</pubDate>
       
       <guid>/blog/web/layui-time-count-down/</guid>
-      <description>![*](https://img.shields.io/static/v1?label=smoke&amp;amp;message=&amp;amp;color=green&amp;amp;style=for-the-badge&amp;amp;logo=appveyor) layui 倒计时 table.render({ elem: &amp;#39;#withdraw-list-table&amp;#39; ,url: &amp;#39;/member/withdraw/list&amp;#39; //模拟接口  ,method:&amp;#39;POST&amp;#39; ,headers: { &amp;#39;X-CSRF-TOKEN&amp;#39;: csrf_token} ,smartReloadModel: true ,totalRow:true ,cols: [[ //{field: &amp;#39;id&amp;#39;,width:80,title: &amp;#39;ID&amp;#39;,sort:true}  {field: &amp;#39;member:order&amp;#39;,width:250, title: &amp;#39;会员/单号&amp;#39;,totalRowText:&amp;#34;总笔数&amp;#34;} ,{field: &amp;#39;_bank_card_number&amp;#39;,width:200,align:&amp;#34;right&amp;#34;, title: &amp;#39;收款银行账号&amp;#39;} ,{field: &amp;#39;_bank_owner_name&amp;#39;,width:120,align:&amp;#34;right&amp;#34;, title: &amp;#39;收款户名&amp;#39;,totalRowText:&amp;#34;金额小计&amp;#34;} ,{field: &amp;#39;payer_name&amp;#39;,width:120,align:&amp;#34;center&amp;#34;, title: &amp;#39;付款人&amp;#39;} ,{field: &amp;#39;amount&amp;#39;,align:&amp;#34;right&amp;#34;, title: &amp;#39;金额&amp;#39;,sort:true,width:100,totalRowText:&amp;#34;金额总计&amp;#34;} ,{field: &amp;#39;service_charge&amp;#39;,align:&amp;#34;right&amp;#34;, title: &amp;#39;手续费&amp;#39;,width:100} ,{field: &amp;#39;create_time&amp;#39;,align:&amp;#34;center&amp;#34;, title: &amp;#39;申请时间&amp;#39;,width:120} ,{field: &amp;#39;deal_time&amp;#39;, title: &amp;#39;处理时间&amp;#39;,sort:true,width:120} ,{field: &amp;#39;agent_pay_status_desc&amp;#39;, align:&amp;#34;center&amp;#34;,title: &amp;#39;业务状态&amp;#39;,width:100} ,{field: &amp;#39;status_desc&amp;#39;, align:&amp;#34;center&amp;#34;,title: &amp;#39;状态&amp;#39;,width:100} ,{field: &amp;#39;is_agent_pay_name&amp;#39;,title: &amp;#39;出款方式&amp;#39;,width:120} ,{ field: &amp;#39;countDown&amp;#39;,width:150, title: &amp;#39;确认收款倒计时&amp;#39;, templet: function (d) { return &amp;#39;&amp;lt;dev class=&amp;#34;layui-box layui-btn-xs countDown&amp;#34; data-date=&amp;#34;&amp;#39; + (d.</description>
+      <description>layui 倒计时 table.render({ elem: &amp;#39;#withdraw-list-table&amp;#39; ,url: &amp;#39;/member/withdraw/list&amp;#39; //模拟接口  ,method:&amp;#39;POST&amp;#39; ,headers: { &amp;#39;X-CSRF-TOKEN&amp;#39;: csrf_token} ,smartReloadModel: true ,totalRow:true ,cols: [[ //{field: &amp;#39;id&amp;#39;,width:80,title: &amp;#39;ID&amp;#39;,sort:true}  {field: &amp;#39;member:order&amp;#39;,width:250, title: &amp;#39;会员/单号&amp;#39;,totalRowText:&amp;#34;总笔数&amp;#34;} ,{field: &amp;#39;_bank_card_number&amp;#39;,width:200,align:&amp;#34;right&amp;#34;, title: &amp;#39;收款银行账号&amp;#39;} ,{field: &amp;#39;_bank_owner_name&amp;#39;,width:120,align:&amp;#34;right&amp;#34;, title: &amp;#39;收款户名&amp;#39;,totalRowText:&amp;#34;金额小计&amp;#34;} ,{field: &amp;#39;payer_name&amp;#39;,width:120,align:&amp;#34;center&amp;#34;, title: &amp;#39;付款人&amp;#39;} ,{field: &amp;#39;amount&amp;#39;,align:&amp;#34;right&amp;#34;, title: &amp;#39;金额&amp;#39;,sort:true,width:100,totalRowText:&amp;#34;金额总计&amp;#34;} ,{field: &amp;#39;service_charge&amp;#39;,align:&amp;#34;right&amp;#34;, title: &amp;#39;手续费&amp;#39;,width:100} ,{field: &amp;#39;create_time&amp;#39;,align:&amp;#34;center&amp;#34;, title: &amp;#39;申请时间&amp;#39;,width:120} ,{field: &amp;#39;deal_time&amp;#39;, title: &amp;#39;处理时间&amp;#39;,sort:true,width:120} ,{field: &amp;#39;agent_pay_status_desc&amp;#39;, align:&amp;#34;center&amp;#34;,title: &amp;#39;业务状态&amp;#39;,width:100} ,{field: &amp;#39;status_desc&amp;#39;, align:&amp;#34;center&amp;#34;,title: &amp;#39;状态&amp;#39;,width:100} ,{field: &amp;#39;is_agent_pay_name&amp;#39;,title: &amp;#39;出款方式&amp;#39;,width:120} ,{ field: &amp;#39;countDown&amp;#39;,width:150, title: &amp;#39;确认收款倒计时&amp;#39;, templet: function (d) { return &amp;#39;&amp;lt;dev class=&amp;#34;layui-box layui-btn-xs countDown&amp;#34; data-date=&amp;#34;&amp;#39; + (d.</description>
     </item>
     
     <item>
@@ -26,7 +26,7 @@
       <pubDate>Mon, 16 Dec 2019 17:48:05 +0800</pubDate>
       
       <guid>/blog/go/time-ticker/</guid>
-      <description>![*](https://img.shields.io/static/v1?label=smoke&amp;amp;message=&amp;amp;color=green&amp;amp;style=for-the-badge&amp;amp;logo=appveyor) // 定时器 func TimeTicker() { tick := time.NewTicker(time.Second * 5) for range tick.C { fmt.Println(&amp;#34;hello --&amp;#34;) } } </description>
+      <description> // 定时器 func TimeTicker() { tick := time.NewTicker(time.Second * 5) for range tick.C { fmt.Println(&amp;#34;hello --&amp;#34;) } } </description>
     </item>
     
     <item>
@@ -35,8 +35,7 @@
       <pubDate>Fri, 13 Dec 2019 10:30:17 +0800</pubDate>
       
       <guid>/blog/tcp/time-wait/</guid>
-      <description>![*](https://img.shields.io/static/v1?label=smoke&amp;amp;message=&amp;amp;color=yellowgreen&amp;amp;style=for-the-badge&amp;amp;logo=appveyor&amp;amp;suffix=download&amp;amp;?link=http://left&amp;amp;link=http://google.com)
-socket  socket是全双工的工作模式，一个socket的关闭，是需要四次握手来完成的。  1. 主动关闭方，调用close(), 协议层发送 FIN 包 2. 被动关闭方收到 FIN包, 协议层回复 ACK， 然后被动关闭方进入 CLOSE_WAIT 状态， 主动关闭方一直等待对方关闭， 进入 FIN_WAIT_2 状态； 此时关闭方等待， 被关闭方进入close() 状态 3. 被动关闭方处理完所有数据后, 调用close(), 此时协议层发送 FIN 包给主动关闭方， 等待对方的 ACK， 被动关闭方进入 LAST_ACK 状态 （此时被动关闭处于LAST_ACK状态） 4. 主动关闭方收到 FIN包， 协议层回复 ACK, 此时主动关闭方 进入 TIME_WAIT 状态，而被动关闭方进入 closed 状态 5. 等待2MSL (2倍msl，为了防止被关闭方无法收到最后一个ACK， 报文生存时间 &amp;gt;= ttl), 主动关闭方 结束 TIME_WAIT, 进入closed 状态 ---- 内核里，写死了这个MSL的时间为：30秒（有读者提醒，RFC里建议的MSL其实是2分钟，但是很多实现都是30秒），所以TIME_WAIT的即为1分钟： TOOL: - 通过 ss -tan state time-wait | wc -l 查看TIME_WAIT数量 分析： - 主动关闭方关闭了连接，发送了FIN； - 被动关闭方回复ACK同时也执行关闭动作，发送FIN包；此时，被动关闭的一方进入LAST_ACK状态 - 主动关闭的一方回去了ACK，主动关闭一方进入TIME_WAIT状态； - 但是最后的ACK丢失，被动关闭的一方还继续停留在LAST_ACK状态 - 此时，如果没有TIME_WAIT的存在，或者说，停留在TIME_WAIT上的时间很短，则主动关闭的一方很快就进入了CLOSED状态，也即是说，如果此时新建一个连接，源随机端口如果被复用，在connect发送SYN包后，由于被动方仍认为这条连接【五元组】还在等待ACK，但是却收到了SYN，则被动方会回复RST - 造成主动创建连接的一方，由于收到了RST，则连接无法成功 在TCP层，有个FLAGS字段，这个字段有以下几个标识：SYN, FIN, ACK, PSH, RST, URG.</description>
+      <description>socket  socket是全双工的工作模式，一个socket的关闭，是需要四次握手来完成的。  1. 主动关闭方，调用close(), 协议层发送 FIN 包 2. 被动关闭方收到 FIN包, 协议层回复 ACK， 然后被动关闭方进入 CLOSE_WAIT 状态， 主动关闭方一直等待对方关闭， 进入 FIN_WAIT_2 状态； 此时关闭方等待， 被关闭方进入close() 状态 3. 被动关闭方处理完所有数据后, 调用close(), 此时协议层发送 FIN 包给主动关闭方， 等待对方的 ACK， 被动关闭方进入 LAST_ACK 状态 （此时被动关闭处于LAST_ACK状态） 4. 主动关闭方收到 FIN包， 协议层回复 ACK, 此时主动关闭方 进入 TIME_WAIT 状态，而被动关闭方进入 closed 状态 5. 等待2MSL (2倍msl，为了防止被关闭方无法收到最后一个ACK， 报文生存时间 &amp;gt;= ttl), 主动关闭方 结束 TIME_WAIT, 进入closed 状态 ---- 内核里，写死了这个MSL的时间为：30秒（有读者提醒，RFC里建议的MSL其实是2分钟，但是很多实现都是30秒），所以TIME_WAIT的即为1分钟： TOOL: - 通过 ss -tan state time-wait | wc -l 查看TIME_WAIT数量 分析： - 主动关闭方关闭了连接，发送了FIN； - 被动关闭方回复ACK同时也执行关闭动作，发送FIN包；此时，被动关闭的一方进入LAST_ACK状态 - 主动关闭的一方回去了ACK，主动关闭一方进入TIME_WAIT状态； - 但是最后的ACK丢失，被动关闭的一方还继续停留在LAST_ACK状态 - 此时，如果没有TIME_WAIT的存在，或者说，停留在TIME_WAIT上的时间很短，则主动关闭的一方很快就进入了CLOSED状态，也即是说，如果此时新建一个连接，源随机端口如果被复用，在connect发送SYN包后，由于被动方仍认为这条连接【五元组】还在等待ACK，但是却收到了SYN，则被动方会回复RST - 造成主动创建连接的一方，由于收到了RST，则连接无法成功 在TCP层，有个FLAGS字段，这个字段有以下几个标识：SYN, FIN, ACK, PSH, RST, URG.</description>
     </item>
     
     <item>
@@ -45,7 +44,7 @@ socket  socket是全双工的工作模式，一个socket的关闭，是需要四
       <pubDate>Wed, 11 Dec 2019 11:35:22 +0800</pubDate>
       
       <guid>/blog/linux/command-use-guid/</guid>
-      <description>![*](https://img.shields.io/static/v1?label=smoke&amp;amp;message=&amp;amp;color=red&amp;amp;style=for-the-badge&amp;amp;logo=appveyor) screen</description>
+      <description>screen</description>
     </item>
     
     <item>
@@ -54,7 +53,7 @@ socket  socket是全双工的工作模式，一个socket的关闭，是需要四
       <pubDate>Tue, 10 Dec 2019 10:36:04 +0800</pubDate>
       
       <guid>/blog/nginx/check-nginx-sh/</guid>
-      <description>![*](https://img.shields.io/static/v1?label=smoke&amp;amp;message=&amp;amp;color=orange&amp;amp;style=for-the-badge&amp;amp;logo=appveyor) Nginx日志安全分析脚本()
+      <description>Nginx日志安全分析脚本()
 check
 #!/usr/bin/env bash echo &amp;#34;&amp;#34; echo &amp;#34; ========================================================= &amp;#34; echo &amp;#34; \ Nginx日志安全分析脚本 V1.0 / &amp;#34; echo &amp;#34; ========================================================= &amp;#34; echo &amp;#34; # 支持Nginx日志分析，攻击告警分析等 &amp;#34; echo &amp;#34; # author：al0ne &amp;#34; echo &amp;#34; # https://github.com/al0ne &amp;#34; echo -e &amp;#34;\n&amp;#34; #此脚本是参考nmgxy/klionsec修改而来,重新添加了一些特征，只用来临时救急，还是推荐到ELK或者Splunk中分析 #功能 ###统计Top 20 地址 ###SQL注入分析 ###扫描器/常用黑客工具 ###漏洞利用检测 ###敏感路径访问 ###文件包含攻击 ###HTTP Tunnel ###Webshell ###寻找响应长度的url Top 20 ###寻找罕见的脚本文件访问 ###寻找302跳转的脚本文件 #如果存在多个access文件或者有多个access.x.gz 建议先zcat access*.gz &amp;gt;&amp;gt; access.log文件中 #设置分析结果存储目录,结尾不能加/ outfile=/tmp/logs #如果目录以存在则清空，未存在则新建目录 if [ -d $outfile ]; then rm -rf $outfile/* else mkdir -p $outfile fi #设置nginx日志目录，结尾必须加/ access_dir=/var/log/nginx/ #设置文件名，如果文件名为access那么匹配的是access*文件 access_log=access #判断日志文件是否存在 num=$(ls ${access_dir}${access_log}* | wc -l) &amp;gt;/dev/null 2&amp;gt;&amp;amp;1 if [ $num -eq 0 ]; then echo &amp;#39;日志文件不存在&amp;#39; exit 1 fi #如果检测别的日志请手动替换偏移，例如awk的$7代表url，$9代表状态码，$10代表长度,本脚本是以nginx日志为基础 echo &amp;#34;分析结果日志：${outfile}&amp;#34; echo &amp;#34;Nginx日志目录：${access_dir}&amp;#34; echo &amp;#34;Nginx文件名：${access_log}&amp;#34; echo -e &amp;#34;\n&amp;#34; echo -e &amp;#34;\e[00;31m[+]TOP 20 IP 地址\e[00m&amp;#34; ag -a -o --nofilename &amp;#39;\d+\.</description>
     </item>
@@ -65,7 +64,7 @@ check
       <pubDate>Fri, 06 Dec 2019 17:48:02 +0800</pubDate>
       
       <guid>/blog/go/transfer-en-zh/</guid>
-      <description>![*](https://img.shields.io/static/v1?label=smoke&amp;amp;message=&amp;amp;color=green&amp;amp;style=for-the-badge&amp;amp;logo=appveyor) cli 翻译 package main import ( &amp;#34;encoding/xml&amp;#34; &amp;#34;github.com/bndr/gotabulate&amp;#34; &amp;#34;github.com/fatih/color&amp;#34; &amp;#34;fmt&amp;#34; &amp;#34;io/ioutil&amp;#34; &amp;#34;net/http&amp;#34; &amp;#34;net/url&amp;#34; &amp;#34;os&amp;#34; &amp;#34;strings&amp;#34; ) type ParseXmlData struct { XMLName xml.Name `xml:&amp;#34;yodaodict&amp;#34;` RawInput string `xml:&amp;#34;return-phrase&amp;#34;` CustomTrans CustomNode `xml:&amp;#34;custom-translation&amp;#34;` WebTrans WebTransList `xml:&amp;#34;yodao-web-dict&amp;#34;` } type CustomNode struct { Type string `xml:&amp;#34;type&amp;#34;` Translation []Translation `xml:&amp;#34;translation&amp;#34;` } type WebTransList struct { TransNode []WebTransNode `xml:&amp;#34;web-translation&amp;#34;` } type WebTransNode struct { Key string `xml:&amp;#34;key&amp;#34;` Trans []TransNode `xml:&amp;#34;trans&amp;#34;` } type TransNode struct { Value string `xml:&amp;#34;value,CDATA&amp;#34;` } type Translation struct { Content string `xml:&amp;#34;content,CDATA&amp;#34;` } func HttpGet(url string, ch chan []byte) { resp, err := http.</description>
+      <description>cli 翻译 package main import ( &amp;#34;encoding/xml&amp;#34; &amp;#34;github.com/bndr/gotabulate&amp;#34; &amp;#34;github.com/fatih/color&amp;#34; &amp;#34;fmt&amp;#34; &amp;#34;io/ioutil&amp;#34; &amp;#34;net/http&amp;#34; &amp;#34;net/url&amp;#34; &amp;#34;os&amp;#34; &amp;#34;strings&amp;#34; ) type ParseXmlData struct { XMLName xml.Name `xml:&amp;#34;yodaodict&amp;#34;` RawInput string `xml:&amp;#34;return-phrase&amp;#34;` CustomTrans CustomNode `xml:&amp;#34;custom-translation&amp;#34;` WebTrans WebTransList `xml:&amp;#34;yodao-web-dict&amp;#34;` } type CustomNode struct { Type string `xml:&amp;#34;type&amp;#34;` Translation []Translation `xml:&amp;#34;translation&amp;#34;` } type WebTransList struct { TransNode []WebTransNode `xml:&amp;#34;web-translation&amp;#34;` } type WebTransNode struct { Key string `xml:&amp;#34;key&amp;#34;` Trans []TransNode `xml:&amp;#34;trans&amp;#34;` } type TransNode struct { Value string `xml:&amp;#34;value,CDATA&amp;#34;` } type Translation struct { Content string `xml:&amp;#34;content,CDATA&amp;#34;` } func HttpGet(url string, ch chan []byte) { resp, err := http.</description>
     </item>
     
     <item>
@@ -74,7 +73,7 @@ check
       <pubDate>Thu, 05 Dec 2019 14:23:52 +0800</pubDate>
       
       <guid>/blog/mac/clear-time-machine/</guid>
-      <description>![*](https://img.shields.io/static/v1?label=smoke&amp;amp;message=&amp;amp;color=blue&amp;amp;style=for-the-badge&amp;amp;logo=appveyor)   清理 Time machine 本地备份以释放硬盘空间
+      <description>   清理 Time machine 本地备份以释放硬盘空间
   10.13之后的系统默认使用 APFS 文件格式，不能关闭本地快照。也就是说一旦你开启了 Time machine，每次备份时都会在你本地留下一份备份，日积月累占用的空间会越来越大
   打开“终端”输入如下代码：sudo tmutil listlocalsnapshots /
   接下来尝试删除第一个快照文件，后面的文件名需要根据自己的显示来改变：tmutil deletelocalsnapshots 2017-12-18-093234
@@ -88,7 +87,7 @@ check
       <pubDate>Wed, 04 Dec 2019 11:12:58 +0800</pubDate>
       
       <guid>/blog/other/markdown-style-part/</guid>
-      <description>![*](https://img.shields.io/static/v1?label=smoke&amp;amp;message=&amp;amp;color=green&amp;amp;style=for-the-badge&amp;amp;logo=appveyor) MARKDOWN STYLE PART  Iframe  &amp;lt;div id=&amp;#34;htmldemo&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;style&amp;gt; #htmldemo { height: 30px; width: 30px; background-color: #00aa9a; animation-name: moveX; animation-duration: 1s; animation-timing-function: linear; animation-iteration-count: infinite; animation-direction: alternate; animation-fill-mode: both; } @keyframes moveX { 0% { transform: translateX(0px); } 100% { transform: translateX(100px); } } &amp;lt;/style&amp;gt;   表格     Tables Are Cool Tables Are Cool Are     col 3 is right-aligned $1600 col 3 is right-aligned $1600 right-aligned   col 2 is centered $12 col 2 is centered $12 centered   zebra stripes are neat $1 zebra stripes are neat $1 are neat    | Tables | Are | Cool | Tables | Are | Cool | | ------------- | :-----------: | -----: | ------------- | :-----------: | -----: | | col 3 is | right-aligned | \$1600 | col 3 is | right-aligned | \$1600 | | col 2 is | centered | \$12 | col 2 is | centered | \$12 | | zebra stripes | are neat | \$1 | zebra stripes | are neat | \$1 |  分割线   ---   标记  A  引用   abc</description>
+      <description>MARKDOWN STYLE PART  Iframe  &amp;lt;div id=&amp;#34;htmldemo&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;style&amp;gt; #htmldemo { height: 30px; width: 30px; background-color: #00aa9a; animation-name: moveX; animation-duration: 1s; animation-timing-function: linear; animation-iteration-count: infinite; animation-direction: alternate; animation-fill-mode: both; } @keyframes moveX { 0% { transform: translateX(0px); } 100% { transform: translateX(100px); } } &amp;lt;/style&amp;gt;   表格     Tables Are Cool Tables Are Cool Are     col 3 is right-aligned $1600 col 3 is right-aligned $1600 right-aligned   col 2 is centered $12 col 2 is centered $12 centered   zebra stripes are neat $1 zebra stripes are neat $1 are neat    | Tables | Are | Cool | Tables | Are | Cool | | ------------- | :-----------: | -----: | ------------- | :-----------: | -----: | | col 3 is | right-aligned | \$1600 | col 3 is | right-aligned | \$1600 | | col 2 is | centered | \$12 | col 2 is | centered | \$12 | | zebra stripes | are neat | \$1 | zebra stripes | are neat | \$1 |  分割线   ---   标记  A  引用   abc</description>
     </item>
     
     <item>
@@ -107,7 +106,7 @@ check
       <pubDate>Tue, 03 Dec 2019 13:22:29 +0800</pubDate>
       
       <guid>/blog/go/grpc-go-use-builder/</guid>
-      <description>![*](https://img.shields.io/static/v1?label=smoke&amp;amp;message=&amp;amp;color=green&amp;amp;style=for-the-badge&amp;amp;logo=appveyor) 使用grpc https://github.com/binfer-go/example-grpc
+      <description>使用grpc https://github.com/binfer-go/example-grpc
 Proto
 //命令 protoc --go_out=plugins=grpc:. .\router.proto syntax = &amp;#34;proto3&amp;#34;;package proto;service RouteGuide{ rpc Getfeature(Point) returns (Feature) {} // 普通  rpc ListFeatures(Point) returns (stream Feature) {} // 服务流  rpc RecordRoute(stream Point) returns (Feature) {} // 客户端流  rpc RouteChat(stream Point) returns (stream Feature){} // 双向流 }message Point { int32 latitude = 1; int32 longitude = 2;}message Feature{ int32 id = 1; bytes data = 2;} 简单RPC  // 服务端 var port = &amp;#34;:9900&amp;#34; type routeGuideServer struct { //pb proto.</description>
     </item>
@@ -118,7 +117,7 @@ Proto
       <pubDate>Tue, 03 Dec 2019 10:50:45 +0800</pubDate>
       
       <guid>/blog/other/self-meditation-thoughts-collect/</guid>
-      <description>![*](https://img.shields.io/static/v1?label=smoke&amp;amp;message=&amp;amp;color=green&amp;amp;style=for-the-badge&amp;amp;logo=appveyor) 冥想杂念收集记录 ···
+      <description> 冥想杂念收集记录 ···
 [时间] 2019-12-03 10:51:38 [状态] 昏沉 [杂念] 1. 小说情节 2. 烤肠 3. 女生面孔 4. 食堂规则 5. 收集杂念本身 6. 医院(陪同) ···
 ···
 [时间] 2019-12-04 10:42:18 [状态] 良好 [杂念] 1. 食堂豆腐脑 2. 奶茶 3. 马匹 4. 模糊 ···
@@ -140,7 +139,7 @@ Proto
       <pubDate>Sat, 30 Nov 2019 13:10:08 +0800</pubDate>
       
       <guid>/blog/php/temegram-php-message/</guid>
-      <description>![*](https://img.shields.io/static/v1?label=smoke&amp;amp;message=&amp;amp;color=yellowgreen&amp;amp;style=for-the-badge&amp;amp;logo=appveyor&amp;amp;suffix=download&amp;amp;?link=http://left&amp;amp;link=http://google.com) telegram php &amp;lt;?php namespace App\Repositories; use GuzzleHttp\Client; use GuzzleHttp\Psr7\Response; use Illuminate\Support\Facades\Log; // 申请bot,建立订阅通道，建立组，管理订阅通道和组，将bot拉入组内 class TelegramRepository extends BaseRepository { static public $curl; protected $list; public $id, $first_name; public function __construct(){ if (!self::$curl) self::$curl = new Client([&amp;#39;base_uri&amp;#39; =&amp;gt; &amp;#34;https://api.telegram.org/bot&amp;#34;.config(&amp;#39;other.telegram&amp;#39;).&amp;#34;/&amp;#34;]); } public function make() { $result = self::$curl-&amp;gt;get(&amp;#34;getUpdates&amp;#34;, [&amp;#39;verify&amp;#39; =&amp;gt; false]); $this-&amp;gt;list = $result-&amp;gt;getBody()-&amp;gt;getContents(); return $this; } public function one($index=0, $field=&amp;#39;chat&amp;#39;) { if ($this-&amp;gt;list) { $data = json_decode($this-&amp;gt;list, true); if (is_array($data)) { if (isset($data[&amp;#39;result&amp;#39;][$index])) { //chat针对组  $info = $data[&amp;#39;result&amp;#39;][$index][&amp;#39;message&amp;#39;][$field]; foreach ($info as $k=&amp;gt;$v) { $this-&amp;gt;$k = $v; } } } } return $this; } public function push(string $message = &amp;#39;&amp;#39;, callable $call=null) { if ($call)$call($this); $msg = array( &amp;#39;位置 : &amp;#39;.</description>
+      <description>telegram php &amp;lt;?php namespace App\Repositories; use GuzzleHttp\Client; use GuzzleHttp\Psr7\Response; use Illuminate\Support\Facades\Log; // 申请bot,建立订阅通道，建立组，管理订阅通道和组，将bot拉入组内 class TelegramRepository extends BaseRepository { static public $curl; protected $list; public $id, $first_name; public function __construct(){ if (!self::$curl) self::$curl = new Client([&amp;#39;base_uri&amp;#39; =&amp;gt; &amp;#34;https://api.telegram.org/bot&amp;#34;.config(&amp;#39;other.telegram&amp;#39;).&amp;#34;/&amp;#34;]); } public function make() { $result = self::$curl-&amp;gt;get(&amp;#34;getUpdates&amp;#34;, [&amp;#39;verify&amp;#39; =&amp;gt; false]); $this-&amp;gt;list = $result-&amp;gt;getBody()-&amp;gt;getContents(); return $this; } public function one($index=0, $field=&amp;#39;chat&amp;#39;) { if ($this-&amp;gt;list) { $data = json_decode($this-&amp;gt;list, true); if (is_array($data)) { if (isset($data[&amp;#39;result&amp;#39;][$index])) { //chat针对组  $info = $data[&amp;#39;result&amp;#39;][$index][&amp;#39;message&amp;#39;][$field]; foreach ($info as $k=&amp;gt;$v) { $this-&amp;gt;$k = $v; } } } } return $this; } public function push(string $message = &amp;#39;&amp;#39;, callable $call=null) { if ($call)$call($this); $msg = array( &amp;#39;位置 : &amp;#39;.</description>
     </item>
     
     <item>
@@ -149,7 +148,7 @@ Proto
       <pubDate>Tue, 19 Nov 2019 18:32:56 +0800</pubDate>
       
       <guid>/blog/other/risk-control-safe-rule/</guid>
-      <description>![*](https://img.shields.io/static/v1?label=smoke&amp;amp;message=&amp;amp;color=green&amp;amp;style=for-the-badge&amp;amp;logo=appveyor) smoke
+      <description>smoke
 会员风控管制   1 可疑名单 (可继续操作，但是行为进行可疑标记)
   2 系统自动管制名单(可继续操作，但是提醒运营对其进行 行为，身份校验)
   3 人工管制名单（行为冻结，通知人工介入，同时发送报告）
@@ -166,7 +165,7 @@ Proto
       <pubDate>Tue, 19 Nov 2019 12:35:53 +0800</pubDate>
       
       <guid>/blog/other/my-life-live-love-list/</guid>
-      <description>![*](https://img.shields.io/static/v1?label=smoke&amp;amp;message=&amp;amp;color=green&amp;amp;style=for-the-badge&amp;amp;logo=appveyor) _ ____ _ _ __ __ _| |_ |__ /_ _ __| | _ _ ___| |_ \ V V / &amp;#39; \ |_ \ &amp;#39;_/ _` |_| &amp;#39; \/ -_) _| \_/\_/|_||_|___/_| \__,_(_)_||_\___|\__| est. 2020 mvp.langer@gmail.com  To help ohters, you don&#39;t have to be an efficient expert in the art;
+      <description> _ ____ _ _ __ __ _| |_ |__ /_ _ __| | _ _ ___| |_ \ V V / &amp;#39; \ |_ \ &amp;#39;_/ _` |_| &amp;#39; \/ -_) _| \_/\_/|_||_|___/_| \__,_(_)_||_\___|\__| est. 2020 mvp.langer@gmail.com  To help ohters, you don&#39;t have to be an efficient expert in the art;
   the main thing is the intention
  list # 健身 # 内在精神 # 咖啡制作 # 摄影 # 游戏 # 酒文化 </description>
     </item>
@@ -177,7 +176,7 @@ Proto
       <pubDate>Tue, 19 Nov 2019 10:21:03 +0800</pubDate>
       
       <guid>/blog/other/coffee-knowledge-over/</guid>
-      <description>![*](https://img.shields.io/static/v1?label=smoke&amp;amp;message=&amp;amp;color=orange&amp;amp;style=for-the-badge&amp;amp;logo=appveyor) Coffee - 咖啡)  咖啡带 ：  （英语：Bean Belt）是指在地球的纬度中，种植咖啡豆的地区。因为刚好形成一道带状，所以称之为咖啡带。这一条咖啡带介在北回归线和南回归线之间  咖啡豆 ：  咖啡属植物的种子，咖啡属植物的果实大小类似樱桃，咖啡豆即为其中的核果。将咖啡豆烘焙加工后再磨碎成咖啡粉，即可烹制咖啡。 两个主要的经济品种分别是阿拉比卡种，市占率约75-80％，和罗布斯塔种，市占率20％。阿拉比卡种的咖啡因含量约为0.8-1.4%，而罗布斯塔种则含1.7-4%。由于咖啡是世界上消费最广泛的饮料之一，咖啡种子是一个主要的经济作物，及重要的出口产品 [阿拉比卡种，罗布斯塔种]  咖啡树 ：  正常的一株咖啡树通常可以长到5米（16英尺）至10米（33英尺）高，不过为了采收方便，豆农们常将其修剪至2米（6.6英尺）以下。  组成 ：  咖啡豆由外果皮、果肉、黏液、羊皮纸、银膜、和种子组成  期货交易 ：  咖啡豆作为商品在多个期货市场包括芝加哥商品交易所及洲际交易所都可以自由买卖，交易以阿拉比卡（Arabica）和罗布斯塔（Robusta）两品种的咖啡豆最为常见，其价格会被地缘政治、气候因素、企业交易及投机者效应等因素所影响。  咖啡加工 ：  （Coffee Production）是一种将咖啡树的咖啡果转换为生咖啡豆商品的工业过程。过程中将咖啡果的果实或果肉去除，留下种子或豆子，并将之烘干。不同的加工方式会影响咖啡在烘烤以及冲泡时期的口味。经加工处理过的生咖啡豆，有着未经加工前所没有的特殊口感。  味觉分类：  酸味: 摩卡、夏威夷酸咖啡、墨西哥、危地马拉、哥斯达黎加高地产、吉利马札罗、哥伦比亚、津巴布韦、萨尔瓦多、西半球水洗式高级新豆。 苦味: 爪哇、曼特宁、波哥大、安哥拉、刚果、乌干达的各种旧豆 。 甜味: 哥伦比亚美特宁、委内瑞拉的旧豆、蓝山、吉利马札罗、摩卡、危地马拉、墨西哥、肯尼亚、山多士、海地。 中性味: 巴西、萨尔瓦多、低地哥斯达黎加、委内瑞拉、洪都拉斯、古巴。 香醇: 哥伦比亚美特宁、摩卡、蓝山、危地马拉、哥斯达黎加 。 ···
+      <description> Coffee - 咖啡)  咖啡带 ：  （英语：Bean Belt）是指在地球的纬度中，种植咖啡豆的地区。因为刚好形成一道带状，所以称之为咖啡带。这一条咖啡带介在北回归线和南回归线之间  咖啡豆 ：  咖啡属植物的种子，咖啡属植物的果实大小类似樱桃，咖啡豆即为其中的核果。将咖啡豆烘焙加工后再磨碎成咖啡粉，即可烹制咖啡。 两个主要的经济品种分别是阿拉比卡种，市占率约75-80％，和罗布斯塔种，市占率20％。阿拉比卡种的咖啡因含量约为0.8-1.4%，而罗布斯塔种则含1.7-4%。由于咖啡是世界上消费最广泛的饮料之一，咖啡种子是一个主要的经济作物，及重要的出口产品 [阿拉比卡种，罗布斯塔种]  咖啡树 ：  正常的一株咖啡树通常可以长到5米（16英尺）至10米（33英尺）高，不过为了采收方便，豆农们常将其修剪至2米（6.6英尺）以下。  组成 ：  咖啡豆由外果皮、果肉、黏液、羊皮纸、银膜、和种子组成  期货交易 ：  咖啡豆作为商品在多个期货市场包括芝加哥商品交易所及洲际交易所都可以自由买卖，交易以阿拉比卡（Arabica）和罗布斯塔（Robusta）两品种的咖啡豆最为常见，其价格会被地缘政治、气候因素、企业交易及投机者效应等因素所影响。  咖啡加工 ：  （Coffee Production）是一种将咖啡树的咖啡果转换为生咖啡豆商品的工业过程。过程中将咖啡果的果实或果肉去除，留下种子或豆子，并将之烘干。不同的加工方式会影响咖啡在烘烤以及冲泡时期的口味。经加工处理过的生咖啡豆，有着未经加工前所没有的特殊口感。  味觉分类：  酸味: 摩卡、夏威夷酸咖啡、墨西哥、危地马拉、哥斯达黎加高地产、吉利马札罗、哥伦比亚、津巴布韦、萨尔瓦多、西半球水洗式高级新豆。 苦味: 爪哇、曼特宁、波哥大、安哥拉、刚果、乌干达的各种旧豆 。 甜味: 哥伦比亚美特宁、委内瑞拉的旧豆、蓝山、吉利马札罗、摩卡、危地马拉、墨西哥、肯尼亚、山多士、海地。 中性味: 巴西、萨尔瓦多、低地哥斯达黎加、委内瑞拉、洪都拉斯、古巴。 香醇: 哥伦比亚美特宁、摩卡、蓝山、危地马拉、哥斯达黎加 。 ···
    Tables Are Cool     col 3 is right-aligned $1600   col 2 is centered $12   zebra stripes are neat $1    </description>
     </item>
     
@@ -187,7 +186,7 @@ Proto
       <pubDate>Mon, 18 Nov 2019 13:40:16 +0800</pubDate>
       
       <guid>/blog/other/project-collect-build-lists-usesmoke/</guid>
-      <description>![*](https://img.shields.io/static/v1?label=smoke&amp;amp;message=&amp;amp;color=green&amp;amp;style=for-the-badge&amp;amp;logo=appveyor)  use Go
+      <description>use Go
    Go list清单 - 开源项目列表
     Gofer框架 - (文档)[https://goframe.org/index]
     Micro框架
@@ -205,7 +204,7 @@ Proto
       <pubDate>Mon, 18 Nov 2019 13:21:41 +0800</pubDate>
       
       <guid>/blog/go/baidu-cloud-download/</guid>
-      <description>![*](https://img.shields.io/static/v1?label=smoke&amp;amp;message=&amp;amp;color=green&amp;amp;style=for-the-badge&amp;amp;logo=appveyor) https://github.com/iikira/BaiduPCS-Go.git
+      <description> https://github.com/iikira/BaiduPCS-Go.git
 baidu-cloud download  use:   login
  example
  ~~
@@ -218,8 +217,7 @@ baidu-cloud download  use:   login
       <pubDate>Fri, 15 Nov 2019 18:35:29 +0800</pubDate>
       
       <guid>/blog/go/dial-sacnning-port/</guid>
-      <description>![=](https://img.shields.io/static/v1?label=smoke&amp;amp;message=&amp;amp;color=green&amp;amp;style=for-the-badge&amp;amp;logo=appveyor)
-go 实现端口扫描  https://github.com/binfer-go/dials.git  package main import ( &amp;#34;flag&amp;#34; &amp;#34;fmt&amp;#34; &amp;#34;net&amp;#34; &amp;#34;sync&amp;#34; &amp;#34;time&amp;#34; ) func main() { startPort := flag.Int(&amp;#34;start-port&amp;#34;, 80, &amp;#34;开始扫描的端口&amp;#34;) endPort := flag.Int(&amp;#34;end-port&amp;#34;, 100, &amp;#34;结束扫描的端口&amp;#34;) timeOut := flag.Duration(&amp;#34;timeout&amp;#34;, time.Millisecond * 200, &amp;#34;超时时间&amp;#34;) flag.Parse() ips := []string{ &amp;#34;127.0.0.1&amp;#34;, &amp;#34;google.com&amp;#34;, &amp;#34;baidu.com&amp;#34;, } // 扫描端口 	Dials(ips, *startPort, *endPort, *timeOut) } func Dials(ips []string, start, end int, timeout time.Duration) { var ( wg = &amp;amp;sync.WaitGroup{} timeOut = time.Millisecond * 200 unUse = map[string][]int{} ) for port := start; port &amp;lt;= end; port++ { wg.</description>
+      <description>go 实现端口扫描  https://github.com/binfer-go/dials.git  package main import ( &amp;#34;flag&amp;#34; &amp;#34;fmt&amp;#34; &amp;#34;net&amp;#34; &amp;#34;sync&amp;#34; &amp;#34;time&amp;#34; ) func main() { startPort := flag.Int(&amp;#34;start-port&amp;#34;, 80, &amp;#34;开始扫描的端口&amp;#34;) endPort := flag.Int(&amp;#34;end-port&amp;#34;, 100, &amp;#34;结束扫描的端口&amp;#34;) timeOut := flag.Duration(&amp;#34;timeout&amp;#34;, time.Millisecond * 200, &amp;#34;超时时间&amp;#34;) flag.Parse() ips := []string{ &amp;#34;127.0.0.1&amp;#34;, &amp;#34;google.com&amp;#34;, &amp;#34;baidu.com&amp;#34;, } // 扫描端口 	Dials(ips, *startPort, *endPort, *timeOut) } func Dials(ips []string, start, end int, timeout time.Duration) { var ( wg = &amp;amp;sync.WaitGroup{} timeOut = time.Millisecond * 200 unUse = map[string][]int{} ) for port := start; port &amp;lt;= end; port++ { wg.</description>
     </item>
     
   </channel>

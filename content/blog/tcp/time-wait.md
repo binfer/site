@@ -4,7 +4,7 @@ date: 2019-12-13T10:30:17+08:00
 tags: ["tcp"]
 ---
 
-![*](https://img.shields.io/static/v1?label=smoke&message=<TCP TIME WAIT>&color=yellowgreen&style=for-the-badge&logo=appveyor&suffix=download&?link=http://left&link=http://google.com)
+![*](https://img.shields.io/static/v1?label=smoke&message=<TCP-TIME-WAIT>&color=yellowgreen&style=for-the-badge&logo=appveyor&suffix=download&?link=http://left&link=http://google.com)
 
 ![https://tools.ietf.org/html/rfc793](/images/tcp/ack.png)
 

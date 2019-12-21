@@ -3,7 +3,7 @@ title: "Clear Time Machine"
 date: 2019-12-05T14:23:52+08:00
 tags: ["mac"]
 ---
-#### ![*](https://img.shields.io/static/v1?label=smoke&message=<Clear Time Machine>&color=blue&style=for-the-badge&logo=appveyor) 
+#### ![*](https://img.shields.io/static/v1?label=smoke&message=<Clear-Time-Machine>&color=blue&style=for-the-badge&logo=appveyor) 
 
 - 清理 Time machine 本地备份以释放硬盘空间
 

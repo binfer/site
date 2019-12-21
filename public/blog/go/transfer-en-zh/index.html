@@ -46,7 +46,7 @@
     "articleSection" : "blog",
     "name" : "Transfer en Zh",
     "headline" : "Transfer en Zh",
-    "description" : "![*](https:\/\/img.shields.io\/static\/v1?label=smoke\x26amp;message=\x26amp;color=green\x26amp;style=for-the-badge\x26amp;logo=appveyor) cli 翻译 package main import ( \x26#34;encoding\/xml\x26#34; \x26#34;github.com\/bndr\/gotabulate\x26#34; \x26#34;github.com\/fatih\/color\x26#34; \x26#34;fmt\x26#34; \x26#34;io\/ioutil\x26#34; \x26#34;net\/http\x26#34; \x26#34;net\/url\x26#34; \x26#34;os\x26#34; \x26#34;strings\x26#34; ) type ParseXmlData struct { XMLName xml.Name `xml:\x26#34;yodaodict\x26#34;` RawInput string `xml:\x26#34;return-phrase\x26#34;` CustomTrans CustomNode `xml:\x26#34;custom-translation\x26#34;` WebTrans WebTransList `xml:\x26#34;yodao-web-dict\x26#34;` } type CustomNode struct { Type string `xml:\x26#34;type\x26#34;` Translation []Translation `xml:\x26#34;translation\x26#34;` } type WebTransList struct { TransNode []WebTransNode `xml:\x26#34;web-translation\x26#34;` } type WebTransNode struct { Key string `xml:\x26#34;key\x26#34;` Trans []TransNode `xml:\x26#34;trans\x26#34;` } type TransNode struct { Value string `xml:\x26#34;value,CDATA\x26#34;` } type Translation struct { Content string `xml:\x26#34;content,CDATA\x26#34;` } func HttpGet(url string, ch chan []byte) { resp, err := http.",
+    "description" : "cli 翻译 package main import ( \x26#34;encoding\/xml\x26#34; \x26#34;github.com\/bndr\/gotabulate\x26#34; \x26#34;github.com\/fatih\/color\x26#34; \x26#34;fmt\x26#34; \x26#34;io\/ioutil\x26#34; \x26#34;net\/http\x26#34; \x26#34;net\/url\x26#34; \x26#34;os\x26#34; \x26#34;strings\x26#34; ) type ParseXmlData struct { XMLName xml.Name `xml:\x26#34;yodaodict\x26#34;` RawInput string `xml:\x26#34;return-phrase\x26#34;` CustomTrans CustomNode `xml:\x26#34;custom-translation\x26#34;` WebTrans WebTransList `xml:\x26#34;yodao-web-dict\x26#34;` } type CustomNode struct { Type string `xml:\x26#34;type\x26#34;` Translation []Translation `xml:\x26#34;translation\x26#34;` } type WebTransList struct { TransNode []WebTransNode `xml:\x26#34;web-translation\x26#34;` } type WebTransNode struct { Key string `xml:\x26#34;key\x26#34;` Trans []TransNode `xml:\x26#34;trans\x26#34;` } type TransNode struct { Value string `xml:\x26#34;value,CDATA\x26#34;` } type Translation struct { Content string `xml:\x26#34;content,CDATA\x26#34;` } func HttpGet(url string, ch chan []byte) { resp, err := http.",
     "inLanguage" : "en-us",
     "author" : "smoke",
     "creator" : "smoke",
@@ -57,7 +57,7 @@
     "datePublished": "2019-12-06 17:48:02 \x2b0800 CST",
     "dateModified" : "2019-12-06 17:48:02 \x2b0800 CST",
     "url" : "\/blog\/go\/transfer-en-zh\/",
-    "wordCount" : "267",
+    "wordCount" : "266",
     "keywords" : [ "go", "smoke"]
 }
 </script>
@@ -134,6 +134,8 @@
         
 
         
+            
+        
 
         
         
@@ -146,7 +148,7 @@
           
           
 
-          <h4 id="httpsimgshieldsiostaticv1labelsmokemessagetransfer-en-zhcolorgreenstylefor-the-badgelogoappveyor">![*](<a href="https://img.shields.io/static/v1?label=smoke&amp;message=">https://img.shields.io/static/v1?label=smoke&amp;message=</a><!-- raw HTML omitted -->&amp;color=green&amp;style=for-the-badge&amp;logo=appveyor)</h4>
+          <h4 id="httpsimgshieldsiostaticv1labelsmokemessagetransfer-en-zhcolorgreenstylefor-the-badgelogoappveyor"><img src="https://img.shields.io/static/v1?label=smoke&amp;message=%3CTransfer-en-Zh%3E&amp;color=green&amp;style=for-the-badge&amp;logo=appveyor" alt="*"></h4>
 <h4 id="cli-">cli 翻译</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">
 <span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
@@ -358,8 +360,9 @@
 
 
     
-    
-    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
     
   
 

@@ -4,7 +4,7 @@ date: 2019-12-10T10:36:04+08:00
 tags: ["nginx"]
 ---
 
-#### ![*](https://img.shields.io/static/v1?label=smoke&message=<Check Nginx Sh>&color=orange&style=for-the-badge&logo=appveyor) 
+#### ![*](https://img.shields.io/static/v1?label=smoke&message=<Check-Nginx-Sh>&color=orange&style=for-the-badge&logo=appveyor) 
 
 
 Nginx日志安全分析脚本()

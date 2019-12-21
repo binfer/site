@@ -4,7 +4,7 @@ date: 2019-12-19T18:29:19+08:00
 tags: ["web", "layui"]
 ---
 
-#### ![*](https://img.shields.io/static/v1?label=smoke&message=<layui time count down>&color=green&style=for-the-badge&logo=appveyor)
+#### ![*](https://img.shields.io/static/v1?label=smoke&message=<Layui-time-count-down>&color=green&style=for-the-badge&logo=appveyor)
 
 #### layui 倒计时
 

@@ -46,7 +46,7 @@
     "articleSection" : "blog",
     "name" : "Temegram Php Message",
     "headline" : "Temegram Php Message",
-    "description" : "![*](https:\/\/img.shields.io\/static\/v1?label=smoke\x26amp;message=\x26amp;color=yellowgreen\x26amp;style=for-the-badge\x26amp;logo=appveyor\x26amp;suffix=download\x26amp;?link=http:\/\/left\x26amp;link=http:\/\/google.com) telegram php \x26lt;?php namespace App\\Repositories; use GuzzleHttp\\Client; use GuzzleHttp\\Psr7\\Response; use Illuminate\\Support\\Facades\\Log; \/\/ 申请bot,建立订阅通道，建立组，管理订阅通道和组，将bot拉入组内 class TelegramRepository extends BaseRepository { static public $curl; protected $list; public $id, $first_name; public function __construct(){ if (!self::$curl) self::$curl = new Client([\x26#39;base_uri\x26#39; =\x26gt; \x26#34;https:\/\/api.telegram.org\/bot\x26#34;.config(\x26#39;other.telegram\x26#39;).\x26#34;\/\x26#34;]); } public function make() { $result = self::$curl-\x26gt;get(\x26#34;getUpdates\x26#34;, [\x26#39;verify\x26#39; =\x26gt; false]); $this-\x26gt;list = $result-\x26gt;getBody()-\x26gt;getContents(); return $this; } public function one($index=0, $field=\x26#39;chat\x26#39;) { if ($this-\x26gt;list) { $data = json_decode($this-\x26gt;list, true); if (is_array($data)) { if (isset($data[\x26#39;result\x26#39;][$index])) { \/\/chat针对组  $info = $data[\x26#39;result\x26#39;][$index][\x26#39;message\x26#39;][$field]; foreach ($info as $k=\x26gt;$v) { $this-\x26gt;$k = $v; } } } } return $this; } public function push(string $message = \x26#39;\x26#39;, callable $call=null) { if ($call)$call($this); $msg = array( \x26#39;位置 : \x26#39;.",
+    "description" : "telegram php \x26lt;?php namespace App\\Repositories; use GuzzleHttp\\Client; use GuzzleHttp\\Psr7\\Response; use Illuminate\\Support\\Facades\\Log; \/\/ 申请bot,建立订阅通道，建立组，管理订阅通道和组，将bot拉入组内 class TelegramRepository extends BaseRepository { static public $curl; protected $list; public $id, $first_name; public function __construct(){ if (!self::$curl) self::$curl = new Client([\x26#39;base_uri\x26#39; =\x26gt; \x26#34;https:\/\/api.telegram.org\/bot\x26#34;.config(\x26#39;other.telegram\x26#39;).\x26#34;\/\x26#34;]); } public function make() { $result = self::$curl-\x26gt;get(\x26#34;getUpdates\x26#34;, [\x26#39;verify\x26#39; =\x26gt; false]); $this-\x26gt;list = $result-\x26gt;getBody()-\x26gt;getContents(); return $this; } public function one($index=0, $field=\x26#39;chat\x26#39;) { if ($this-\x26gt;list) { $data = json_decode($this-\x26gt;list, true); if (is_array($data)) { if (isset($data[\x26#39;result\x26#39;][$index])) { \/\/chat针对组  $info = $data[\x26#39;result\x26#39;][$index][\x26#39;message\x26#39;][$field]; foreach ($info as $k=\x26gt;$v) { $this-\x26gt;$k = $v; } } } } return $this; } public function push(string $message = \x26#39;\x26#39;, callable $call=null) { if ($call)$call($this); $msg = array( \x26#39;位置 : \x26#39;.",
     "inLanguage" : "en-us",
     "author" : "smoke",
     "creator" : "smoke",
@@ -57,7 +57,7 @@
     "datePublished": "2019-11-30 13:10:08 \x2b0800 CST",
     "dateModified" : "2019-11-30 13:10:08 \x2b0800 CST",
     "url" : "\/blog\/php\/temegram-php-message\/",
-    "wordCount" : "165",
+    "wordCount" : "164",
     "keywords" : [ "php", "smoke"]
 }
 </script>
@@ -134,6 +134,8 @@
         
 
         
+            
+        
 
         
         
@@ -146,7 +148,7 @@
           
           
 
-          <h4 id="httpsimgshieldsiostaticv1labelsmokemessagetemegram-php-messagecoloryellowgreenstylefor-the-badgelogoappveyorsuffixdownloadlinkhttpleftlinkhttpgooglecom">![*](<a href="https://img.shields.io/static/v1?label=smoke&amp;message=">https://img.shields.io/static/v1?label=smoke&amp;message=</a><!-- raw HTML omitted -->&amp;color=yellowgreen&amp;style=for-the-badge&amp;logo=appveyor&amp;suffix=download&amp;?link=http://left&amp;link=http://google.com)</h4>
+          <h4 id="httpsimgshieldsiostaticv1labelsmokemessagetemegram-php-messagecoloryellowgreenstylefor-the-badgelogoappveyorsuffixdownloadlinkhttpleftlinkhttpgooglecom"><img src="https://img.shields.io/static/v1?label=smoke&amp;message=%3CTemegram-Php-Message%3E&amp;color=yellowgreen&amp;style=for-the-badge&amp;logo=appveyor&amp;suffix=download&amp;?link=http://left&amp;link=http://google.com" alt="*"></h4>
 <h2 id="telegram-php">telegram php</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">
 <span style="color:#75715e">&lt;?php</span>
@@ -313,8 +315,9 @@
 
 
     
-    
-    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
     
   
 
