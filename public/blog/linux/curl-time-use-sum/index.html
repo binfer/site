@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="smoke">
+  <meta name="description" content="smoke.mvp">
+  <meta name="keywords" content="smoke">
+  
+  <link rel="prev" href="/blog/other/hahaha-heiheihei-huhuhu-hohoho/" />
+  <link rel="next" href="/blog/go/package-build-safe-complete/" />
+  <link rel="canonical" href="/blog/linux/curl-time-use-sum/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Curl Time Use Sum | smoke
+       
+  </title>
+  <meta name="title" content="Curl Time Use Sum | smoke">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": ""
+    },
+    "articleSection" : "blog",
+    "name" : "Curl Time Use Sum",
+    "headline" : "Curl Time Use Sum",
+    "description" : " 在开发过程中，有时候会需要对接口进行简单测速。这个接口可能是其它部门提供过来的，但是我们对于性能并不知情，需要进行下简单快速的测试，这里不是一个标准的性能测试流程。此刻，就非常需要一个工具来帮你做，而curl就是这么一个工具。 什么是curl? curl是linux下的一个命令行工具，业界更多称作它为下载工具，支持文件上传和下载，支持包括HTTP、HTTPS、FTP等众多协议，还支持POST、COOKIES、认证、从指定偏移处下载部分文件、用户代理、网络测速、文件大小、进度条等功能。 可以说它是一个非常有用的网络命令行工具。 利用curl简单接口测速 curl -s -w \x26#39;%{time_connect}:%{time_starttransfer}:%{time_total}\\n\x26#39; \x26#39;http:\/\/example.com\/api\/user\x26#39; # result 0.081:0.272:0.779 上面示例用curl对example.com的某个api进行测速，-s 参数去掉所有状态信息，-w 参数让 curl 写出列出的计时器的状态信息。 计时器参数： 参数\t一个普通标题 time_connect\t客户端建立服务器TCP连接用时 time_starttransfer\t发出请求后，服务器返回数据的第一个字节用时 time_total\t完成请求用时 time_namelookup\tDNS解析用时 speed_download\t下载速度，单位-字节每秒 通过观察curl数据及其随时间变化的趋势,可以很好地了解接口的响应速度。以上变量会按CURL认为合适的格式输出，输出变量需要按照%{variable_name}的格式，如果需要输出%，double一下即可，即%%，同时，\\n是换行，\\r是回车，\\t是TAB ",
+    "inLanguage" : "en-us",
+    "author" : "smoke",
+    "creator" : "smoke",
+    "publisher": "smoke",
+    "accountablePerson" : "smoke",
+    "copyrightHolder" : "smoke",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-12-31 16:26:02 \x2b0800 CST",
+    "dateModified" : "2019-12-31 16:26:02 \x2b0800 CST",
+    "url" : "\/blog\/linux\/curl-time-use-sum\/",
+    "wordCount" : "32",
+    "keywords" : [ "linux", "smoke"]
+}
+</script>
+
+</head>
+
+  
+
+
+<link href="/css/awesome.min.css" type="application/rss+xml" />
+<script src="/js/jquery.min.js" async=""></script>
+<script src="/js/autoload.js" async=""></script>
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="">smoke</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/blog/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="">smoke</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/blog/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Curl Time Use Sum</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="" rel="author">smoke</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-12-31 itemprop="datePublished">December 31, 2019</time>
+                </span>
+                in
+                
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <h4 id="httpsimgshieldsiostaticv1labelsmokemessagecurl-time-use-sumcolorredstylefor-the-badgelogoappveyor"><img src="https://img.shields.io/static/v1?label=smoke&amp;message=%3CCurl-Time-Use-Sum%3E&amp;color=red&amp;style=for-the-badge&amp;logo=appveyor" alt="*"></h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">
+在开发过程中，有时候会需要对接口进行简单测速。这个接口可能是其它部门提供过来的，但是我们对于性能并不知情，需要进行下简单快速的测试，这里不是一个标准的性能测试流程。此刻，就非常需要一个工具来帮你做，而curl就是这么一个工具。
+
+什么是curl?
+curl是linux下的一个命令行工具，业界更多称作它为下载工具，支持文件上传和下载，支持包括HTTP、HTTPS、FTP等众多协议，还支持POST、COOKIES、认证、从指定偏移处下载部分文件、用户代理、网络测速、文件大小、进度条等功能。
+
+可以说它是一个非常有用的网络命令行工具。
+
+利用curl简单接口测速
+curl -s -w &#39;%{time_connect}:%{time_starttransfer}:%{time_total}\n&#39; &#39;http://example.com/api/user&#39;
+
+# result 
+0.081:0.272:0.779
+上面示例用curl对example.com的某个api进行测速，-s 参数去掉所有状态信息，-w 参数让 curl 写出列出的计时器的状态信息。
+
+计时器参数：
+
+参数	一个普通标题
+time_connect	客户端建立服务器TCP连接用时
+time_starttransfer	发出请求后，服务器返回数据的第一个字节用时
+time_total	完成请求用时
+time_namelookup	DNS解析用时
+speed_download	下载速度，单位-字节每秒
+通过观察curl数据及其随时间变化的趋势,可以很好地了解接口的响应速度。以上变量会按CURL认为合适的格式输出，输出变量需要按照%{variable_name}的格式，如果需要输出%，double一下即可，即%%，同时，\n是换行，\r是回车，\t是TAB
+
+
+
+</code></pre></div>
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>smoke </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=/blog/linux/curl-time-use-sum/>/blog/linux/curl-time-use-sum/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                #
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="tags/linux/">
+                    #linux</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="/blog/other/hahaha-heiheihei-huhuhu-hohoho/" class="prev" rel="prev" title="Hahaha Heiheihei Huhuhu Hohoho"><i class="iconfont icon-left"></i>&nbsp;Hahaha Heiheihei Huhuhu Hohoho</a>
+         
+        
+        <a href="/blog/go/package-build-safe-complete/" class="next" rel="next" title="Package Build Safe Complete">Package Build Safe Complete&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="">smoke</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

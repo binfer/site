@@ -6,10 +6,19 @@
     <description>Recent content in go on smoke</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Dec 2019 17:48:05 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jan 2020 17:56:05 +0800</lastBuildDate>
     
 	<atom:link href="/tags/go/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Package Build Safe Complete</title>
+      <link>/blog/go/package-build-safe-complete/</link>
+      <pubDate>Fri, 10 Jan 2020 17:56:05 +0800</pubDate>
+      
+      <guid>/blog/go/package-build-safe-complete/</guid>
+      <description>// tcp防止粘包，封装 package packet import ( &amp;#34;bytes&amp;#34; &amp;#34;encoding/binary&amp;#34; &amp;#34;fmt&amp;#34; ) const ( DEFAULE_HEADER = &amp;#34;[**********]&amp;#34; DEFAULT_HEADER_LENGTH = 12 DEFAULT_SAVE_DATA_LENGTH = 4 ) type Packet struct { Header string HeaderLengh int32 SaveDataLength int32 Data []byte } //set delimiter header func (self *Packet) SetHeader(header string) *Packet { self.Header = header self.HeaderLengh = int32(len([]byte(header))) return self } //create default package func NewDefaultPacket(data []byte) *Packet { return &amp;amp;Packet{DEFAULE_HEADER, DEFAULT_HEADER_LENGTH, DEFAULT_SAVE_DATA_LENGTH, data} } //convert to net package func (self *Packet) Packet() []byte { fmt.</description>
+    </item>
     
     <item>
       <title>Time Ticker</title>
