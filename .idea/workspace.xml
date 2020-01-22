@@ -3,20 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="0c32945a-7494-489a-b97b-8292736505f4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blog/other/project-collect-build-lists-useSmoke.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blog/other/project-collect-build-lists-useSmoke.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/blog/go/package-build-safe-complete/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/go/package-build-safe-complete/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/blog/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/blog/web/layui-time-count-down/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/web/layui-time-count-down/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/blog/other/project-collect-build-lists-usesmoke/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/other/project-collect-build-lists-usesmoke/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/blog/page/2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/page/2/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/sitemap.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tags/go/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/go/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tags/go/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/go/index.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/tags/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/tags/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tags/linux/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/linux/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tags/linux/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/linux/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tags/other/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/other/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tags/other/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/other/index.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/php/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/php/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/php/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/php/index.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/LeaveIt" beforeDir="false" afterPath="$PROJECT_DIR$/themes/LeaveIt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/LeaveIt/exampleSite/content/posts/migrate-from-jekyll.md" beforeDir="false" afterPath="$PROJECT_DIR$/themes/LeaveIt/exampleSite/content/posts/migrate-from-jekyll.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/LeaveIt/layouts/partials/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/LeaveIt/layouts/partials/head.html" afterDir="false" />
@@ -62,6 +60,7 @@
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">

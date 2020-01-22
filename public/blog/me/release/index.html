@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="smoke">
+  <meta name="description" content="smoke.mvp">
+  <meta name="keywords" content="smoke">
+  
+  <link rel="prev" href="/blog/go/package-build-safe-complete/" />
+  <link rel="next" href="/blog/php/two-search-method/" />
+  <link rel="canonical" href="/blog/me/release/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Release | smoke
+       
+  </title>
+  <meta name="title" content="Release | smoke">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": ""
+    },
+    "articleSection" : "blog",
+    "name" : "Release",
+    "headline" : "Release",
+    "description" : "2020-01-16 1. 更新内容 * 更新风控模型 - 2. 清理缓存 ： php artisan cache:clear 3. 队列: php artisan queue:restart php artisan queue:work --queue=\x26#39;{safe_module_job}\x26#39; --timeout=10 --tries=2 4. 添加权限 ： 4. 备注： 已推 release 2020-01-21\n  更新内容\n  前端AppMemberApi ： 发送短信添加图形验证码验证  总控： 配置 -\x26gt; 会员配置 -\x26gt; 会员短信 -\x26gt; 添加开启验证码验证开关，默认开启 1     添加开关： 短信 api 防机器人刷 会员基本配置 开关按钮 会员短信 qclound_sms_app_swith 2 #默认关闭 Integer 短信 api 防机器人刷\n     清理缓存 ：",
+    "inLanguage" : "en-us",
+    "author" : "smoke",
+    "creator" : "smoke",
+    "publisher": "smoke",
+    "accountablePerson" : "smoke",
+    "copyrightHolder" : "smoke",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-01-17 10:54:59 \x2b0800 CST",
+    "dateModified" : "2020-01-17 10:54:59 \x2b0800 CST",
+    "url" : "\/blog\/me\/release\/",
+    "wordCount" : "66",
+    "keywords" : [  "smoke"]
+}
+</script>
+
+</head>
+
+  
+
+
+<link href="/css/awesome.min.css" type="application/rss+xml" />
+<script src="/js/jquery.min.js" async=""></script>
+<script src="/js/autoload.js" async=""></script>
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="">smoke</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/blog/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="">smoke</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/blog/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Release</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="" rel="author">smoke</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-01-17 itemprop="datePublished">January 17, 2020</time>
+                </span>
+                in
+                
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">
+2020-01-16
+
+
+1. 更新内容 
+     * 更新风控模型
+       -   
+
+2. 清理缓存 ：  php artisan cache:clear
+ 
+3. 队列:
+    php artisan queue:restart  
+    php artisan queue:work --queue=&#39;{safe_module_job}&#39; --timeout=10 --tries=2
+        
+
+4. 添加权限 ： 
+        
+4. 备注：
+    
+
+已推 release
+
+</code></pre></div><p>2020-01-21</p>
+<ol>
+<li>
+<p>更新内容</p>
+<ul>
+<li>
+<h2 id="appmemberapi----">前端AppMemberApi  ：  发送短信添加图形验证码验证</h2>
+</li>
+<li>总控： 配置 -&gt; 会员配置 -&gt; 会员短信 -&gt; 添加开启验证码验证开关，默认开启 1</li>
+</ul>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>添加开关：
+短信 api 防机器人刷
+会员基本配置
+开关按钮
+会员短信
+qclound_sms_app_swith
+2  #默认关闭
+Integer
+短信 api 防机器人刷</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li>
+<p>清理缓存 ：</p>
+</li>
+<li>
+<p>队列:</p>
+</li>
+<li>
+<p>添加权限 ：</p>
+</li>
+<li>
+<p>备注：</p>
+</li>
+</ol>
+<p>已推 release</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">
+
+
+
+
+
+</code></pre></div>
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>smoke </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=/blog/me/release/>/blog/me/release/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                #
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="/blog/go/package-build-safe-complete/" class="prev" rel="prev" title="Package Build Safe Complete"><i class="iconfont icon-left"></i>&nbsp;Package Build Safe Complete</a>
+         
+        
+        <a href="/blog/php/two-search-method/" class="next" rel="next" title="Two Search Method">Two Search Method&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="">smoke</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

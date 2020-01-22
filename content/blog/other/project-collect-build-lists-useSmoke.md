@@ -66,7 +66,9 @@ tags: ["other"]
 
 
 > Other project 
->
+
+>>  [MonogoDBCompass](https://www.mongodb.com/products/compass)
+
 >>  [markdown使用 ](https://markdown.tw/) 
 
 >>  [github中文文档收集](https://github.com/0voice/from_coder_to_expert) 
@@ -95,3 +97,5 @@ tags: ["other"]
 >>  [smartdns](https://github.com/pymumu/smartdns#%E6%A0%87%E5%87%86linux%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E6%A0%91%E8%8E%93%E6%B4%BEx86_64%E7%B3%BB%E7%BB%9F) `smartDNS`
 >
 >>> [Manjaro](https://leay.net/2019/12/18/manjaro/) `Manjaro 基于 Arch Linux `
+>
+>>> [Rkhunter检测linux](https://www.howtoing.com/install-rootkit-hunter-scan-for-rootkits-backdoors-in-linux) `Rkhunter `
