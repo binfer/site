@@ -46,7 +46,7 @@
     "articleSection" : "blog",
     "name" : "Package Build Safe Complete",
     "headline" : "Package Build Safe Complete",
-    "description" : "\/\/ tcp防止粘包，封装 package packet import ( \x26#34;bytes\x26#34; \x26#34;encoding\/binary\x26#34; \x26#34;fmt\x26#34; ) const ( DEFAULE_HEADER = \x26#34;[**********]\x26#34; DEFAULT_HEADER_LENGTH = 12 DEFAULT_SAVE_DATA_LENGTH = 4 ) type Packet struct { Header string HeaderLengh int32 SaveDataLength int32 Data []byte } \/\/set delimiter header func (self *Packet) SetHeader(header string) *Packet { self.Header = header self.HeaderLengh = int32(len([]byte(header))) return self } \/\/create default package func NewDefaultPacket(data []byte) *Packet { return \x26amp;Packet{DEFAULE_HEADER, DEFAULT_HEADER_LENGTH, DEFAULT_SAVE_DATA_LENGTH, data} } \/\/convert to net package func (self *Packet) Packet() []byte { fmt.",
+    "description" : "\/\/ tcp防止粘包，封装 package packet import ( \u0026#34;bytes\u0026#34; \u0026#34;encoding\/binary\u0026#34; \u0026#34;fmt\u0026#34; ) const ( DEFAULE_HEADER = \u0026#34;[**********]\u0026#34; DEFAULT_HEADER_LENGTH = 12 DEFAULT_SAVE_DATA_LENGTH = 4 ) type Packet struct { Header string HeaderLengh int32 SaveDataLength int32 Data []byte } \/\/set delimiter header func (self *Packet) SetHeader(header string) *Packet { self.Header = header self.HeaderLengh = int32(len([]byte(header))) return self } \/\/create default package func NewDefaultPacket(data []byte) *Packet { return \u0026amp;Packet{DEFAULE_HEADER, DEFAULT_HEADER_LENGTH, DEFAULT_SAVE_DATA_LENGTH, data} } \/\/convert to net package func (self *Packet) Packet() []byte { fmt.",
     "inLanguage" : "en-us",
     "author" : "smoke",
     "creator" : "smoke",
@@ -54,8 +54,8 @@
     "accountablePerson" : "smoke",
     "copyrightHolder" : "smoke",
     "copyrightYear" : "2020",
-    "datePublished": "2020-01-10 17:56:05 \x2b0800 CST",
-    "dateModified" : "2020-01-10 17:56:05 \x2b0800 CST",
+    "datePublished": "2020-01-10 17:56:05 \u002b0800 PST",
+    "dateModified" : "2020-01-10 17:56:05 \u002b0800 PST",
     "url" : "\/blog\/go\/package-build-safe-complete\/",
     "wordCount" : "295",
     "keywords" : [ "go", "smoke"]
@@ -66,10 +66,6 @@
 
   
 
-
-<link href="/css/awesome.min.css" type="application/rss+xml" />
-<script src="/js/jquery.min.js" async=""></script>
-<script src="/js/autoload.js" async=""></script>
 
   <body class="">
     <div class="wrapper">

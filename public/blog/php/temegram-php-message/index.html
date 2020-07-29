@@ -46,7 +46,7 @@
     "articleSection" : "blog",
     "name" : "Temegram Php Message",
     "headline" : "Temegram Php Message",
-    "description" : "telegram php \x26lt;?php namespace App\\Repositories; use GuzzleHttp\\Client; use GuzzleHttp\\Psr7\\Response; use Illuminate\\Support\\Facades\\Log; \/\/ 申请bot,建立订阅通道，建立组，管理订阅通道和组，将bot拉入组内 class TelegramRepository extends BaseRepository { static public $curl; protected $list; public $id, $first_name; public function __construct(){ if (!self::$curl) self::$curl = new Client([\x26#39;base_uri\x26#39; =\x26gt; \x26#34;https:\/\/api.telegram.org\/bot\x26#34;.config(\x26#39;other.telegram\x26#39;).\x26#34;\/\x26#34;]); } public function make() { $result = self::$curl-\x26gt;get(\x26#34;getUpdates\x26#34;, [\x26#39;verify\x26#39; =\x26gt; false]); $this-\x26gt;list = $result-\x26gt;getBody()-\x26gt;getContents(); return $this; } public function one($index=0, $field=\x26#39;chat\x26#39;) { if ($this-\x26gt;list) { $data = json_decode($this-\x26gt;list, true); if (is_array($data)) { if (isset($data[\x26#39;result\x26#39;][$index])) { \/\/chat针对组  $info = $data[\x26#39;result\x26#39;][$index][\x26#39;message\x26#39;][$field]; foreach ($info as $k=\x26gt;$v) { $this-\x26gt;$k = $v; } } } } return $this; } public function push(string $message = \x26#39;\x26#39;, callable $call=null) { if ($call)$call($this); $msg = array( \x26#39;位置 : \x26#39;.",
+    "description" : "telegram php \u0026lt;?php namespace App\\Repositories; use GuzzleHttp\\Client; use GuzzleHttp\\Psr7\\Response; use Illuminate\\Support\\Facades\\Log; \/\/ 申请bot,建立订阅通道，建立组，管理订阅通道和组，将bot拉入组内 class TelegramRepository extends BaseRepository { static public $curl; protected $list; public $id, $first_name; public function __construct(){ if (!self::$curl) self::$curl = new Client([\u0026#39;base_uri\u0026#39; =\u0026gt; \u0026#34;https:\/\/api.telegram.org\/bot\u0026#34;.config(\u0026#39;other.telegram\u0026#39;).\u0026#34;\/\u0026#34;]); } public function make() { $result = self::$curl-\u0026gt;get(\u0026#34;getUpdates\u0026#34;, [\u0026#39;verify\u0026#39; =\u0026gt; false]); $this-\u0026gt;list = $result-\u0026gt;getBody()-\u0026gt;getContents(); return $this; } public function one($index=0, $field=\u0026#39;chat\u0026#39;) { if ($this-\u0026gt;list) { $data = json_decode($this-\u0026gt;list, true); if (is_array($data)) { if (isset($data[\u0026#39;result\u0026#39;][$index])) { \/\/chat针对组  $info = $data[\u0026#39;result\u0026#39;][$index][\u0026#39;message\u0026#39;][$field]; foreach ($info as $k=\u0026gt;$v) { $this-\u0026gt;$k = $v; } } } } return $this; } public function push(string $message = \u0026#39;\u0026#39;, callable $call=null) { if ($call)$call($this); $msg = array( \u0026#39;位置 : \u0026#39;.",
     "inLanguage" : "en-us",
     "author" : "smoke",
     "creator" : "smoke",
@@ -54,8 +54,8 @@
     "accountablePerson" : "smoke",
     "copyrightHolder" : "smoke",
     "copyrightYear" : "2019",
-    "datePublished": "2019-11-30 13:10:08 \x2b0800 CST",
-    "dateModified" : "2019-11-30 13:10:08 \x2b0800 CST",
+    "datePublished": "2019-11-30 13:10:08 \u002b0800 PST",
+    "dateModified" : "2019-11-30 13:10:08 \u002b0800 PST",
     "url" : "\/blog\/php\/temegram-php-message\/",
     "wordCount" : "164",
     "keywords" : [ "php", "smoke"]
@@ -66,10 +66,6 @@
 
   
 
-
-<link href="/css/awesome.min.css" type="application/rss+xml" />
-<script src="/js/jquery.min.js" async=""></script>
-<script src="/js/autoload.js" async=""></script>
 
   <body class="">
     <div class="wrapper">

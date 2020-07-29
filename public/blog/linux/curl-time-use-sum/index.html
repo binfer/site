@@ -46,7 +46,7 @@
     "articleSection" : "blog",
     "name" : "Curl Time Use Sum",
     "headline" : "Curl Time Use Sum",
-    "description" : " 在开发过程中，有时候会需要对接口进行简单测速。这个接口可能是其它部门提供过来的，但是我们对于性能并不知情，需要进行下简单快速的测试，这里不是一个标准的性能测试流程。此刻，就非常需要一个工具来帮你做，而curl就是这么一个工具。 什么是curl? curl是linux下的一个命令行工具，业界更多称作它为下载工具，支持文件上传和下载，支持包括HTTP、HTTPS、FTP等众多协议，还支持POST、COOKIES、认证、从指定偏移处下载部分文件、用户代理、网络测速、文件大小、进度条等功能。 可以说它是一个非常有用的网络命令行工具。 利用curl简单接口测速 curl -s -w \x26#39;%{time_connect}:%{time_starttransfer}:%{time_total}\\n\x26#39; \x26#39;http:\/\/example.com\/api\/user\x26#39; # result 0.081:0.272:0.779 上面示例用curl对example.com的某个api进行测速，-s 参数去掉所有状态信息，-w 参数让 curl 写出列出的计时器的状态信息。 计时器参数： 参数\t一个普通标题 time_connect\t客户端建立服务器TCP连接用时 time_starttransfer\t发出请求后，服务器返回数据的第一个字节用时 time_total\t完成请求用时 time_namelookup\tDNS解析用时 speed_download\t下载速度，单位-字节每秒 通过观察curl数据及其随时间变化的趋势,可以很好地了解接口的响应速度。以上变量会按CURL认为合适的格式输出，输出变量需要按照%{variable_name}的格式，如果需要输出%，double一下即可，即%%，同时，\\n是换行，\\r是回车，\\t是TAB ",
+    "description" : " 在开发过程中，有时候会需要对接口进行简单测速。这个接口可能是其它部门提供过来的，但是我们对于性能并不知情，需要进行下简单快速的测试，这里不是一个标准的性能测试流程。此刻，就非常需要一个\u0008工具来帮你做，而curl就是这么一个工具。 什么是curl? curl是linux下的一个命令行工具，业界更多称作它为下载工具，支持文件上传和下载，支持包括HTTP、HTTPS、FTP等众多协议，还支持POST、COOKIES、认证、从指定偏移处下载部分文件、用户代理、网络测速、文件大小、进度条等功能。 可以说它是一个非常有用的网络命令行工具。 利用curl简单接口测速 curl -s -w \u0026#39;%{time_connect}:%{time_starttransfer}:%{time_total}\\n\u0026#39; \u0026#39;http:\/\/example.com\/api\/user\u0026#39; # result 0.081:0.272:0.779 上面示例用curl对example.com的某个api进行测速，-s 参数去掉所有状态信息，-w 参数让 curl 写出列出的计时器的状态信息。 计时器参数： 参数\t一个普通标题 time_connect\t客户端建立服务器TCP连接用时 time_starttransfer\t发出请求后，服务器返回数据的第一个字节用时 time_total\t完成请求用时 time_namelookup\tDNS解析用时 speed_download\t下载速度，单位-字节每秒 通过观察curl数据及其随时间变化的趋势,可以很好地了解接口的响应速度。以上变量会按CURL认为合适的格式输出，输出变量需要按照%{variable_name}的格式，如果需要输出%，double一下即可，即%%，同时，\\n是换行，\\r是回车，\\t是TAB ",
     "inLanguage" : "en-us",
     "author" : "smoke",
     "creator" : "smoke",
@@ -54,8 +54,8 @@
     "accountablePerson" : "smoke",
     "copyrightHolder" : "smoke",
     "copyrightYear" : "2019",
-    "datePublished": "2019-12-31 16:26:02 \x2b0800 CST",
-    "dateModified" : "2019-12-31 16:26:02 \x2b0800 CST",
+    "datePublished": "2019-12-31 16:26:02 \u002b0800 PST",
+    "dateModified" : "2019-12-31 16:26:02 \u002b0800 PST",
     "url" : "\/blog\/linux\/curl-time-use-sum\/",
     "wordCount" : "32",
     "keywords" : [ "linux", "smoke"]
@@ -66,10 +66,6 @@
 
   
 
-
-<link href="/css/awesome.min.css" type="application/rss+xml" />
-<script src="/js/jquery.min.js" async=""></script>
-<script src="/js/autoload.js" async=""></script>
 
   <body class="">
     <div class="wrapper">

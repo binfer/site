@@ -46,7 +46,7 @@
     "articleSection" : "blog",
     "name" : "Check Nginx Sh",
     "headline" : "Check Nginx Sh",
-    "description" : "Nginx日志安全分析脚本()\ncheck\n#!\/usr\/bin\/env bash echo \x26#34;\x26#34; echo \x26#34; ========================================================= \x26#34; echo \x26#34; \\ Nginx日志安全分析脚本 V1.0 \/ \x26#34; echo \x26#34; ========================================================= \x26#34; echo \x26#34; # 支持Nginx日志分析，攻击告警分析等 \x26#34; echo \x26#34; # author：al0ne \x26#34; echo \x26#34; # https:\/\/github.com\/al0ne \x26#34; echo -e \x26#34;\\n\x26#34; #此脚本是参考nmgxy\/klionsec修改而来,重新添加了一些特征，只用来临时救急，还是推荐到ELK或者Splunk中分析 #功能 ###统计Top 20 地址 ###SQL注入分析 ###扫描器\/常用黑客工具 ###漏洞利用检测 ###敏感路径访问 ###文件包含攻击 ###HTTP Tunnel ###Webshell ###寻找响应长度的url Top 20 ###寻找罕见的脚本文件访问 ###寻找302跳转的脚本文件 #如果存在多个access文件或者有多个access.x.gz 建议先zcat access*.gz \x26gt;\x26gt; access.log文件中 #设置分析结果存储目录,结尾不能加\/ outfile=\/tmp\/logs #如果目录以存在则清空，未存在则新建目录 if [ -d $outfile ]; then rm -rf $outfile\/* else mkdir -p $outfile fi #设置nginx日志目录，结尾必须加\/ access_dir=\/var\/log\/nginx\/ #设置文件名，如果文件名为access那么匹配的是access*文件 access_log=access #判断日志文件是否存在 num=$(ls ${access_dir}${access_log}* | wc -l) \x26gt;\/dev\/null 2\x26gt;\x26amp;1 if [ $num -eq 0 ]; then echo \x26#39;日志文件不存在\x26#39; exit 1 fi #如果检测别的日志请手动替换偏移，例如awk的$7代表url，$9代表状态码，$10代表长度,本脚本是以nginx日志为基础 echo \x26#34;分析结果日志：${outfile}\x26#34; echo \x26#34;Nginx日志目录：${access_dir}\x26#34; echo \x26#34;Nginx文件名：${access_log}\x26#34; echo -e \x26#34;\\n\x26#34; echo -e \x26#34;\\e[00;31m[\x2b]TOP 20 IP 地址\\e[00m\x26#34; ag -a -o --nofilename \x26#39;\\d\x2b\\.",
+    "description" : "Nginx日志安全分析脚本()\ncheck\n#!\/usr\/bin\/env bash echo \u0026#34;\u0026#34; echo \u0026#34; ========================================================= \u0026#34; echo \u0026#34; \\ Nginx日志安全分析脚本 V1.0 \/ \u0026#34; echo \u0026#34; ========================================================= \u0026#34; echo \u0026#34; # 支持Nginx日志分析，攻击告警分析等 \u0026#34; echo \u0026#34; # author：al0ne \u0026#34; echo \u0026#34; # https:\/\/github.com\/al0ne \u0026#34; echo -e \u0026#34;\\n\u0026#34; #此脚本是参考nmgxy\/klionsec修改而来,重新添加了一些特征，只用来临时救急，还是推荐到ELK或者Splunk中分析 #功能 ###统计Top 20 地址 ###SQL注入分析 ###扫描器\/常用黑客工具 ###漏洞利用检测 ###敏感路径访问 ###文件包含攻击 ###HTTP Tunnel ###Webshell ###寻找响应长度的url Top 20 ###寻找罕见的脚本文件访问 ###寻找302跳转的脚本文件 #如果存在多个access文件或者有多个access.x.gz 建议先zcat access*.gz \u0026gt;\u0026gt; access.log文件中 #设置分析结果存储目录,结尾不能加\/ outfile=\/tmp\/logs #如果目录以存在则清空，未存在则新建目录 if [ -d $outfile ]; then rm -rf $outfile\/* else mkdir -p $outfile fi #设置nginx日志目录，结尾必须加\/ access_dir=\/var\/log\/nginx\/ #设置文件名，如果文件名为access那么匹配的是access*文件 access_log=access #判断日志文件是否存在 num=$(ls ${access_dir}${access_log}* | wc -l) \u0026gt;\/dev\/null 2\u0026gt;\u0026amp;1 if [ $num -eq 0 ]; then echo \u0026#39;日志文件不存在\u0026#39; exit 1 fi #如果检测别的日志请手动替换偏移，例如awk的$7代表url，$9代表状态码，$10代表长度,本脚本是以nginx日志为基础 echo \u0026#34;分析结果日志：${outfile}\u0026#34; echo \u0026#34;Nginx日志目录：${access_dir}\u0026#34; echo \u0026#34;Nginx文件名：${access_log}\u0026#34; echo -e \u0026#34;\\n\u0026#34; echo -e \u0026#34;\\e[00;31m[\u002b]TOP 20 IP 地址\\e[00m\u0026#34; ag -a -o --nofilename \u0026#39;\\d\u002b\\.",
     "inLanguage" : "en-us",
     "author" : "smoke",
     "creator" : "smoke",
@@ -54,8 +54,8 @@
     "accountablePerson" : "smoke",
     "copyrightHolder" : "smoke",
     "copyrightYear" : "2019",
-    "datePublished": "2019-12-10 10:36:04 \x2b0800 CST",
-    "dateModified" : "2019-12-10 10:36:04 \x2b0800 CST",
+    "datePublished": "2019-12-10 10:36:04 \u002b0800 PST",
+    "dateModified" : "2019-12-10 10:36:04 \u002b0800 PST",
     "url" : "\/blog\/nginx\/check-nginx-sh\/",
     "wordCount" : "590",
     "keywords" : [ "nginx", "smoke"]
@@ -66,10 +66,6 @@
 
   
 
-
-<link href="/css/awesome.min.css" type="application/rss+xml" />
-<script src="/js/jquery.min.js" async=""></script>
-<script src="/js/autoload.js" async=""></script>
 
   <body class="">
     <div class="wrapper">
@@ -191,7 +187,7 @@ access_dir<span style="color:#f92672">=</span>/var/log/nginx/
 <span style="color:#75715e">#设置文件名，如果文件名为access那么匹配的是access*文件</span>
 access_log<span style="color:#f92672">=</span>access
 <span style="color:#75715e">#判断日志文件是否存在</span>
-num<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>ls <span style="color:#e6db74">${</span>access_dir<span style="color:#e6db74">}</span><span style="color:#e6db74">${</span>access_log<span style="color:#e6db74">}</span>* | wc -l<span style="color:#66d9ef">)</span> &gt;/dev/null 2&gt;&amp;<span style="color:#ae81ff">1</span>
+num<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>ls <span style="color:#e6db74">${</span>access_dir<span style="color:#e6db74">}${</span>access_log<span style="color:#e6db74">}</span>* | wc -l<span style="color:#66d9ef">)</span> &gt;/dev/null 2&gt;&amp;<span style="color:#ae81ff">1</span>
 <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $num -eq <span style="color:#ae81ff">0</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
     echo <span style="color:#e6db74">&#39;日志文件不存在&#39;</span>
     exit <span style="color:#ae81ff">1</span>
@@ -199,75 +195,75 @@ num<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>ls <
 
 <span style="color:#75715e">#如果检测别的日志请手动替换偏移，例如awk的$7代表url，$9代表状态码，$10代表长度,本脚本是以nginx日志为基础</span>
 
-echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">分析结果日志：</span><span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
-echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Nginx日志目录：</span><span style="color:#e6db74">${</span>access_dir<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
-echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Nginx文件名：</span><span style="color:#e6db74">${</span>access_log<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+echo <span style="color:#e6db74">&#34;分析结果日志：</span><span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+echo <span style="color:#e6db74">&#34;Nginx日志目录：</span><span style="color:#e6db74">${</span>access_dir<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+echo <span style="color:#e6db74">&#34;Nginx文件名：</span><span style="color:#e6db74">${</span>access_log<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
 echo -e <span style="color:#e6db74">&#34;\n&#34;</span>
 
 echo -e <span style="color:#e6db74">&#34;\e[00;31m[+]TOP 20 IP 地址\e[00m&#34;</span>
-ag -a -o --nofilename <span style="color:#e6db74">&#39;\d+\.\d+\.\d+\.\d+&#39;</span> <span style="color:#e6db74">${</span>access_dir<span style="color:#e6db74">}</span><span style="color:#e6db74">${</span>access_log<span style="color:#e6db74">}</span>* | sort | uniq -c | sort -nr | head -n <span style="color:#ae81ff">20</span> | tee -a <span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/top20.log
+ag -a -o --nofilename <span style="color:#e6db74">&#39;\d+\.\d+\.\d+\.\d+&#39;</span> <span style="color:#e6db74">${</span>access_dir<span style="color:#e6db74">}${</span>access_log<span style="color:#e6db74">}</span>* | sort | uniq -c | sort -nr | head -n <span style="color:#ae81ff">20</span> | tee -a <span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/top20.log
 echo -e <span style="color:#e6db74">&#34;\n&#34;</span>
 
 echo -e <span style="color:#e6db74">&#34;\e[00;31m[+]SQL注入攻击分析\e[00m&#34;</span>
-ag -a <span style="color:#e6db74">&#34;xp_cmdshell|%20xor|%20and|%20AND|%20or|%20OR|select%20|SELECT%20|%20and%201=1|%20and%201=2|%20exec|%20from|%27exec|information_schema.tables|load_file|benchmark|substring|table_name|table_schema|%20where%20|%20union%20|%20UNION%20|concat\(|concat_ws\(|%20group%20|0x5f|0x7e|0x7c|0x27|%20limit|%20LIMIT|%20FROM|version%28|version\(|database%28|database\(|user%28|user\(|%20extractvalue|%20updatexml|rand\(0\)\*2|%20group%20by%20x&#34;</span> <span style="color:#e6db74">${</span>access_dir<span style="color:#e6db74">}</span><span style="color:#e6db74">${</span>access_log<span style="color:#e6db74">}</span>* | awk <span style="color:#e6db74">&#39;($9==200)||($9==500) {print $0}&#39;</span> &gt;<span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/sql.log
+ag -a <span style="color:#e6db74">&#34;xp_cmdshell|%20xor|%20and|%20AND|%20or|%20OR|select%20|SELECT%20|%20and%201=1|%20and%201=2|%20exec|%20from|%27exec|information_schema.tables|load_file|benchmark|substring|table_name|table_schema|%20where%20|%20union%20|%20UNION%20|concat\(|concat_ws\(|%20group%20|0x5f|0x7e|0x7c|0x27|%20limit|%20LIMIT|%20FROM|version%28|version\(|database%28|database\(|user%28|user\(|%20extractvalue|%20updatexml|rand\(0\)\*2|%20group%20by%20x&#34;</span> <span style="color:#e6db74">${</span>access_dir<span style="color:#e6db74">}${</span>access_log<span style="color:#e6db74">}</span>* | awk <span style="color:#e6db74">&#39;($9==200)||($9==500) {print $0}&#39;</span> &gt;<span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/sql.log
 awk <span style="color:#e6db74">&#39;{print &#34;SQL注入攻击&#34; NR&#34;次&#34;}&#39;</span> <span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/sql.log | tail -n1
 echo <span style="color:#e6db74">&#34;SQL注入 TOP 20 IP地址&#34;</span>
 ag -o <span style="color:#e6db74">&#39;(?&lt;=:)\d+\.\d+\.\d+\.\d+&#39;</span> <span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/sql.log | sort | uniq -c | sort -nr | head -n <span style="color:#ae81ff">20</span> | tee -a <span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/sql_top20.log
 echo -e <span style="color:#e6db74">&#34;\n&#34;</span>
 
 echo -e <span style="color:#e6db74">&#34;\e[00;31m[+]扫描器scan &amp; 黑客工具\e[00m&#34;</span>
-ag -a <span style="color:#e6db74">&#34;sqlmap|acunetix|by_wvs|nikto|netsparker|HP404|nsfocus|WebCruiser|owasp|nmap|nessus|HEAD |AppScan|burpsuite|w3af|ZAP|openVAS|.+avij|.+angolin|360webscan|webscan|XSS@HERE|XSS%40HERE|NOSEC.JSky|wwwscan|wscan|antSword|WebVulnScan|WebInspect|ltx71|masscan|python-requests|Python-urllib|WinHttpRequest&#34;</span> <span style="color:#e6db74">${</span>access_dir<span style="color:#e6db74">}</span><span style="color:#e6db74">${</span>access_log<span style="color:#e6db74">}</span>* | awk <span style="color:#e6db74">&#39;($9==200)||($9==500) {print $0}&#39;</span> &gt;<span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/scan.log
+ag -a <span style="color:#e6db74">&#34;sqlmap|acunetix|by_wvs|nikto|netsparker|HP404|nsfocus|WebCruiser|owasp|nmap|nessus|HEAD |AppScan|burpsuite|w3af|ZAP|openVAS|.+avij|.+angolin|360webscan|webscan|XSS@HERE|XSS%40HERE|NOSEC.JSky|wwwscan|wscan|antSword|WebVulnScan|WebInspect|ltx71|masscan|python-requests|Python-urllib|WinHttpRequest&#34;</span> <span style="color:#e6db74">${</span>access_dir<span style="color:#e6db74">}${</span>access_log<span style="color:#e6db74">}</span>* | awk <span style="color:#e6db74">&#39;($9==200)||($9==500) {print $0}&#39;</span> &gt;<span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/scan.log
 awk <span style="color:#e6db74">&#39;{print &#34;共检测到扫描攻击&#34; NR&#34;次&#34;}&#39;</span> <span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/scan.log | tail -n1
 echo <span style="color:#e6db74">&#34;扫描工具流量 TOP 20&#34;</span>
 ag -o <span style="color:#e6db74">&#39;(?&lt;=:)\d+\.\d+\.\d+\.\d+&#39;</span> <span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/scan.log | sort | uniq -c | sort -nr | head -n <span style="color:#ae81ff">20</span> | tee -a <span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/scan_top20.log
 echo -e <span style="color:#e6db74">&#34;\n&#34;</span>
 
 echo -e <span style="color:#e6db74">&#34;\e[00;31m[+]敏感路径访问\e[00m&#34;</span>
-ag -a <span style="color:#e6db74">&#34;/_cat/|/_config/|include=|phpinfo|info\.php|/web-console|JMXInvokerServlet|/manager/html|axis2-admin|axis2-web|phpMyAdmin|phpmyadmin|/admin-console|/jmx-console|/console/|\.zip|\.rar|\.mdb|\.inc|\.sql|\.config|\.bak|/.svn/|/\.git/|\.hg|\.DS_Store|\.htaccess|nginx\.conf|\.bash_history|/CVS/|\.bak|wwwroot|备份|/Web.config|/web.config|/1.txt|/test.txt&#34;</span> <span style="color:#e6db74">${</span>access_dir<span style="color:#e6db74">}</span><span style="color:#e6db74">${</span>access_log<span style="color:#e6db74">}</span>* | awk <span style="color:#e6db74">&#39;($9==200)||($9==500) {print $0}&#39;</span> &gt;<span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/dir.log
+ag -a <span style="color:#e6db74">&#34;/_cat/|/_config/|include=|phpinfo|info\.php|/web-console|JMXInvokerServlet|/manager/html|axis2-admin|axis2-web|phpMyAdmin|phpmyadmin|/admin-console|/jmx-console|/console/|\.zip|\.rar|\.mdb|\.inc|\.sql|\.config|\.bak|/.svn/|/\.git/|\.hg|\.DS_Store|\.htaccess|nginx\.conf|\.bash_history|/CVS/|\.bak|wwwroot|备份|/Web.config|/web.config|/1.txt|/test.txt&#34;</span> <span style="color:#e6db74">${</span>access_dir<span style="color:#e6db74">}${</span>access_log<span style="color:#e6db74">}</span>* | awk <span style="color:#e6db74">&#39;($9==200)||($9==500) {print $0}&#39;</span> &gt;<span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/dir.log
 awk <span style="color:#e6db74">&#39;{print &#34;共检测到针对敏感文件扫描&#34; NR&#34;次&#34;}&#39;</span> <span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/dir.log | tail -n1
 echo <span style="color:#e6db74">&#34;敏感文件访问流量 TOP 20&#34;</span>
 ag -o <span style="color:#e6db74">&#39;(?&lt;=:)\d+\.\d+\.\d+\.\d+&#39;</span> <span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/dir.log | sort | uniq -c | sort -nr | head -n <span style="color:#ae81ff">20</span> | tee -a <span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/dir_top20.log
 echo -e <span style="color:#e6db74">&#34;\n&#34;</span>
 
 echo -e <span style="color:#e6db74">&#34;\e[00;31m[+]漏洞利用检测\e[00m&#34;</span>
-ag -a <span style="color:#e6db74">&#34;%0D%0A|file:/|gopher:/|dict:/|WindowsPowerShell|/wls-wsat/|call_user_func_array\&amp;vars\[0\]=|uddiexplorer|@DEFAULT_MEMBER_ACCESS|@java\.lang\.Runtime|OgnlContext|/bin/bash|cmd\.exe|wget\s|curl\s&#34;</span> <span style="color:#e6db74">${</span>access_dir<span style="color:#e6db74">}</span><span style="color:#e6db74">${</span>access_log<span style="color:#e6db74">}</span>* | awk <span style="color:#e6db74">&#39;($9==200)||($9==500) {print $0}&#39;</span> &gt;<span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/exploit.log
+ag -a <span style="color:#e6db74">&#34;%0D%0A|file:/|gopher:/|dict:/|WindowsPowerShell|/wls-wsat/|call_user_func_array\&amp;vars\[0\]=|uddiexplorer|@DEFAULT_MEMBER_ACCESS|@java\.lang\.Runtime|OgnlContext|/bin/bash|cmd\.exe|wget\s|curl\s&#34;</span> <span style="color:#e6db74">${</span>access_dir<span style="color:#e6db74">}${</span>access_log<span style="color:#e6db74">}</span>* | awk <span style="color:#e6db74">&#39;($9==200)||($9==500) {print $0}&#39;</span> &gt;<span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/exploit.log
 awk <span style="color:#e6db74">&#39;{print &#34;漏洞利用探测&#34; NR&#34;次&#34;}&#39;</span> <span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/exploit.log | tail -n1
 echo <span style="color:#e6db74">&#34;漏洞利用检测 TOP 20&#34;</span>
 ag -o <span style="color:#e6db74">&#39;(?&lt;=:)\d+\.\d+\.\d+\.\d+&#39;</span> <span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/exploit.log | sort | uniq -c | sort -nr | head -n <span style="color:#ae81ff">20</span> | tee -a <span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/exploit_top20.log
 echo -e <span style="color:#e6db74">&#34;\n&#34;</span>
 
 echo -e <span style="color:#e6db74">&#34;\e[00;31m[+]文件包含攻击\e[00m&#34;</span>
-ag -a <span style="color:#e6db74">&#34;/etc/passwd|/etc/shadow|%00|/win.ini|/my.ini|\.\./\.\./&#34;</span> <span style="color:#e6db74">${</span>access_dir<span style="color:#e6db74">}</span><span style="color:#e6db74">${</span>access_log<span style="color:#e6db74">}</span>* | awk <span style="color:#e6db74">&#39;($9==200)||($9==500) {print $0}&#39;</span> &gt;<span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/lfi.log
+ag -a <span style="color:#e6db74">&#34;/etc/passwd|/etc/shadow|%00|/win.ini|/my.ini|\.\./\.\./&#34;</span> <span style="color:#e6db74">${</span>access_dir<span style="color:#e6db74">}${</span>access_log<span style="color:#e6db74">}</span>* | awk <span style="color:#e6db74">&#39;($9==200)||($9==500) {print $0}&#39;</span> &gt;<span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/lfi.log
 awk <span style="color:#e6db74">&#39;{print &#34;共检测到LFI本地文件包含&#34; NR&#34;次&#34;}&#39;</span> <span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/lfi.log | tail -n1
 echo <span style="color:#e6db74">&#34;文件包含 TOP 20&#34;</span>
 ag -o <span style="color:#e6db74">&#39;(?&lt;=:)\d+\.\d+\.\d+\.\d+&#39;</span> <span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/lfi.log | sort | uniq -c | sort -nr | head -n <span style="color:#ae81ff">20</span> | tee -a <span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/lfi_top20.log
 echo -e <span style="color:#e6db74">&#34;\n&#34;</span>
 
 echo -e <span style="color:#e6db74">&#34;\e[00;31m[+]webshell\e[00m&#34;</span>
-ag -a <span style="color:#e6db74">&#34;dbname=|exec=|cmd=|\br57\b|\bc99\b|\bc100\b|\bb374k\b|adminer.php|eval\(|assert\(|%eval|%execute|tunnel\.[asp|php|jsp|aspx]{3}|makewebtaski|ma\.[asp|php|jsp|aspx]{3}|\bup\.[asp|php|jsp|aspx]{3}|cmd\.[asp|php|jsp|aspx]{3}|xiaoma\.[asp|php|jsp|aspx]{3}|shell\.[asp|php|jsp|aspx]{3}|tom\.[asp|php|jsp|aspx]{3}|k8cmd\.[asp|php|jsp|aspx]{3}|ver[0-9]{3}\.[asp|php|jsp|aspx]{3}|\.aar|[asp|php|jsp|aspx]{3}spy\.|o=vLogin&#34;</span> <span style="color:#e6db74">${</span>access_dir<span style="color:#e6db74">}</span><span style="color:#e6db74">${</span>access_log<span style="color:#e6db74">}</span>* | awk <span style="color:#e6db74">&#39;($9==200)||($9==500) {print $0}&#39;</span> &gt;<span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/webshell.log
+ag -a <span style="color:#e6db74">&#34;dbname=|exec=|cmd=|\br57\b|\bc99\b|\bc100\b|\bb374k\b|adminer.php|eval\(|assert\(|%eval|%execute|tunnel\.[asp|php|jsp|aspx]{3}|makewebtaski|ma\.[asp|php|jsp|aspx]{3}|\bup\.[asp|php|jsp|aspx]{3}|cmd\.[asp|php|jsp|aspx]{3}|xiaoma\.[asp|php|jsp|aspx]{3}|shell\.[asp|php|jsp|aspx]{3}|tom\.[asp|php|jsp|aspx]{3}|k8cmd\.[asp|php|jsp|aspx]{3}|ver[0-9]{3}\.[asp|php|jsp|aspx]{3}|\.aar|[asp|php|jsp|aspx]{3}spy\.|o=vLogin&#34;</span> <span style="color:#e6db74">${</span>access_dir<span style="color:#e6db74">}${</span>access_log<span style="color:#e6db74">}</span>* | awk <span style="color:#e6db74">&#39;($9==200)||($9==500) {print $0}&#39;</span> &gt;<span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/webshell.log
 awk <span style="color:#e6db74">&#39;{print &#34;共检测到webshell行为&#34; NR &#34;次&#34;}&#39;</span> <span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/webshell.log | tail -n1
 echo <span style="color:#e6db74">&#34;Webshell TOP 20&#34;</span>
 ag -o <span style="color:#e6db74">&#39;(?&lt;=:)\d+\.\d+\.\d+\.\d+&#39;</span> <span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/webshell.log | sort | uniq -c | sort -nr | head -n <span style="color:#ae81ff">20</span> | tee -a <span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/webshell_top20.log
 echo -e <span style="color:#e6db74">&#34;\n&#34;</span>
 
 echo -e <span style="color:#e6db74">&#34;\e[00;31m[+]HTTP Tunnel\e[00m&#34;</span>
-ag -a <span style="color:#e6db74">&#34;cmd=disconnect|cmd=read|cmd=forward|cmd=connect|127.0.0.1&#34;</span> <span style="color:#e6db74">${</span>access_dir<span style="color:#e6db74">}</span><span style="color:#e6db74">${</span>access_log<span style="color:#e6db74">}</span>* | awk <span style="color:#e6db74">&#39;($9==200)||($9==500) {print $0}&#39;</span> | tee -a <span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/tunnel.log
+ag -a <span style="color:#e6db74">&#34;cmd=disconnect|cmd=read|cmd=forward|cmd=connect|127.0.0.1&#34;</span> <span style="color:#e6db74">${</span>access_dir<span style="color:#e6db74">}${</span>access_log<span style="color:#e6db74">}</span>* | awk <span style="color:#e6db74">&#39;($9==200)||($9==500) {print $0}&#39;</span> | tee -a <span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/tunnel.log
 awk <span style="color:#e6db74">&#39;{print &#34;共检测到隧道行为&#34; NR &#34;次&#34;}&#39;</span> <span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/tunnel.log | tail -n1
 echo -e <span style="color:#e6db74">&#34;\n&#34;</span>
 
 echo -e <span style="color:#e6db74">&#34;\e[00;31m[+]Top 20 url长度\e[00m&#34;</span>
-len<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>cat <span style="color:#e6db74">${</span>access_dir<span style="color:#e6db74">}</span><span style="color:#e6db74">${</span>access_log<span style="color:#e6db74">}</span>* | awk <span style="color:#e6db74">&#39;{print $10}&#39;</span> | sort -nr | head -n 20<span style="color:#66d9ef">)</span>
-echo $len | xargs -i<span style="color:#f92672">{</span><span style="color:#f92672">}</span> ag -a --nocolor <span style="color:#e6db74">&#39;\d+\s{}\s&#39;</span> <span style="color:#e6db74">${</span>access_dir<span style="color:#e6db74">}</span><span style="color:#e6db74">${</span>access_log<span style="color:#e6db74">}</span>* | awk <span style="color:#e6db74">&#39;{print $7,$10}&#39;</span> | sort | uniq | sort -k <span style="color:#ae81ff">2</span> -nr | tee -a <span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/url_len.log
+len<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>cat <span style="color:#e6db74">${</span>access_dir<span style="color:#e6db74">}${</span>access_log<span style="color:#e6db74">}</span>* | awk <span style="color:#e6db74">&#39;{print $10}&#39;</span> | sort -nr | head -n 20<span style="color:#66d9ef">)</span>
+echo $len | xargs -i<span style="color:#f92672">{}</span> ag -a --nocolor <span style="color:#e6db74">&#39;\d+\s{}\s&#39;</span> <span style="color:#e6db74">${</span>access_dir<span style="color:#e6db74">}${</span>access_log<span style="color:#e6db74">}</span>* | awk <span style="color:#e6db74">&#39;{print $7,$10}&#39;</span> | sort | uniq | sort -k <span style="color:#ae81ff">2</span> -nr | tee -a <span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/url_len.log
 echo -e <span style="color:#e6db74">&#34;\n&#34;</span>
 
 echo -e <span style="color:#e6db74">&#34;\e[00;31m[+]罕见的脚本文件访问\e[00m&#34;</span>
 echo <span style="color:#e6db74">&#34;访问量特别特别少的脚本文件极有可能是webshell&#34;</span>
-cat <span style="color:#e6db74">${</span>access_dir<span style="color:#e6db74">}</span><span style="color:#e6db74">${</span>access_log<span style="color:#e6db74">}</span>* | awk <span style="color:#e6db74">&#39;($9==200)||($9==500) {print $7}&#39;</span> | sort | uniq -c | sort -n | ag -v <span style="color:#e6db74">&#39;\?&#39;</span> | ag <span style="color:#e6db74">&#39;\.php|\.jsp|\.asp|\.aspx&#39;</span> | head -n <span style="color:#ae81ff">20</span> | tee -a <span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/rare_url.log
+cat <span style="color:#e6db74">${</span>access_dir<span style="color:#e6db74">}${</span>access_log<span style="color:#e6db74">}</span>* | awk <span style="color:#e6db74">&#39;($9==200)||($9==500) {print $7}&#39;</span> | sort | uniq -c | sort -n | ag -v <span style="color:#e6db74">&#39;\?&#39;</span> | ag <span style="color:#e6db74">&#39;\.php|\.jsp|\.asp|\.aspx&#39;</span> | head -n <span style="color:#ae81ff">20</span> | tee -a <span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/rare_url.log
 echo -e <span style="color:#e6db74">&#34;\n&#34;</span>
 
 echo -e <span style="color:#e6db74">&#34;\e[00;31m[+]302跳转\e[00m&#34;</span>
 echo <span style="color:#e6db74">&#34;此目的是寻找一些登录成功的脚本文件，极有可能是webshell文件&#34;</span>
-cat <span style="color:#e6db74">${</span>access_dir<span style="color:#e6db74">}</span><span style="color:#e6db74">${</span>access_log<span style="color:#e6db74">}</span>* | awk <span style="color:#e6db74">&#39;($9==302)||($9==301) {print $7}&#39;</span> | sort | uniq -c | sort -n | ag -v <span style="color:#e6db74">&#39;\?&#39;</span> | ag <span style="color:#e6db74">&#39;\.php|\.jsp|\.asp|\.aspx&#39;</span> | head -n <span style="color:#ae81ff">20</span> | tee -a <span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/302_goto.log
+cat <span style="color:#e6db74">${</span>access_dir<span style="color:#e6db74">}${</span>access_log<span style="color:#e6db74">}</span>* | awk <span style="color:#e6db74">&#39;($9==302)||($9==301) {print $7}&#39;</span> | sort | uniq -c | sort -n | ag -v <span style="color:#e6db74">&#39;\?&#39;</span> | ag <span style="color:#e6db74">&#39;\.php|\.jsp|\.asp|\.aspx&#39;</span> | head -n <span style="color:#ae81ff">20</span> | tee -a <span style="color:#e6db74">${</span>outfile<span style="color:#e6db74">}</span>/302_goto.log
 echo -e <span style="color:#e6db74">&#34;\n&#34;</span>
 
 
