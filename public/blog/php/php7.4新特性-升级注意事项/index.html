@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="smoke">
+  <meta name="description" content="smoke.mvp">
+  <meta name="keywords" content="smoke">
+  
+  <link rel="prev" href="/blog/php/two-search-method/" />
+  
+  <link rel="canonical" href="/blog/php/php7.4%E6%96%B0%E7%89%B9%E6%80%A7-%E5%8D%87%E7%BA%A7%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Php7.4新特性,升级事项 | smoke
+       
+  </title>
+  <meta name="title" content="Php7.4新特性,升级事项 | smoke">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": ""
+    },
+    "articleSection" : "blog",
+    "name" : "Php7.4新特性,升级事项",
+    "headline" : "Php7.4新特性,升级事项",
+    "description" : "升级7.4注意事项, 建议:如果升级最好选择7.2 或者 7.3 (优化性能,7.4的新特性可以忽略不计) ``\n Arch 发行版的反馈, 其他版本没有反馈    php-fpm 的新选项 ProtectHome 会导致经典的 File not found 错误，\n fixcode:  72510   引用:  php7.4 Commit   解决方案:  使用 systemctl edit php-fpm.service 修改 ProtectHome=false，重启服务.      php 解释器会对 null 类型的下标访问直接报错 Trying to access array offset on value of type null。\n 解决方案:  修改代码解决      php 中经常使用 inlcude，require 等来包含其它文件。而调试发现在某个 include 之后，php 直接停止执行并报错 Trying to access array offset on value of type null - 解决方案： - 修改代码解决",
+    "inLanguage" : "en-us",
+    "author" : "smoke",
+    "creator" : "smoke",
+    "publisher": "smoke",
+    "accountablePerson" : "smoke",
+    "copyrightHolder" : "smoke",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-07-29 15:48:07 \u002b0800 PST",
+    "dateModified" : "2020-07-29 15:48:07 \u002b0800 PST",
+    "url" : "\/blog\/php\/php7.4%E6%96%B0%E7%89%B9%E6%80%A7-%E5%8D%87%E7%BA%A7%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9\/",
+    "wordCount" : "286",
+    "keywords" : [ "php", "smoke"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="">smoke</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/blog/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="">smoke</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/blog/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Php7.4新特性,升级事项</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="" rel="author">smoke</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-07-29 itemprop="datePublished">July 29, 2020</time>
+                </span>
+                in
+                
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <h3 id="升级74注意事项-建议如果升级最好选择72-或者-73-优化性能74的新特性可以忽略不计">升级7.4注意事项, 建议:如果升级最好选择7.2 或者 7.3 (优化性能,7.4的新特性可以忽略不计)</h3>
+<p>``</p>
+<ul>
+<li><strong>Arch</strong> 发行版的反馈, 其他版本没有反馈</li>
+</ul>
+<ol>
+<li>
+<p>php-fpm 的新选项 ProtectHome 会导致经典的 File not found 错误，</p>
+<ul>
+<li>fixcode:
+<ul>
+<li><em>72510</em></li>
+</ul>
+</li>
+<li>引用:
+<ul>
+<li><a href="https://github.com/php/php-src/commit/40c4d7f1820df1872a71ab07fd26da45a203e37f#diff-c0605c0e7e1db864472acf66a9812d33R22">php7.4 Commit</a></li>
+</ul>
+</li>
+<li>解决方案:
+<ul>
+<li>使用 <code>systemctl edit php-fpm.service</code> 修改 <code>ProtectHome=false</code>，重启服务.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>php 解释器会对 null 类型的下标访问直接报错 <code>Trying to access array offset on value of type null</code>。</p>
+<ul>
+<li>解决方案:
+<ul>
+<li>修改代码解决</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>php 中经常使用 inlcude，require 等来包含其它文件。而调试发现在某个 include 之后，php 直接停止执行并报错 <code>Trying to access array offset on value of type null</code>
+　- 解决方案：
+- 修改代码解决</p>
+</li>
+</ol>
+<h2 id="heading">``</h2>
+<h3 id="新特性">新特性</h3>
+<ul>
+<li>7.0-7.4 更多特性
+<ul>
+<li>参考1: <a href="https://blog.p2hp.com/archives/6918">https://blog.p2hp.com/archives/6918</a></li>
+<li>参考2: <a href="https://www.sky8g.com/technology/3208/#mcetoc_1dmqpf77a0">https://www.sky8g.com/technology/3208/#mcetoc_1dmqpf77a0</a></li>
+</ul>
+</li>
+</ul>
+<p><del>7.4</del>:</p>
+<p>1 属性添加限定类型</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> {
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">int</span> $age;
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">string</span> $name;
+}  
+$user <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">User</span>();
+$user<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+$user<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;张三&#34;</span>;
+<span style="color:#75715e">//error
+</span><span style="color:#75715e"></span>$user<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;zhang&#34;</span>;<span style="color:#75715e">//需要传递int
+</span><span style="color:#75715e"></span><span style="color:#75715e">?&gt;</span>
+
+</code></pre></div><p>2 箭头函数</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#75715e">#这个特性基本上参考 Js 的 ES6 的语法。可以让我们的代码写的更少。如果你的代码有 fn 这个函数。可能会冲突
+</span><span style="color:#75715e"></span>$factor <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+$nums <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_map</span>(<span style="color:#a6e22e">fn</span>($n)<span style="color:#f92672">=&gt;</span>$n <span style="color:#f92672">*</span> $factor,[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>]);<span style="color:#75715e">//[10,20,30]
+</span><span style="color:#75715e">//之前的写法
+</span><span style="color:#75715e"></span>$nums <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_map</span>(<span style="color:#66d9ef">function</span>($num)<span style="color:#66d9ef">use</span>($factor){
+  <span style="color:#66d9ef">return</span> $num <span style="color:#f92672">*</span> $factor;
+},[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>])
+<span style="color:#75715e">?&gt;</span>
+</code></pre></div><p>3 有限返回类型协变与参数类型逆变</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">
+<span style="color:#75715e">&lt;?php</span>     
+<span style="color:#75715e"># 仅当使用自动加载时，才提供完全协变 / 逆变支持。在单个文件中，只能使用非循环类型引用，因为所有类在被引用之前都必须可用。
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">A</span> {}
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">B</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">A</span> {}
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Producer</span> {
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">method</span>()<span style="color:#f92672">:</span> <span style="color:#a6e22e">A</span> {}
+}
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ChildProducer</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Producer</span> {
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">method</span>()<span style="color:#f92672">:</span> <span style="color:#a6e22e">B</span> {}
+}
+<span style="color:#75715e">?&gt;</span>
+
+</code></pre></div><p>4 数组解包</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#75715e">#使用展开运算符... 解包数组
+</span><span style="color:#75715e"></span>$parts <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;apple&#39;</span>, <span style="color:#e6db74">&#39;pear&#39;</span>];
+$fruits <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;banana&#39;</span>, <span style="color:#e6db74">&#39;orange&#39;</span>, <span style="color:#f92672">...</span>$parts, <span style="color:#e6db74">&#39;watermelon&#39;</span>];<span style="color:#75715e">//[&#39;banana&#39;, &#39;orange&#39;, &#39;apple&#39;, &#39;pear&#39;, &#39;watermelon&#39;];
+</span><span style="color:#75715e">//老的写法
+</span><span style="color:#75715e"></span>$fruits <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_merge</span>([<span style="color:#e6db74">&#39;banana&#39;</span>, <span style="color:#e6db74">&#39;orange&#39;</span>],$parts,[<span style="color:#e6db74">&#39;watermelon&#39;</span>]);
+
+<span style="color:#75715e">?&gt;</span>
+
+</code></pre></div><p>5 空合并运算符赋值</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+
+$array[<span style="color:#e6db74">&#39;key&#39;</span>] <span style="color:#f92672">??=</span> <span style="color:#a6e22e">computeDefault</span>();
+<span style="color:#75715e">// 老的写法
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">isset</span>($array[<span style="color:#e6db74">&#39;key&#39;</span>])) {
+    $array[<span style="color:#e6db74">&#39;key&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">computeDefault</span>();
+}
+<span style="color:#75715e">?&gt;</span>
+
+</code></pre></div><p>6 数值文字分隔符</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#75715e">#数字文字可以在数字之间包含下划线。
+</span><span style="color:#75715e"></span><span style="color:#ae81ff">6.674</span><span style="color:#a6e22e">_083e</span><span style="color:#f92672">-</span><span style="color:#ae81ff">11</span>; <span style="color:#75715e">// float
+</span><span style="color:#75715e"></span><span style="color:#ae81ff">299</span><span style="color:#a6e22e">_792_458</span>;   <span style="color:#75715e">// decimal
+</span><span style="color:#75715e"></span><span style="color:#ae81ff">0xCAFE</span><span style="color:#a6e22e">_F00D</span>;   <span style="color:#75715e">// hexadecimal
+</span><span style="color:#75715e"></span><span style="color:#ae81ff">0</span><span style="color:#a6e22e">b0101_1111</span>;   <span style="color:#75715e">// binary
+</span><span style="color:#75715e"></span><span style="color:#75715e">?&gt;</span>
+
+</code></pre></div><p>7 允许从 __toString() 抛出异常</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">#现在允许从 __toString() 引发异常，以往这会导致致命错误，字符串转换中现有的可恢复致命错误已转换为 Error 异常。
+</code></pre></div><p>8 Filter</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#75715e">#新增 FILTER_VALIDATE_FLOAT
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">filter_var</span>(<span style="color:#ae81ff">1.00</span>,<span style="color:#a6e22e">FILTER_VALIDATE_FLOAT</span>);
+</code></pre></div><p>9 strip_tags 支持数组</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#a6e22e">strip_tags</span>($str,[<span style="color:#e6db74">&#39;p&#39;</span>,<span style="color:#e6db74">&#39;a&#39;</span>,<span style="color:#e6db74">&#39;div&#39;</span>]);
+<span style="color:#75715e">//老的写法
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">strip_tags</span>($str,<span style="color:#e6db74">&#34;&lt;p&gt;&lt;a&gt;&lt;div&gt;&#34;</span>);
+</code></pre></div><hr>
+<h3 id="tp6和tp5对比">TP6和TP5对比</h3>
+<p>1 目录结构的异同 tp5核心框架是项目根目录thinkphp下 , tp6是vendor的topthink</p>
+<p>2 安装方式不同,tp6仅能通过composer方式安装,进入组件堆积开发时代</p>
+<p>3 类自动加载方式不同 tp6使用composer方式实现类自动加载, tp5 composer+自己实现了一套</p>
+<p>4 tp6使用了php7严格模式</p>
+<p>5 支持更多的PSR规范   <a href="https://learnku.com/docs/psr">PSR</a></p>
+<p>6 组件的独立 ORM 模板引擎</p>
+<p>7 中间件改进 TP6开始使用了管道模式来实现中间件</p>
+<p>8 引入Filesystem</p>
+<p>9 对Swoole及单元测试做出更多的完善支持</p>
+<p>10 底层脚手架注入[Symfony]（https://symfony.com/）</p>
+<p>11 组件化开发是当前的开发趋势，<a href="https://packagist.org/">packagist</a>库让开发多样化，简易化。</p>
+<p>11 php的composer, nodejs的npm, nvm, go的go mod等都完善了包或者库的简易使用</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>smoke </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=/blog/php/php7.4%E6%96%B0%E7%89%B9%E6%80%A7-%E5%8D%87%E7%BA%A7%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/>/blog/php/php7.4%E6%96%B0%E7%89%B9%E6%80%A7-%E5%8D%87%E7%BA%A7%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                #
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="tags/php/">
+                    #php</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="/blog/php/two-search-method/" class="prev" rel="prev" title="Two Search Method"><i class="iconfont icon-left"></i>&nbsp;Two Search Method</a>
+         
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="">smoke</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

@@ -6,10 +6,22 @@
     <description>Recent content in Blogs on smoke</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Jan 2020 12:39:26 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2020 15:48:07 +0800</lastBuildDate>
     
 	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Php7.4新特性,升级事项</title>
+      <link>/blog/php/php7.4%E6%96%B0%E7%89%B9%E6%80%A7-%E5%8D%87%E7%BA%A7%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</link>
+      <pubDate>Wed, 29 Jul 2020 15:48:07 +0800</pubDate>
+      
+      <guid>/blog/php/php7.4%E6%96%B0%E7%89%B9%E6%80%A7-%E5%8D%87%E7%BA%A7%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</guid>
+      <description>升级7.4注意事项, 建议:如果升级最好选择7.2 或者 7.3 (优化性能,7.4的新特性可以忽略不计) ``
+ Arch 发行版的反馈, 其他版本没有反馈    php-fpm 的新选项 ProtectHome 会导致经典的 File not found 错误，
+ fixcode:  72510   引用:  php7.4 Commit   解决方案:  使用 systemctl edit php-fpm.service 修改 ProtectHome=false，重启服务.      php 解释器会对 null 类型的下标访问直接报错 Trying to access array offset on value of type null。
+ 解决方案:  修改代码解决      php 中经常使用 inlcude，require 等来包含其它文件。而调试发现在某个 include 之后，php 直接停止执行并报错 Trying to access array offset on value of type null - 解决方案： - 修改代码解决</description>
+    </item>
     
     <item>
       <title>Two Search Method</title>

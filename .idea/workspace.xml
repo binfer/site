@@ -2,52 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c32945a-7494-489a-b97b-8292736505f4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/public/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/about/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/about/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/archives/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/archives/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/blog/go/baidu-cloud-download/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/go/baidu-cloud-download/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/blog/go/dial-sacnning-port/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/go/dial-sacnning-port/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/blog/go/grpc-go-use-builder/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/go/grpc-go-use-builder/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/blog/go/package-build-safe-complete/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/go/package-build-safe-complete/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/blog/go/time-ticker/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/go/time-ticker/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/blog/go/transfer-en-zh/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/go/transfer-en-zh/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/blog/go/位运算/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/go/位运算/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/blog/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/blog/linux/command-use-guid/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/linux/command-use-guid/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/blog/linux/curl-time-use-sum/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/linux/curl-time-use-sum/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/blog/linux/vim/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/linux/vim/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/blog/mac/clear-time-machine/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/mac/clear-time-machine/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/blog/me/release/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/me/release/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/blog/nginx/check-nginx-sh/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/nginx/check-nginx-sh/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/blog/other/coffee-knowledge-over/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/other/coffee-knowledge-over/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/blog/other/hahaha-heiheihei-huhuhu-hohoho/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/other/hahaha-heiheihei-huhuhu-hohoho/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/blog/other/markdown-style-part/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/other/markdown-style-part/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/blog/other/my-life-live-love-list/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/other/my-life-live-love-list/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/blog/other/project-collect-build-lists-usesmoke/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/other/project-collect-build-lists-usesmoke/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/blog/other/risk-control-safe-rule/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/other/risk-control-safe-rule/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/blog/other/self-meditation-thoughts-collect/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/other/self-meditation-thoughts-collect/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/blog/page/2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/page/2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/blog/php/temegram-php-message/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/php/temegram-php-message/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/blog/php/two-search-method/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/php/two-search-method/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/blog/tcp/time-wait/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/tcp/time-wait/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/blog/web/layui-time-count-down/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/web/layui-time-count-down/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/categories/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/sitemap.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tags/go/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/go/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tags/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tags/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tags/layui/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/layui/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tags/linux/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/linux/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tags/mac/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/mac/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tags/nginx/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/nginx/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tags/other/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/other/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tags/other/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/other/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tags/php/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/php/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tags/tcp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/tcp/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tags/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/web/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/LeaveIt/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/themes/LeaveIt/LICENSE" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +54,12 @@
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
@@ -128,7 +90,7 @@
       <option name="presentableId" value="Default" />
       <updated>1595556372653</updated>
       <workItem from="1595556373706" duration="413000" />
-      <workItem from="1596006113285" duration="353000" />
+      <workItem from="1596006113285" duration="5398000" />
     </task>
     <servers />
   </component>
