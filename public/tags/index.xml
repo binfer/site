@@ -12,84 +12,13 @@
     
     
     <item>
-      <title>go</title>
-      <link>/tags/go/</link>
-      <pubDate>Thu, 30 Jul 2020 15:04:19 +0800</pubDate>
+      <title>Tags</title>
+      <link>/tags/tags/</link>
+      <pubDate>Fri, 15 Nov 2019 15:31:54 +0800</pubDate>
       
-      <guid>/tags/go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>php</title>
-      <link>/tags/php/</link>
-      <pubDate>Thu, 30 Jul 2020 11:57:03 +0800</pubDate>
-      
-      <guid>/tags/php/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>linux</title>
-      <link>/tags/linux/</link>
-      <pubDate>Tue, 31 Dec 2019 16:26:02 +0800</pubDate>
-      
-      <guid>/tags/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>other</title>
-      <link>/tags/other/</link>
-      <pubDate>Tue, 31 Dec 2019 12:05:30 +0800</pubDate>
-      
-      <guid>/tags/other/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>layui</title>
-      <link>/tags/layui/</link>
-      <pubDate>Thu, 19 Dec 2019 18:29:19 +0800</pubDate>
-      
-      <guid>/tags/layui/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>web</title>
-      <link>/tags/web/</link>
-      <pubDate>Thu, 19 Dec 2019 18:29:19 +0800</pubDate>
-      
-      <guid>/tags/web/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tcp</title>
-      <link>/tags/tcp/</link>
-      <pubDate>Fri, 13 Dec 2019 10:30:17 +0800</pubDate>
-      
-      <guid>/tags/tcp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>nginx</title>
-      <link>/tags/nginx/</link>
-      <pubDate>Tue, 10 Dec 2019 10:36:04 +0800</pubDate>
-      
-      <guid>/tags/nginx/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>mac</title>
-      <link>/tags/mac/</link>
-      <pubDate>Thu, 05 Dec 2019 14:23:52 +0800</pubDate>
-      
-      <guid>/tags/mac/</guid>
-      <description></description>
+      <guid>/tags/tags/</guid>
+      <description>&amp;mdash;&amp;ndash; ~
+ code  </description>
     </item>
     
   </channel>

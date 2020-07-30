@@ -17,7 +17,8 @@
       <pubDate>Thu, 30 Jul 2020 15:04:19 +0800</pubDate>
       
       <guid>/blog/go/algorithm/</guid>
-      <description>#给定 nums = [3,2,2,3], val = 3, #函数应该返回新的长度 2, 并且 nums 中的前两个元素均为 2。 #你不需要考虑数组中超出新长度后面的元素 func removeElement(nums []int, val int) int { for i := 0; i &amp;lt; len(nums);{ if nums[i] == val { nums = append(nums[:i],nums[i+1:]...) }else{ i++ } } retunums) } #我们要想寻找最长公共前缀，那么首先这个前缀是公共的，我们可以从任意一个元素中找到它。假定我们现在就从一个数组中寻找最长公共前缀，那么首先，我们可以将第一个元素设置为基准元素x0。假如数组为[&amp;quot;flow&amp;quot;,&amp;quot;flower&amp;quot;,&amp;quot;flight&amp;quot;]，flow就是我们的基准元素x0。 //GO func longestCommonPrefix(strs []string) string { if len(strs) &amp;lt; 1 { return &amp;quot;&amp;quot; } prefix := strs[0] for _,k := range strs { for strings.Index(k,prefix) != 0 { if len(prefix) == 0 { return &amp;quot;&amp;quot; } prefix = prefix[:len(prefix) - 1] } } return prefix } </description>
+      <description>参考: https://www.geekxh.com/
+#给定 nums = [3,2,2,3], val = 3, #函数应该返回新的长度 2, 并且 nums 中的前两个元素均为 2。 #你不需要考虑数组中超出新长度后面的元素 func removeElement(nums []int, val int) int { for i := 0; i &amp;lt; len(nums);{ if nums[i] == val { nums = append(nums[:i],nums[i+1:]...) }else{ i++ } } retunums) } #我们要想寻找最长公共前缀，那么首先这个前缀是公共的，我们可以从任意一个元素中找到它。假定我们现在就从一个数组中寻找最长公共前缀，那么首先，我们可以将第一个元素设置为基准元素x0。假如数组为[&amp;quot;flow&amp;quot;,&amp;quot;flower&amp;quot;,&amp;quot;flight&amp;quot;]，flow就是我们的基准元素x0。 //GO func longestCommonPrefix(strs []string) string { if len(strs) &amp;lt; 1 { return &amp;quot;&amp;quot; } prefix := strs[0] for _,k := range strs { for strings.Index(k,prefix) !</description>
     </item>
     
     <item>
@@ -40,6 +41,23 @@ $subject = array( &amp;#34;commonName&amp;#34; =&amp;gt; &amp;#34;jc2182.com&amp
  Arch 发行版的反馈, 其他版本没有反馈    php-fpm 的新选项 ProtectHome 会导致经典的 File not found 错误，
  fixcode:  72510   引用:  php7.4 Commit   解决方案:  使用 systemctl edit php-fpm.service 修改 ProtectHome=false，重启服务.      php 解释器会对 null 类型的下标访问直接报错 Trying to access array offset on value of type null。
  解决方案:  修改代码解决      php 中经常使用 inlcude，require 等来包含其它文件。而调试发现在某个 include 之后，php 直接停止执行并报错 Trying to access array offset on value of type null - 解决方案： - 修改代码解决</description>
+    </item>
+    
+    <item>
+      <title>Cookie Samesite</title>
+      <link>/blog/php/cookie-samesite/</link>
+      <pubDate>Fri, 24 Jul 2020 10:13:38 +0800</pubDate>
+      
+      <guid>/blog/php/cookie-samesite/</guid>
+      <description>`` 参考站: 1.	https://web.dev/samesite-cookies-explained/ 2.	https://tools.ietf.org/html/draft-ietf-httpbis-rfc6265bis-03#section-5.2
+注意: Chrome80　版本后默认不允许跨站cookie操作，　如果要进行跨站cookie操作需要https请求。 Chrome84 版本开始支持samesite=none属性，　但是必须在https下进行，并且要指定Secure
+支持： chrome://flags/#cookies-without-same-site-must-be-secure
+环境：　1. Chrome 版本 84.0.4147.89（正式版本） （64 位） 2. php7.31 3. 本地http, 无ssl证书，　跨站访问无法测试  特性: 1. samesite=Lax	不设置SameSite属性，　默认为：　SameSite=Lax 2. samesite=struct	仅限于当前站使用cookie 3. samesite=none	上下文站点皆可使用cookie, none属性必须指定secure(以此表示是安全的关联站)
+问题：　1.　解决内联站点被劫持的问题 2. 解决内联站点互相读取cookie
+方案: 1. samesite=struct 仅限于当前站点使用 2. samesite=none 允许安全的关联站使用
+测试场景： 打开 new.food 并从中请求 dev.food (跨站请求)
+代码测试:
+1. Set-Cookie: promo_shown=1; SameSite=Strict 结果: 仅限于当前站点 2. Set-Cookie: promo_shown=1; SameSite=Lax 结果: 跨站无法拿到对方cookie 3.</description>
     </item>
     
     <item>

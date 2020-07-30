@@ -9,9 +9,9 @@
   <meta name="description" content="smoke.mvp">
   <meta name="keywords" content="smoke">
   
-  <link rel="prev" href="/blog/php/php-csr%E8%AF%81%E4%B9%A6%E7%94%9F%E6%88%90/" />
-  
-  <link rel="canonical" href="/blog/go/algorithm/" />
+  <link rel="prev" href="/blog/php/two-search-method/" />
+  <link rel="next" href="/blog/php/php7.4%E6%96%B0%E7%89%B9%E6%80%A7-%E5%8D%87%E7%BA%A7%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" />
+  <link rel="canonical" href="/blog/php/cookie-samesite/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -22,10 +22,10 @@
   <title>
        
        
-           Algorithm | smoke
+           Cookie Samesite | smoke
        
   </title>
-  <meta name="title" content="Algorithm | smoke">
+  <meta name="title" content="Cookie Samesite | smoke">
     
   
   <link rel="stylesheet" href="/font/iconfont.css">
@@ -44,9 +44,9 @@
          "@id": ""
     },
     "articleSection" : "blog",
-    "name" : "Algorithm",
-    "headline" : "Algorithm",
-    "description" : "参考: https:\/\/www.geekxh.com\/\n#给定 nums = [3,2,2,3], val = 3, #函数应该返回新的长度 2, 并且 nums 中的前两个元素均为 2。 #你不需要考虑数组中超出新长度后面的元素 func removeElement(nums []int, val int) int { for i := 0; i \u0026lt; len(nums);{ if nums[i] == val { nums = append(nums[:i],nums[i\u002b1:]...) }else{ i\u002b\u002b } } retunums) } #我们要想寻找最长公共前缀，那么首先这个前缀是公共的，我们可以从任意一个元素中找到它。假定我们现在就从一个数组中寻找最长公共前缀，那么首先，我们可以将第一个元素设置为基准元素x0。假如数组为[\u0026quot;flow\u0026quot;,\u0026quot;flower\u0026quot;,\u0026quot;flight\u0026quot;]，flow就是我们的基准元素x0。 \/\/GO func longestCommonPrefix(strs []string) string { if len(strs) \u0026lt; 1 { return \u0026quot;\u0026quot; } prefix := strs[0] for _,k := range strs { for strings.Index(k,prefix) !",
+    "name" : "Cookie Samesite",
+    "headline" : "Cookie Samesite",
+    "description" : "`` 参考站: 1.\thttps:\/\/web.dev\/samesite-cookies-explained\/ 2.\thttps:\/\/tools.ietf.org\/html\/draft-ietf-httpbis-rfc6265bis-03#section-5.2\n注意: Chrome80　版本后默认不允许跨站cookie操作，　如果要进行跨站cookie操作需要https请求。 Chrome84 版本开始支持samesite=none属性，　但是必须在https下进行，并且要指定Secure\n支持： chrome:\/\/flags\/#cookies-without-same-site-must-be-secure\n环境：　1. Chrome 版本 84.0.4147.89（正式版本） （64 位） 2. php7.31 3. 本地http, 无ssl证书，　跨站访问无法测试  特性: 1. samesite=Lax\t不设置SameSite属性，　默认为：　SameSite=Lax 2. samesite=struct\t仅限于当前站使用cookie 3. samesite=none\t上下文站点皆可使用cookie, none属性必须指定secure(以此表示是安全的关联站)\n问题：　1.　解决内联站点被劫持的问题 2. 解决内联站点互相读取cookie\n方案: 1. samesite=struct 仅限于当前站点使用 2. samesite=none 允许安全的关联站使用\n测试场景： 打开 new.food 并从中请求 dev.food (跨站请求)\n代码测试:\n1. Set-Cookie: promo_shown=1; SameSite=Strict 结果: 仅限于当前站点 2. Set-Cookie: promo_shown=1; SameSite=Lax 结果: 跨站无法拿到对方cookie 3.",
     "inLanguage" : "en-us",
     "author" : "smoke",
     "creator" : "smoke",
@@ -54,11 +54,11 @@
     "accountablePerson" : "smoke",
     "copyrightHolder" : "smoke",
     "copyrightYear" : "2020",
-    "datePublished": "2020-07-30 15:04:19 \u002b0800 PST",
-    "dateModified" : "2020-07-30 15:04:19 \u002b0800 PST",
-    "url" : "\/blog\/go\/algorithm\/",
-    "wordCount" : "91",
-    "keywords" : [ "go", "smoke"]
+    "datePublished": "2020-07-24 10:13:38 \u002b0800 PST",
+    "dateModified" : "2020-07-24 10:13:38 \u002b0800 PST",
+    "url" : "\/blog\/php\/cookie-samesite\/",
+    "wordCount" : "79",
+    "keywords" : [ "php", "smoke"]
 }
 </script>
 
@@ -116,11 +116,11 @@
       		
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">Algorithm</h1>
+        <h1 class="post-title" itemprop="name headline">Cookie Samesite</h1>
         <div class="post-meta">
                 Written by <a itemprop="name" href="" rel="author">smoke</a> with ♥ 
                 <span class="post-time">
-                on <time datetime=2020-07-30 itemprop="datePublished">July 30, 2020</time>
+                on <time datetime=2020-07-24 itemprop="datePublished">July 24, 2020</time>
                 </span>
                 in
                 
@@ -129,6 +129,8 @@
     <div class="post-content">
         
 
+        
+            
         
 
         
@@ -142,41 +144,43 @@
           
           
 
-          <p>参考:
-<a href="https://www.geekxh.com/">https://www.geekxh.com/</a></p>
-<pre><code class="language-textmate" data-lang="textmate">#给定 nums = [3,2,2,3], val = 3,
-#函数应该返回新的长度 2, 并且 nums 中的前两个元素均为 2。
-#你不需要考虑数组中超出新长度后面的元素
-
-func removeElement(nums []int, val int) int {
-    for i := 0; i &lt; len(nums);{
-        if nums[i] == val {
-            nums = append(nums[:i],nums[i+1:]...)
-        }else{
-            i++
-        }
-    }
-    retunums)
-}
-</code></pre><pre><code class="language-textmate" data-lang="textmate">#我们要想寻找最长公共前缀，那么首先这个前缀是公共的，我们可以从任意一个元素中找到它。假定我们现在就从一个数组中寻找最长公共前缀，那么首先，我们可以将第一个元素设置为基准元素x0。假如数组为[&quot;flow&quot;,&quot;flower&quot;,&quot;flight&quot;]，flow就是我们的基准元素x0。
-
-//GO
-func longestCommonPrefix(strs []string) string {
-    if len(strs) &lt; 1 {
-        return &quot;&quot;
-    }
-    prefix := strs[0]
-    for _,k := range strs {
-        for strings.Index(k,prefix) != 0 {
-            if len(prefix) == 0 {
-                return &quot;&quot;
-            }
-            prefix = prefix[:len(prefix) - 1]
-        }
-    }
-    return prefix
-}
+          <h4 id="httpsimgshieldsiostaticv1labelsmokemessagecookie-samesitecoloryellowgreenstylefor-the-badgelogoappveyorsuffixdownloadlinkhttpleftlinkhttpgooglecom"><img src="https://img.shields.io/static/v1?label=smoke&amp;message=%3CCOOKIE-SAMESITE%3E&amp;color=yellowgreen&amp;style=for-the-badge&amp;logo=appveyor&amp;suffix=download&amp;?link=http://left&amp;link=http://google.com" alt="*"></h4>
+<p>``
+参考站:
+1.	https://web.dev/samesite-cookies-explained/
+2.	https://tools.ietf.org/html/draft-ietf-httpbis-rfc6265bis-03#section-5.2</p>
+<p>注意:
+Chrome80　版本后默认不允许跨站cookie操作，　如果要进行跨站cookie操作需要https请求。
+Chrome84  版本开始支持samesite=none属性，　但是必须在https下进行，并且要指定Secure</p>
+<p>支持：
+chrome://flags/#cookies-without-same-site-must-be-secure</p>
+<p>环境：　</p>
+<pre><code>1. Chrome 版本 84.0.4147.89（正式版本） （64 位）
+2. php7.31
+3. 本地http, 无ssl证书，　跨站访问无法测试
 </code></pre>
+<p>特性:
+1. samesite=Lax		不设置SameSite属性，　默认为：　SameSite=Lax
+2. samesite=struct	仅限于当前站使用cookie
+3. samesite=none	上下文站点皆可使用cookie, none属性必须指定secure(以此表示是安全的关联站)</p>
+<p>问题：　
+1.　解决内联站点被劫持的问题
+2.  解决内联站点互相读取cookie</p>
+<p>方案:
+1. samesite=struct 仅限于当前站点使用
+2. samesite=none 允许安全的关联站使用</p>
+<p>测试场景：
+打开 new.food 并从中请求 dev.food (跨站请求)</p>
+<p>代码测试:</p>
+<pre><code>1. Set-Cookie: promo_shown=1; SameSite=Strict
+    结果: 仅限于当前站点
+2. Set-Cookie: promo_shown=1; SameSite=Lax
+    结果: 跨站无法拿到对方cookie
+3. Set-Cookie: promo_shown=1; SameSite=None Struce	
+</code></pre>
+<p>结论：
+``</p>
+
     </div>
 
     <div class="post-copyright">
@@ -190,7 +194,7 @@ func longestCommonPrefix(strs []string) string {
              
             <p class="copyright-item">
                     <span>Link:</span>
-                    <a href=/blog/go/algorithm/>/blog/go/algorithm/</span>
+                    <a href=/blog/php/cookie-samesite/>/blog/php/cookie-samesite/</span>
             </p>
             
              
@@ -206,8 +210,8 @@ func longestCommonPrefix(strs []string) string {
             <section>
             <i class="iconfont icon-tag"></i>Tag(s): 
             
-            <span class="tag"><a href="tags/go/">
-                    #go</a></span>
+            <span class="tag"><a href="tags/php/">
+                    #php</a></span>
             
             </section>
         
@@ -219,8 +223,10 @@ func longestCommonPrefix(strs []string) string {
 
     <div class="post-nav">
         
-        <a href="/blog/php/php-csr%E8%AF%81%E4%B9%A6%E7%94%9F%E6%88%90/" class="prev" rel="prev" title="PHP CSR证书生成"><i class="iconfont icon-left"></i>&nbsp;PHP CSR证书生成</a>
+        <a href="/blog/php/two-search-method/" class="prev" rel="prev" title="Two Search Method"><i class="iconfont icon-left"></i>&nbsp;Two Search Method</a>
          
+        
+        <a href="/blog/php/php7.4%E6%96%B0%E7%89%B9%E6%80%A7-%E5%8D%87%E7%BA%A7%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" class="next" rel="next" title="Php7.4新特性,升级事项">Php7.4新特性,升级事项&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 
@@ -260,8 +266,9 @@ func longestCommonPrefix(strs []string) string {
 
 
     
-    
-    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
     
   
 
