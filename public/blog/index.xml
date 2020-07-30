@@ -6,10 +6,20 @@
     <description>Recent content in Blogs on smoke</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Jul 2020 15:48:07 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jul 2020 11:57:03 +0800</lastBuildDate>
     
 	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>PHP CSR证书生成</title>
+      <link>/blog/php/php-csr%E8%AF%81%E4%B9%A6%E7%94%9F%E6%88%90/</link>
+      <pubDate>Thu, 30 Jul 2020 11:57:03 +0800</pubDate>
+      
+      <guid>/blog/php/php-csr%E8%AF%81%E4%B9%A6%E7%94%9F%E6%88%90/</guid>
+      <description>-参考: - https://www.jc2182.com/php/php-openssl-csr-new-ref.html
+$subject = array( &amp;#34;commonName&amp;#34; =&amp;gt; &amp;#34;jc2182.com&amp;#34;, ); // Generate a new private (and public) key pair $private_key = openssl_pkey_new(array( &amp;#34;private_key_type&amp;#34; =&amp;gt; OPENSSL_KEYTYPE_EC, &amp;#34;curve_name&amp;#34; =&amp;gt; &amp;#39;prime256v1&amp;#39;, )); // Generate a certificate signing request $csr = openssl_csr_new($subject, $private_key, array(&amp;#39;digest_alg&amp;#39; =&amp;gt; &amp;#39;sha384&amp;#39;)); // Generate self-signed EC cert $x509 = openssl_csr_sign($csr, null, $private_key, $days=365, array(&amp;#39;digest_alg&amp;#39; =&amp;gt; &amp;#39;sha384&amp;#39;)); openssl_x509_export_to_file($x509, &amp;#39;ecc-cert.pem&amp;#39;); openssl_pkey_export_to_file($private_key, &amp;#39;ecc-private.key&amp;#39;); </description>
+    </item>
     
     <item>
       <title>Php7.4新特性,升级事项</title>
@@ -17,7 +27,7 @@
       <pubDate>Wed, 29 Jul 2020 15:48:07 +0800</pubDate>
       
       <guid>/blog/php/php7.4%E6%96%B0%E7%89%B9%E6%80%A7-%E5%8D%87%E7%BA%A7%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</guid>
-      <description>升级7.4注意事项, 建议:如果升级最好选择7.2 或者 7.3 (优化性能,7.4的新特性可以忽略不计) ``
+      <description>升级7.4注意事项, 建议:如果升级最好选择7.2 或者 7.3 (7.4的新特性可以忽略不计) ``
  Arch 发行版的反馈, 其他版本没有反馈    php-fpm 的新选项 ProtectHome 会导致经典的 File not found 错误，
  fixcode:  72510   引用:  php7.4 Commit   解决方案:  使用 systemctl edit php-fpm.service 修改 ProtectHome=false，重启服务.      php 解释器会对 null 类型的下标访问直接报错 Trying to access array offset on value of type null。
  解决方案:  修改代码解决      php 中经常使用 inlcude，require 等来包含其它文件。而调试发现在某个 include 之后，php 直接停止执行并报错 Trying to access array offset on value of type null - 解决方案： - 修改代码解决</description>

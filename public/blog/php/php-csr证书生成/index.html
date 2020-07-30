@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="smoke">
+  <meta name="description" content="smoke.mvp">
+  <meta name="keywords" content="smoke">
+  
+  <link rel="prev" href="/blog/php/php7.4%E6%96%B0%E7%89%B9%E6%80%A7-%E5%8D%87%E7%BA%A7%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" />
+  
+  <link rel="canonical" href="/blog/php/php-csr%E8%AF%81%E4%B9%A6%E7%94%9F%E6%88%90/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           PHP CSR证书生成 | smoke
+       
+  </title>
+  <meta name="title" content="PHP CSR证书生成 | smoke">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": ""
+    },
+    "articleSection" : "blog",
+    "name" : "PHP CSR证书生成",
+    "headline" : "PHP CSR证书生成",
+    "description" : "-参考: - https:\/\/www.jc2182.com\/php\/php-openssl-csr-new-ref.html\n$subject = array( \u0026#34;commonName\u0026#34; =\u0026gt; \u0026#34;jc2182.com\u0026#34;, ); \/\/ Generate a new private (and public) key pair $private_key = openssl_pkey_new(array( \u0026#34;private_key_type\u0026#34; =\u0026gt; OPENSSL_KEYTYPE_EC, \u0026#34;curve_name\u0026#34; =\u0026gt; \u0026#39;prime256v1\u0026#39;, )); \/\/ Generate a certificate signing request $csr = openssl_csr_new($subject, $private_key, array(\u0026#39;digest_alg\u0026#39; =\u0026gt; \u0026#39;sha384\u0026#39;)); \/\/ Generate self-signed EC cert $x509 = openssl_csr_sign($csr, null, $private_key, $days=365, array(\u0026#39;digest_alg\u0026#39; =\u0026gt; \u0026#39;sha384\u0026#39;)); openssl_x509_export_to_file($x509, \u0026#39;ecc-cert.pem\u0026#39;); openssl_pkey_export_to_file($private_key, \u0026#39;ecc-private.key\u0026#39;); ",
+    "inLanguage" : "en-us",
+    "author" : "smoke",
+    "creator" : "smoke",
+    "publisher": "smoke",
+    "accountablePerson" : "smoke",
+    "copyrightHolder" : "smoke",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-07-30 11:57:03 \u002b0800 PST",
+    "dateModified" : "2020-07-30 11:57:03 \u002b0800 PST",
+    "url" : "\/blog\/php\/php-csr%E8%AF%81%E4%B9%A6%E7%94%9F%E6%88%90\/",
+    "wordCount" : "60",
+    "keywords" : [ "php", "smoke"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="">smoke</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/blog/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="">smoke</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/blog/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">PHP CSR证书生成</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="" rel="author">smoke</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-07-30 itemprop="datePublished">July 30, 2020</time>
+                </span>
+                in
+                
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>-参考:
+- <a href="https://www.jc2182.com/php/php-openssl-csr-new-ref.html">https://www.jc2182.com/php/php-openssl-csr-new-ref.html</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">
+$subject = array(
+        &#34;commonName&#34; =&gt; &#34;jc2182.com&#34;,
+);
+
+// Generate a new private (and public) key pair
+$private_key = openssl_pkey_new(array(
+        &#34;private_key_type&#34; =&gt; OPENSSL_KEYTYPE_EC,
+        &#34;curve_name&#34; =&gt; &#39;prime256v1&#39;,
+));
+
+// Generate a certificate signing request
+$csr = openssl_csr_new($subject, $private_key, array(&#39;digest_alg&#39; =&gt; &#39;sha384&#39;));
+
+// Generate self-signed EC cert
+$x509 = openssl_csr_sign($csr, null, $private_key, $days=365, array(&#39;digest_alg&#39; =&gt; &#39;sha384&#39;));
+openssl_x509_export_to_file($x509, &#39;ecc-cert.pem&#39;);
+openssl_pkey_export_to_file($private_key, &#39;ecc-private.key&#39;);
+
+
+</code></pre></div>
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>smoke </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=/blog/php/php-csr%E8%AF%81%E4%B9%A6%E7%94%9F%E6%88%90/>/blog/php/php-csr%E8%AF%81%E4%B9%A6%E7%94%9F%E6%88%90/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                #
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="tags/php/">
+                    #php</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="/blog/php/php7.4%E6%96%B0%E7%89%B9%E6%80%A7-%E5%8D%87%E7%BA%A7%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" class="prev" rel="prev" title="Php7.4新特性,升级事项"><i class="iconfont icon-left"></i>&nbsp;Php7.4新特性,升级事项</a>
+         
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="">smoke</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>
