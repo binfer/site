@@ -6,10 +6,19 @@
     <description>Recent content in go on smoke</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Jan 2020 17:56:05 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jul 2020 15:04:19 +0800</lastBuildDate>
     
 	<atom:link href="/tags/go/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Algorithm</title>
+      <link>/blog/go/algorithm/</link>
+      <pubDate>Thu, 30 Jul 2020 15:04:19 +0800</pubDate>
+      
+      <guid>/blog/go/algorithm/</guid>
+      <description>#给定 nums = [3,2,2,3], val = 3, #函数应该返回新的长度 2, 并且 nums 中的前两个元素均为 2。 #你不需要考虑数组中超出新长度后面的元素 func removeElement(nums []int, val int) int { for i := 0; i &amp;lt; len(nums);{ if nums[i] == val { nums = append(nums[:i],nums[i+1:]...) }else{ i++ } } retunums) } #我们要想寻找最长公共前缀，那么首先这个前缀是公共的，我们可以从任意一个元素中找到它。假定我们现在就从一个数组中寻找最长公共前缀，那么首先，我们可以将第一个元素设置为基准元素x0。假如数组为[&amp;quot;flow&amp;quot;,&amp;quot;flower&amp;quot;,&amp;quot;flight&amp;quot;]，flow就是我们的基准元素x0。 //GO func longestCommonPrefix(strs []string) string { if len(strs) &amp;lt; 1 { return &amp;quot;&amp;quot; } prefix := strs[0] for _,k := range strs { for strings.Index(k,prefix) != 0 { if len(prefix) == 0 { return &amp;quot;&amp;quot; } prefix = prefix[:len(prefix) - 1] } } return prefix } </description>
+    </item>
     
     <item>
       <title>Package Build Safe Complete</title>

@@ -9,9 +9,9 @@
   <meta name="description" content="smoke.mvp">
   <meta name="keywords" content="smoke">
   
-  <link rel="prev" href="/blog/php/php7.4%E6%96%B0%E7%89%B9%E6%80%A7-%E5%8D%87%E7%BA%A7%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" />
-  <link rel="next" href="/blog/go/algorithm/" />
-  <link rel="canonical" href="/blog/php/php-csr%E8%AF%81%E4%B9%A6%E7%94%9F%E6%88%90/" />
+  <link rel="prev" href="/blog/php/php-csr%E8%AF%81%E4%B9%A6%E7%94%9F%E6%88%90/" />
+  
+  <link rel="canonical" href="/blog/go/algorithm/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -22,10 +22,10 @@
   <title>
        
        
-           PHP CSR证书生成 | smoke
+           Algorithm | smoke
        
   </title>
-  <meta name="title" content="PHP CSR证书生成 | smoke">
+  <meta name="title" content="Algorithm | smoke">
     
   
   <link rel="stylesheet" href="/font/iconfont.css">
@@ -44,9 +44,9 @@
          "@id": ""
     },
     "articleSection" : "blog",
-    "name" : "PHP CSR证书生成",
-    "headline" : "PHP CSR证书生成",
-    "description" : "-参考: - https:\/\/www.jc2182.com\/php\/php-openssl-csr-new-ref.html\n$subject = array( \u0026#34;commonName\u0026#34; =\u0026gt; \u0026#34;jc2182.com\u0026#34;, ); \/\/ Generate a new private (and public) key pair $private_key = openssl_pkey_new(array( \u0026#34;private_key_type\u0026#34; =\u0026gt; OPENSSL_KEYTYPE_EC, \u0026#34;curve_name\u0026#34; =\u0026gt; \u0026#39;prime256v1\u0026#39;, )); \/\/ Generate a certificate signing request $csr = openssl_csr_new($subject, $private_key, array(\u0026#39;digest_alg\u0026#39; =\u0026gt; \u0026#39;sha384\u0026#39;)); \/\/ Generate self-signed EC cert $x509 = openssl_csr_sign($csr, null, $private_key, $days=365, array(\u0026#39;digest_alg\u0026#39; =\u0026gt; \u0026#39;sha384\u0026#39;)); openssl_x509_export_to_file($x509, \u0026#39;ecc-cert.pem\u0026#39;); openssl_pkey_export_to_file($private_key, \u0026#39;ecc-private.key\u0026#39;); ",
+    "name" : "Algorithm",
+    "headline" : "Algorithm",
+    "description" : "#给定 nums = [3,2,2,3], val = 3, #函数应该返回新的长度 2, 并且 nums 中的前两个元素均为 2。 #你不需要考虑数组中超出新长度后面的元素 func removeElement(nums []int, val int) int { for i := 0; i \u0026lt; len(nums);{ if nums[i] == val { nums = append(nums[:i],nums[i\u002b1:]...) }else{ i\u002b\u002b } } retunums) } #我们要想寻找最长公共前缀，那么首先这个前缀是公共的，我们可以从任意一个元素中找到它。假定我们现在就从一个数组中寻找最长公共前缀，那么首先，我们可以将第一个元素设置为基准元素x0。假如数组为[\u0026quot;flow\u0026quot;,\u0026quot;flower\u0026quot;,\u0026quot;flight\u0026quot;]，flow就是我们的基准元素x0。 \/\/GO func longestCommonPrefix(strs []string) string { if len(strs) \u0026lt; 1 { return \u0026quot;\u0026quot; } prefix := strs[0] for _,k := range strs { for strings.Index(k,prefix) != 0 { if len(prefix) == 0 { return \u0026quot;\u0026quot; } prefix = prefix[:len(prefix) - 1] } } return prefix } ",
     "inLanguage" : "en-us",
     "author" : "smoke",
     "creator" : "smoke",
@@ -54,11 +54,11 @@
     "accountablePerson" : "smoke",
     "copyrightHolder" : "smoke",
     "copyrightYear" : "2020",
-    "datePublished": "2020-07-30 11:57:03 \u002b0800 PST",
-    "dateModified" : "2020-07-30 11:57:03 \u002b0800 PST",
-    "url" : "\/blog\/php\/php-csr%E8%AF%81%E4%B9%A6%E7%94%9F%E6%88%90\/",
-    "wordCount" : "60",
-    "keywords" : [ "php", "smoke"]
+    "datePublished": "2020-07-30 15:04:19 \u002b0800 PST",
+    "dateModified" : "2020-07-30 15:04:19 \u002b0800 PST",
+    "url" : "\/blog\/go\/algorithm\/",
+    "wordCount" : "89",
+    "keywords" : [ "go", "smoke"]
 }
 </script>
 
@@ -116,7 +116,7 @@
       		
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">PHP CSR证书生成</h1>
+        <h1 class="post-title" itemprop="name headline">Algorithm</h1>
         <div class="post-meta">
                 Written by <a itemprop="name" href="" rel="author">smoke</a> with ♥ 
                 <span class="post-time">
@@ -142,29 +142,39 @@
           
           
 
-          <p>-参考:
-- <a href="https://www.jc2182.com/php/php-openssl-csr-new-ref.html">https://www.jc2182.com/php/php-openssl-csr-new-ref.html</a></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">
-$subject = array(
-        &#34;commonName&#34; =&gt; &#34;jc2182.com&#34;,
-);
+          <pre><code>#给定 nums = [3,2,2,3], val = 3,
+#函数应该返回新的长度 2, 并且 nums 中的前两个元素均为 2。
+#你不需要考虑数组中超出新长度后面的元素
 
-// Generate a new private (and public) key pair
-$private_key = openssl_pkey_new(array(
-        &#34;private_key_type&#34; =&gt; OPENSSL_KEYTYPE_EC,
-        &#34;curve_name&#34; =&gt; &#39;prime256v1&#39;,
-));
+func removeElement(nums []int, val int) int {
+    for i := 0; i &lt; len(nums);{
+        if nums[i] == val {
+            nums = append(nums[:i],nums[i+1:]...)
+        }else{
+            i++
+        }
+    }
+    retunums)
+}
+</code></pre><pre><code>#我们要想寻找最长公共前缀，那么首先这个前缀是公共的，我们可以从任意一个元素中找到它。假定我们现在就从一个数组中寻找最长公共前缀，那么首先，我们可以将第一个元素设置为基准元素x0。假如数组为[&quot;flow&quot;,&quot;flower&quot;,&quot;flight&quot;]，flow就是我们的基准元素x0。
 
-// Generate a certificate signing request
-$csr = openssl_csr_new($subject, $private_key, array(&#39;digest_alg&#39; =&gt; &#39;sha384&#39;));
-
-// Generate self-signed EC cert
-$x509 = openssl_csr_sign($csr, null, $private_key, $days=365, array(&#39;digest_alg&#39; =&gt; &#39;sha384&#39;));
-openssl_x509_export_to_file($x509, &#39;ecc-cert.pem&#39;);
-openssl_pkey_export_to_file($private_key, &#39;ecc-private.key&#39;);
-
-
-</code></pre></div>
+//GO
+func longestCommonPrefix(strs []string) string {
+    if len(strs) &lt; 1 {
+        return &quot;&quot;
+    }
+    prefix := strs[0]
+    for _,k := range strs {
+        for strings.Index(k,prefix) != 0 {
+            if len(prefix) == 0 {
+                return &quot;&quot;
+            }
+            prefix = prefix[:len(prefix) - 1]
+        }
+    }
+    return prefix
+}
+</code></pre>
     </div>
 
     <div class="post-copyright">
@@ -178,7 +188,7 @@ openssl_pkey_export_to_file($private_key, &#39;ecc-private.key&#39;);
              
             <p class="copyright-item">
                     <span>Link:</span>
-                    <a href=/blog/php/php-csr%E8%AF%81%E4%B9%A6%E7%94%9F%E6%88%90/>/blog/php/php-csr%E8%AF%81%E4%B9%A6%E7%94%9F%E6%88%90/</span>
+                    <a href=/blog/go/algorithm/>/blog/go/algorithm/</span>
             </p>
             
              
@@ -194,8 +204,8 @@ openssl_pkey_export_to_file($private_key, &#39;ecc-private.key&#39;);
             <section>
             <i class="iconfont icon-tag"></i>Tag(s): 
             
-            <span class="tag"><a href="tags/php/">
-                    #php</a></span>
+            <span class="tag"><a href="tags/go/">
+                    #go</a></span>
             
             </section>
         
@@ -207,10 +217,8 @@ openssl_pkey_export_to_file($private_key, &#39;ecc-private.key&#39;);
 
     <div class="post-nav">
         
-        <a href="/blog/php/php7.4%E6%96%B0%E7%89%B9%E6%80%A7-%E5%8D%87%E7%BA%A7%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" class="prev" rel="prev" title="Php7.4新特性,升级事项"><i class="iconfont icon-left"></i>&nbsp;Php7.4新特性,升级事项</a>
+        <a href="/blog/php/php-csr%E8%AF%81%E4%B9%A6%E7%94%9F%E6%88%90/" class="prev" rel="prev" title="PHP CSR证书生成"><i class="iconfont icon-left"></i>&nbsp;PHP CSR证书生成</a>
          
-        
-        <a href="/blog/go/algorithm/" class="next" rel="next" title="Algorithm">Algorithm&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 

@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0c32945a-7494-489a-b97b-8292736505f4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/blog/php/php7.4新特性-升级注意事项.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blog/php/php7.4新特性-升级注意事项.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/LeaveIt/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/themes/LeaveIt/LICENSE" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +39,7 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../wwwroot/template" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -79,6 +78,7 @@
       <workItem from="1595556373706" duration="413000" />
       <workItem from="1596006113285" duration="9409000" />
       <workItem from="1596078358103" duration="49000" />
+      <workItem from="1596081373916" duration="1432000" />
     </task>
     <servers />
   </component>

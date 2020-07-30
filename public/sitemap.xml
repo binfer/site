@@ -2,9 +2,59 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
+      <loc>/blog/go/algorithm/</loc>
+      
+      <lastmod>2020-07-30T15:04:19+08:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
       <loc>/blog/</loc>
       
-      <lastmod>2020-07-30T11:57:03+08:00</lastmod>
+      <lastmod>2020-07-30T15:04:19+08:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>/tags/go/</loc>
+      
+      <lastmod>2020-07-30T15:04:19+08:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>/</loc>
+      
+      <lastmod>2020-07-30T15:04:19+08:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>/tags/</loc>
+      
+      <lastmod>2020-07-30T15:04:19+08:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>/tags/</loc>
+      
+      <lastmod>2020-07-30T15:04:19+08:00</lastmod>
       
       
       
@@ -23,36 +73,6 @@
   
     <url>
       <loc>/blog/php/php-csr%E8%AF%81%E4%B9%A6%E7%94%9F%E6%88%90/</loc>
-      
-      <lastmod>2020-07-30T11:57:03+08:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/</loc>
-      
-      <lastmod>2020-07-30T11:57:03+08:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/</loc>
-      
-      <lastmod>2020-07-30T11:57:03+08:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/</loc>
       
       <lastmod>2020-07-30T11:57:03+08:00</lastmod>
       
@@ -85,16 +105,6 @@
       <loc>/blog/me/release/</loc>
       
       <lastmod>2020-01-17T10:54:59+08:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/go/</loc>
-      
-      <lastmod>2020-01-10T17:56:05+08:00</lastmod>
       
       
       
