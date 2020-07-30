@@ -4,7 +4,7 @@ date: 2020-07-24T10:16:26+08:00
 tags : ["php"]
 ---
 #### ![*](https://img.shields.io/static/v1?label=smoke&message=<PHPEXCEL>&color=yellowgreen&style=for-the-badge&logo=appveyor&suffix=download&?link=http://left&link=http://google.com)
-``
+```textmate
 导出百万级的方案网上给出的比较多　我目前整理了３种可供参考的。
 １．php打开缓冲区进行写入导出，适用于phpexcel之类的第三方包，性能一般，适合复杂业务　　　
 ２．php运行mysql直接借助mysql导出，性能高，不适合复杂业务　　
@@ -79,4 +79,4 @@ tags : ["php"]
 --- 耗时: 27.906 秒	
 --- 消耗内存: 2039.1 MB	
 --- 内存使用峰值: 1288 MB
-``
+```

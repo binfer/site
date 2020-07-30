@@ -46,7 +46,7 @@
     "articleSection" : "blog",
     "name" : "Cookie Samesite",
     "headline" : "Cookie Samesite",
-    "description" : "`` 参考站: 1.\thttps:\/\/web.dev\/samesite-cookies-explained\/ 2.\thttps:\/\/tools.ietf.org\/html\/draft-ietf-httpbis-rfc6265bis-03#section-5.2\n注意: Chrome80　版本后默认不允许跨站cookie操作，　如果要进行跨站cookie操作需要https请求。 Chrome84 版本开始支持samesite=none属性，　但是必须在https下进行，并且要指定Secure\n支持： chrome:\/\/flags\/#cookies-without-same-site-must-be-secure\n环境：　1. Chrome 版本 84.0.4147.89（正式版本） （64 位） 2. php7.31 3. 本地http, 无ssl证书，　跨站访问无法测试  特性: 1. samesite=Lax\t不设置SameSite属性，　默认为：　SameSite=Lax 2. samesite=struct\t仅限于当前站使用cookie 3. samesite=none\t上下文站点皆可使用cookie, none属性必须指定secure(以此表示是安全的关联站)\n问题：　1.　解决内联站点被劫持的问题 2. 解决内联站点互相读取cookie\n方案: 1. samesite=struct 仅限于当前站点使用 2. samesite=none 允许安全的关联站使用\n测试场景： 打开 new.food 并从中请求 dev.food (跨站请求)\n代码测试:\n1. Set-Cookie: promo_shown=1; SameSite=Strict 结果: 仅限于当前站点 2. Set-Cookie: promo_shown=1; SameSite=Lax 结果: 跨站无法拿到对方cookie 3.",
+    "description" : "- 参考站: - 1.\thttps:\/\/web.dev\/samesite-cookies-explained\/ - 2.\thttps:\/\/tools.ietf.org\/html\/draft-ietf-httpbis-rfc6265bis-03#section-5.2 注意: Chrome80　版本后默认不允许跨站cookie操作，　如果要进行跨站cookie操作需要https请求。 Chrome84 版本开始支持samesite=none属性，　但是必须在https下进行，并且要指定Secure 支持： chrome:\/\/flags\/#cookies-without-same-site-must-be-secure 环境：　1. Chrome 版本 84.0.4147.89（正式版本） （64 位） 2. php7.31 3. 本地http, 无ssl证书，　跨站访问无法测试 特性: 1. samesite=Lax\t不设置SameSite属性，　默认为：　SameSite=Lax 2. samesite=struct\t仅限于当前站使用cookie 3. samesite=none\t上下文站点皆可使用cookie, none属性必须指定secure(以此表示是安全的关联站) 问题：　1.　解决内联站点被劫持的问题 2. 解决内联站点互相读取cookie 方案: 1. samesite=struct 仅限于当前站点使用 2. samesite=none 允许安全的关联站使用 测试场景： 打开 new.food 并从中请求 dev.food (跨站请求) 代码测试: 1. Set-Cookie: promo_shown=1; SameSite=Strict 结果: 仅限于当前站点 2. Set-Cookie: promo_shown=1; SameSite=Lax 结果: 跨站无法拿到对方cookie 3.",
     "inLanguage" : "en-us",
     "author" : "smoke",
     "creator" : "smoke",
@@ -57,7 +57,7 @@
     "datePublished": "2020-07-24 10:13:38 \u002b0800 PST",
     "dateModified" : "2020-07-24 10:13:38 \u002b0800 PST",
     "url" : "\/blog\/php\/cookie-samesite\/",
-    "wordCount" : "79",
+    "wordCount" : "80",
     "keywords" : [ "php", "smoke"]
 }
 </script>
@@ -145,42 +145,56 @@
           
 
           <h4 id="httpsimgshieldsiostaticv1labelsmokemessagecookie-samesitecoloryellowgreenstylefor-the-badgelogoappveyorsuffixdownloadlinkhttpleftlinkhttpgooglecom"><img src="https://img.shields.io/static/v1?label=smoke&amp;message=%3CCOOKIE-SAMESITE%3E&amp;color=yellowgreen&amp;style=for-the-badge&amp;logo=appveyor&amp;suffix=download&amp;?link=http://left&amp;link=http://google.com" alt="*"></h4>
-<p>``
-参考站:
-1.	https://web.dev/samesite-cookies-explained/
-2.	https://tools.ietf.org/html/draft-ietf-httpbis-rfc6265bis-03#section-5.2</p>
-<p>注意:
-Chrome80　版本后默认不允许跨站cookie操作，　如果要进行跨站cookie操作需要https请求。
-Chrome84  版本开始支持samesite=none属性，　但是必须在https下进行，并且要指定Secure</p>
-<p>支持：
-chrome://flags/#cookies-without-same-site-must-be-secure</p>
-<p>环境：　</p>
-<pre><code>1. Chrome 版本 84.0.4147.89（正式版本） （64 位）
-2. php7.31
-3. 本地http, 无ssl证书，　跨站访问无法测试
-</code></pre>
-<p>特性:
-1. samesite=Lax		不设置SameSite属性，　默认为：　SameSite=Lax
-2. samesite=struct	仅限于当前站使用cookie
-3. samesite=none	上下文站点皆可使用cookie, none属性必须指定secure(以此表示是安全的关联站)</p>
-<p>问题：　
-1.　解决内联站点被劫持的问题
-2.  解决内联站点互相读取cookie</p>
-<p>方案:
-1. samesite=struct 仅限于当前站点使用
-2. samesite=none 允许安全的关联站使用</p>
-<p>测试场景：
-打开 new.food 并从中请求 dev.food (跨站请求)</p>
-<p>代码测试:</p>
-<pre><code>1. Set-Cookie: promo_shown=1; SameSite=Strict
-    结果: 仅限于当前站点
-2. Set-Cookie: promo_shown=1; SameSite=Lax
-    结果: 跨站无法拿到对方cookie
-3. Set-Cookie: promo_shown=1; SameSite=None Struce	
-</code></pre>
-<p>结论：
-``</p>
+<pre><code class="language-textmate" data-lang="textmate">- 参考站: 
+	- 1.	https://web.dev/samesite-cookies-explained/
+	- 2.	https://tools.ietf.org/html/draft-ietf-httpbis-rfc6265bis-03#section-5.2
 
+注意:
+	Chrome80　版本后默认不允许跨站cookie操作，　如果要进行跨站cookie操作需要https请求。
+	Chrome84  版本开始支持samesite=none属性，　但是必须在https下进行，并且要指定Secure
+
+支持：
+	chrome://flags/#cookies-without-same-site-must-be-secure
+
+
+环境：　
+
+	1. Chrome 版本 84.0.4147.89（正式版本） （64 位）
+	2. php7.31
+	3. 本地http, 无ssl证书，　跨站访问无法测试
+
+
+
+特性:
+	1. samesite=Lax		不设置SameSite属性，　默认为：　SameSite=Lax
+	2. samesite=struct	仅限于当前站使用cookie
+	3. samesite=none	上下文站点皆可使用cookie, none属性必须指定secure(以此表示是安全的关联站)
+
+
+
+问题：　
+	1.　解决内联站点被劫持的问题
+	2.  解决内联站点互相读取cookie
+
+
+方案:
+	1. samesite=struct 仅限于当前站点使用
+	2. samesite=none 允许安全的关联站使用
+
+
+测试场景：
+	打开 new.food 并从中请求 dev.food (跨站请求)
+
+代码测试:
+	
+	1. Set-Cookie: promo_shown=1; SameSite=Strict
+		结果: 仅限于当前站点
+	2. Set-Cookie: promo_shown=1; SameSite=Lax
+		结果: 跨站无法拿到对方cookie
+	3. Set-Cookie: promo_shown=1; SameSite=None Struce	
+
+结论：
+</code></pre>
     </div>
 
     <div class="post-copyright">

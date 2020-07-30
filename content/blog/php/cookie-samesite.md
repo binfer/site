@@ -7,10 +7,10 @@ tags : ["php"]
 #### ![*](https://img.shields.io/static/v1?label=smoke&message=<COOKIE-SAMESITE>&color=yellowgreen&style=for-the-badge&logo=appveyor&suffix=download&?link=http://left&link=http://google.com)
 
 
-``
-参考站: 
-	1.	https://web.dev/samesite-cookies-explained/
-	2.	https://tools.ietf.org/html/draft-ietf-httpbis-rfc6265bis-03#section-5.2
+```textmate
+- 参考站: 
+	- 1.	https://web.dev/samesite-cookies-explained/
+	- 2.	https://tools.ietf.org/html/draft-ietf-httpbis-rfc6265bis-03#section-5.2
 
 注意:
 	Chrome80　版本后默认不允许跨站cookie操作，　如果要进行跨站cookie操作需要https请求。
@@ -57,4 +57,4 @@ tags : ["php"]
 	3. Set-Cookie: promo_shown=1; SameSite=None Struce	
 
 结论：
-``
+```
