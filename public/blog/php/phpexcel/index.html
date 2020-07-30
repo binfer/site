@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="smoke">
+  <meta name="description" content="smoke.mvp">
+  <meta name="keywords" content="smoke">
+  
+  <link rel="prev" href="/blog/php/cookie-samesite/" />
+  <link rel="next" href="/blog/php/php7.4%E6%96%B0%E7%89%B9%E6%80%A7-%E5%8D%87%E7%BA%A7%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" />
+  <link rel="canonical" href="/blog/php/phpexcel/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Phpexcel | smoke
+       
+  </title>
+  <meta name="title" content="Phpexcel | smoke">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": ""
+    },
+    "articleSection" : "blog",
+    "name" : "Phpexcel",
+    "headline" : "Phpexcel",
+    "description" : "`` 导出百万级的方案网上给出的比较多　我目前整理了３种可供参考的。 １．php打开缓冲区进行写入导出，适用于phpexcel之类的第三方包，性能一般，适合复杂业务　２．php运行mysql直接借助mysql导出，性能高，不适合复杂业务　３: php扩展导出，性能比较好适合多业务\n采用csv格式导出，　excel有数据行限制，几百万数据基本打不开。\n——————————————————————————————————————————————————————————————————\n10:29:22 当前使用的缓存方法是： MemoryGZip 方式\t10:29:24 当前模拟数据( 1000000 ) 条\t10:30:09\u0026mdash; 耗时: 46.661 秒\t10:30:09\u0026mdash; 消耗内存: 1438.7 MB\t10:30:09\u0026mdash; 内存使用峰值: 1348.16015625 MB\t10:30:09\u0026mdash; 完成写入文件\t10:30:09\u0026mdash; 文件被创建在： \/www\/wwwroot\/www.new.food\/food\/public目录\n——————————————————————————————————————————————————————————————————— 10:31:46 当前使用的缓存方法是： Memory 方式\t10:31:48 当前模拟数据( 1000000 ) 条\t10:32:03\u0026mdash; 耗时: 17.586 秒\t10:32:03\u0026mdash; 消耗内存: 1454.33 MB\t10:32:03\u0026mdash; 内存使用峰值: 1454.16015625 MB\t10:32:03\u0026mdash; 完成写入文件\t10:32:03\u0026mdash; 文件被创建在： \/www\/wwwroot\/www.new.food\/food\/public目录\n———————————————————————————————————————————————————————————————————— 10:33:09 当前使用的缓存方法是： PHPTemp 方式\t10:33:11 当前模拟数据( 1000000 ) 条\t10:33:26\u0026mdash; 耗时: 17.",
+    "inLanguage" : "en-us",
+    "author" : "smoke",
+    "creator" : "smoke",
+    "publisher": "smoke",
+    "accountablePerson" : "smoke",
+    "copyrightHolder" : "smoke",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-07-24 10:16:26 \u002b0800 PST",
+    "dateModified" : "2020-07-24 10:16:26 \u002b0800 PST",
+    "url" : "\/blog\/php\/phpexcel\/",
+    "wordCount" : "206",
+    "keywords" : [ "php", "smoke"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="">smoke</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/blog/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="">smoke</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/blog/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Phpexcel</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="" rel="author">smoke</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-07-24 itemprop="datePublished">July 24, 2020</time>
+                </span>
+                in
+                
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <h4 id="httpsimgshieldsiostaticv1labelsmokemessagephpexcelcoloryellowgreenstylefor-the-badgelogoappveyorsuffixdownloadlinkhttpleftlinkhttpgooglecom"><img src="https://img.shields.io/static/v1?label=smoke&amp;message=%3CPHPEXCEL%3E&amp;color=yellowgreen&amp;style=for-the-badge&amp;logo=appveyor&amp;suffix=download&amp;?link=http://left&amp;link=http://google.com" alt="*"></h4>
+<p>``
+导出百万级的方案网上给出的比较多　我目前整理了３种可供参考的。
+１．php打开缓冲区进行写入导出，适用于phpexcel之类的第三方包，性能一般，适合复杂业务　　　
+２．php运行mysql直接借助mysql导出，性能高，不适合复杂业务　　
+３: php扩展导出，性能比较好适合多业务</p>
+<p>采用csv格式导出，　excel有数据行限制，几百万数据基本打不开。</p>
+<p>——————————————————————————————————————————————————————————————————</p>
+<p>10:29:22 当前使用的缓存方法是： MemoryGZip 方式		
+10:29:24 当前模拟数据( 1000000 ) 条		
+10:30:09&mdash; 耗时: 46.661 秒		
+10:30:09&mdash; 消耗内存: 1438.7 MB		
+10:30:09&mdash; 内存使用峰值: 1348.16015625 MB		
+10:30:09&mdash; 完成写入文件		
+10:30:09&mdash; 文件被创建在： /www/wwwroot/www.new.food/food/public目录</p>
+<p>———————————————————————————————————————————————————————————————————
+10:31:46 当前使用的缓存方法是： Memory 方式		
+10:31:48 当前模拟数据( 1000000 ) 条		
+10:32:03&mdash; 耗时: 17.586 秒		
+10:32:03&mdash; 消耗内存: 1454.33 MB		
+10:32:03&mdash; 内存使用峰值: 1454.16015625 MB		
+10:32:03&mdash; 完成写入文件		
+10:32:03&mdash; 文件被创建在： /www/wwwroot/www.new.food/food/public目录</p>
+<p>————————————————————————————————————————————————————————————————————
+10:33:09 当前使用的缓存方法是： PHPTemp 方式		
+10:33:11 当前模拟数据( 1000000 ) 条		
+10:33:26&mdash; 耗时: 17.729 秒		
+10:33:26&mdash; 消耗内存: 1614.19 MB		
+10:33:26&mdash; 内存使用峰值: 1426.16015625 MB		
+10:33:26&mdash; 完成写入文件		
+10:33:26&mdash; 文件被创建在： /www/wwwroot/www.new.food/food/public目录		
+————————————————————————————————————————————————————————————————————</p>
+<p>10:40:25 当前使用的缓存方法是： DiscISAM 方式		
+10:40:28 当前模拟数据( 1000000 ) 条		
+10:40:43&mdash; 耗时: 17.64 秒		
+10:40:43&mdash; 消耗内存: 1614.21 MB		
+10:40:43&mdash; 内存使用峰值: 1278.16015625 MB		
+10:40:43&mdash; 完成写入文件		
+10:40:43&mdash; 文件被创建在： /www/wwwroot/www.new.food/food/public目录		
+————————————————————————————————————————————————————————————————————</p>
+<p>10:39:42 当前使用的缓存方法是： MemorySerialized 方式		
+10:39:44 当前模拟数据( 1000000 ) 条		
+10:39:57&mdash; 耗时: 14.748 秒		
+10:39:57&mdash; 消耗内存: 5161.86 MB		
+10:39:57&mdash; 内存使用峰值: 4758.16015625 MB		
+10:39:57&mdash; 完成写入文件		
+10:39:57&mdash; 文件被创建在： /www/wwwroot/www.new.food/food/public目录		
+————————————————————————————————————————————————————————————————————
+11:56:11 当前使用的缓存方法是：putcsv 方式 　　(未使用缓冲，仅使用迭代)
+11:56:11 当前模拟数据( 1000000 ) 条
+11:57:01&mdash; 耗时: 50.216 秒
+11:57:01&mdash; 消耗内存: 546.16 MB
+11:57:01&mdash; 内存使用峰值: 208.16015625 MB
+11:57:01&mdash; 完成写入文件 11:57:01&mdash; 文件被创建在： /www/wwwroot/www.new.food/food/public/.</p>
+<p>————————————————————————————————————————————————————————————————————
+11:56:15 当前使用的缓存方法是：putcsv 方式 　　(使用缓冲和迭代)
+11:59:15&mdash; 耗时: 51.022 秒
+11:59:15&mdash; 消耗内存: 546.15 MB
+11:59:15&mdash; 内存使用峰值: 1114.16015625 MB
+11:59:15&mdash; 完成写入文件
+11:59:15&mdash; 文件被创建在： /www/wwwroot/www.new.food/food/public/../20200721115824.csv目录</p>
+<p>&mdash; 耗时: 27.906 秒
+&mdash; 消耗内存: 2039.1 MB
+&mdash; 内存使用峰值: 1288 MB
+``</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>smoke </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=/blog/php/phpexcel/>/blog/php/phpexcel/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                #
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="tags/php/">
+                    #php</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="/blog/php/cookie-samesite/" class="prev" rel="prev" title="Cookie Samesite"><i class="iconfont icon-left"></i>&nbsp;Cookie Samesite</a>
+         
+        
+        <a href="/blog/php/php7.4%E6%96%B0%E7%89%B9%E6%80%A7-%E5%8D%87%E7%BA%A7%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" class="next" rel="next" title="Php7.4新特性,升级事项">Php7.4新特性,升级事项&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="">smoke</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

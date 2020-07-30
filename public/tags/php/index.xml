@@ -34,6 +34,20 @@ $subject = array( &amp;#34;commonName&amp;#34; =&amp;gt; &amp;#34;jc2182.com&amp
     </item>
     
     <item>
+      <title>Phpexcel</title>
+      <link>/blog/php/phpexcel/</link>
+      <pubDate>Fri, 24 Jul 2020 10:16:26 +0800</pubDate>
+      
+      <guid>/blog/php/phpexcel/</guid>
+      <description>`` 导出百万级的方案网上给出的比较多　我目前整理了３种可供参考的。 １．php打开缓冲区进行写入导出，适用于phpexcel之类的第三方包，性能一般，适合复杂业务　２．php运行mysql直接借助mysql导出，性能高，不适合复杂业务　３: php扩展导出，性能比较好适合多业务
+采用csv格式导出，　excel有数据行限制，几百万数据基本打不开。
+——————————————————————————————————————————————————————————————————
+10:29:22 当前使用的缓存方法是： MemoryGZip 方式	10:29:24 当前模拟数据( 1000000 ) 条	10:30:09&amp;mdash; 耗时: 46.661 秒	10:30:09&amp;mdash; 消耗内存: 1438.7 MB	10:30:09&amp;mdash; 内存使用峰值: 1348.16015625 MB	10:30:09&amp;mdash; 完成写入文件	10:30:09&amp;mdash; 文件被创建在： /www/wwwroot/www.new.food/food/public目录
+——————————————————————————————————————————————————————————————————— 10:31:46 当前使用的缓存方法是： Memory 方式	10:31:48 当前模拟数据( 1000000 ) 条	10:32:03&amp;mdash; 耗时: 17.586 秒	10:32:03&amp;mdash; 消耗内存: 1454.33 MB	10:32:03&amp;mdash; 内存使用峰值: 1454.16015625 MB	10:32:03&amp;mdash; 完成写入文件	10:32:03&amp;mdash; 文件被创建在： /www/wwwroot/www.new.food/food/public目录
+———————————————————————————————————————————————————————————————————— 10:33:09 当前使用的缓存方法是： PHPTemp 方式	10:33:11 当前模拟数据( 1000000 ) 条	10:33:26&amp;mdash; 耗时: 17.</description>
+    </item>
+    
+    <item>
       <title>Cookie Samesite</title>
       <link>/blog/php/cookie-samesite/</link>
       <pubDate>Fri, 24 Jul 2020 10:13:38 +0800</pubDate>
