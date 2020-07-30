@@ -3,7 +3,8 @@ title: "Algorithm"
 date: 2020-07-30T15:04:19+08:00
 tags : ["go"]
 ---
-
+参考: 
+https://www.geekxh.com/
 ```textmate
 #给定 nums = [3,2,2,3], val = 3,
 #函数应该返回新的长度 2, 并且 nums 中的前两个元素均为 2。
