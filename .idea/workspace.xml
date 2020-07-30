@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0c32945a-7494-489a-b97b-8292736505f4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blog/go/algorithm.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blog/go/algorithm.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/LeaveIt/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/themes/LeaveIt/LICENSE" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +79,7 @@
       <workItem from="1595556373706" duration="413000" />
       <workItem from="1596006113285" duration="9409000" />
       <workItem from="1596078358103" duration="49000" />
-      <workItem from="1596081373916" duration="1432000" />
+      <workItem from="1596081373916" duration="2622000" />
     </task>
     <servers />
   </component>
