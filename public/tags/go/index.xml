@@ -6,10 +6,19 @@
     <description>Recent content in go on smoke</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Jul 2020 15:04:19 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 31 Jul 2020 15:02:15 +0800</lastBuildDate>
     
 	<atom:link href="/tags/go/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Slice与unsafe</title>
+      <link>/blog/go/slice%E4%B8%8Eunsafe.pointer%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2/</link>
+      <pubDate>Fri, 31 Jul 2020 15:02:15 +0800</pubDate>
+      
+      <guid>/blog/go/slice%E4%B8%8Eunsafe.pointer%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2/</guid>
+      <description>var o []byte sliceHeader := (*reflect.SliceHeader)((unsafe.Pointer(&amp;amp;o))) sliceHeader.Cap = length sliceHeader.Len = length sliceHeader.Data = uintptr(ptr) </description>
+    </item>
     
     <item>
       <title>Algorithm</title>
